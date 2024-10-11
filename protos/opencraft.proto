@@ -1,0 +1,90 @@
+syntax = "proto3";
+package opencraft;
+
+option csharp_namespace = "Opencraft.NetCode";
+option go_package = "./protos";
+
+// Messages from clients to servers
+message ToServer {
+    oneof payload {
+        IWantPlayer i_want_player = 1;
+        IWantMovePlayer i_want_move_player = 2;
+        IWantChangeBlock i_want_change_block = 3;
+        IWantColumn i_want_column = 4;
+    }
+}
+
+message IWantPlayer {
+    uint32 playerID = 1;
+}
+
+message IWantMovePlayer {
+    uint32 playerID = 1;
+    Vec3 newPosition = 2;
+}
+
+message IWantChangeBlock {
+    Pos3 blockPosition = 1;
+    uint32 blockType = 2;
+}
+
+message IWantColumn {
+    Pos2 columnPos = 1;
+}
+
+// Messages from servers to clients
+message ToClient {
+    oneof payload {
+        YouArePlayer you_are_player = 1;
+        PlayerUpdate player_update = 2;
+        ChunkData chunk_data = 3;
+        ColumnData column_data = 4;
+        BlockUpdate block_update = 5;
+        MultiBlockUpdate multi_block_update = 6;
+    }
+}
+
+message YouArePlayer {
+    uint32 playerID = 1;
+    Vec3 spawnLocation = 2;
+}
+
+message Vec3 {
+    float x = 1;
+    float y = 2;
+    float z = 3;
+}
+
+message Pos2 {
+    int32 x = 1;
+    int32 z = 2;
+}
+
+message Pos3 {
+    int32 x = 1;
+    int32 y = 2;
+    int32 z = 3;
+}
+
+message PlayerUpdate {
+    uint32 playerID = 1;
+    Vec3 position = 2;
+}
+
+message ChunkData {
+    bytes blockTypes = 1;
+}
+
+message ColumnData {
+    Pos2 position = 1;
+    repeated ChunkData chunks = 2;
+}
+
+message BlockUpdate {
+    Pos3 blockPosition = 1;
+    uint32 blockType = 2;
+}
+
+message MultiBlockUpdate {
+    repeated BlockUpdate updates = 1;
+}

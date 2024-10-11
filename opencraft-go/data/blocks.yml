@@ -1,0 +1,18 @@
+blocks:
+  - name: dirt
+    color: brown
+  - name: grass
+    color: green
+  - name: stone
+    color: gray
+  - name: sand
+    color: yellow
+  - name: snow
+    color: white
+  - name: brick
+    color: red
+  - name: water
+    color: blue
+items:
+  - name: stick
+  - name: apple
