@@ -56,14 +56,14 @@ message Vec3 {
 }
 
 message Pos2 {
-    int32 x = 1;
-    int32 z = 2;
+    sint32 x = 1;
+    sint32 z = 2;
 }
 
 message Pos3 {
-    int32 x = 1;
-    int32 y = 2;
-    int32 z = 3;
+    sint32 x = 1;
+    sint32 y = 2;
+    sint32 z = 3;
 }
 
 message PlayerUpdate {

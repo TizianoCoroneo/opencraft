@@ -1,6 +1,7 @@
 package server
 
 import (
+	"bufio"
 	"net"
 	"time"
 
@@ -8,22 +9,22 @@ import (
 	"github.com/jdonkervliet/opencraft-go/model"
 	"github.com/jdonkervliet/opencraft-go/protos"
 	log "github.com/sirupsen/logrus"
-	"google.golang.org/protobuf/proto"
+	"google.golang.org/protobuf/encoding/protodelim"
 )
 
 type IncomingMessage struct {
-	Address *net.UDPAddr
-	Data    *protos.ToServer
+	Connection net.Conn
+	Data       *protos.ToServer
 }
 
 type ServerPlayer struct {
 	model.Player
-	controllers []*net.UDPAddr
+	controllers []net.Conn
 }
 
 func newServerPlayer() *ServerPlayer {
 	p := &ServerPlayer{
-		controllers: make([]*net.UDPAddr, 0),
+		controllers: make([]net.Conn, 0),
 	}
 	p.Position = math32.Vector3{X: 2, Y: 2, Z: 2}
 	return p
@@ -37,7 +38,7 @@ type Game struct {
 
 	running bool
 	msgBuf  chan *IncomingMessage
-	s       *net.UDPConn
+	s       net.Listener
 }
 
 func NewGame() *Game {
@@ -61,7 +62,7 @@ func (g *Game) Stop() {
 	g.running = false
 }
 
-func (g *Game) handleIWantPlayer(msg *protos.IWantPlayer, sender *net.UDPAddr) {
+func (g *Game) handleIWantPlayer(msg *protos.IWantPlayer, conn net.Conn) {
 	var i uint32
 
 	if msg.PlayerID == 0 {
@@ -83,7 +84,7 @@ func (g *Game) handleIWantPlayer(msg *protos.IWantPlayer, sender *net.UDPAddr) {
 		p = newServerPlayer()
 		g.Players[i] = p
 	}
-	p.controllers = append(p.controllers, sender)
+	p.controllers = append(p.controllers, conn)
 
 	loc := &protos.Vec3{X: p.Position.X, Y: p.Position.Y, Z: p.Position.Z}
 	reply := &protos.ToClient{
@@ -94,16 +95,12 @@ func (g *Game) handleIWantPlayer(msg *protos.IWantPlayer, sender *net.UDPAddr) {
 			},
 		},
 	}
-	replyBytes, err := proto.Marshal(reply)
-	if err != nil {
-		log.Fatal(err)
-	}
-	if _, err := g.s.WriteToUDP(replyBytes, sender); err != nil {
+	if _, err := protodelim.MarshalTo(conn, reply); err != nil {
 		log.Fatal(err)
 	}
 }
 
-func (g *Game) handleIWantMovePlayer(msg *protos.IWantMovePlayer, sender *net.UDPAddr) {
+func (g *Game) handleIWantMovePlayer(msg *protos.IWantMovePlayer, conn net.Conn) {
 	p, ok := g.Players[msg.PlayerID]
 	if ok {
 		// No checks whatsoever!
@@ -113,7 +110,7 @@ func (g *Game) handleIWantMovePlayer(msg *protos.IWantMovePlayer, sender *net.UD
 	}
 }
 
-func (g *Game) handleIWantChangeBlock(msg *protos.IWantChangeBlock, sender *net.UDPAddr) {
+func (g *Game) handleIWantChangeBlock(msg *protos.IWantChangeBlock, conn net.Conn) {
 	msgPos := msg.BlockPosition
 	msgTyp := msg.BlockType
 	pos := model.IntPos3{X: int(msgPos.X), Y: int(msgPos.Y), Z: int(msgPos.Z)}
@@ -123,7 +120,7 @@ func (g *Game) handleIWantChangeBlock(msg *protos.IWantChangeBlock, sender *net.
 	}
 }
 
-func (g *Game) handleIWantColumn(msg *protos.IWantColumn, sender *net.UDPAddr) {
+func (g *Game) handleIWantColumn(msg *protos.IWantColumn, conn net.Conn) {
 	pos := &protos.Pos2{X: msg.ColumnPos.X, Z: msg.ColumnPos.Z}
 	chunks := make([]*protos.ChunkData, 1)
 	buf := make([]byte, 16*16*16)
@@ -140,26 +137,22 @@ func (g *Game) handleIWantColumn(msg *protos.IWantColumn, sender *net.UDPAddr) {
 			},
 		},
 	}
-	replyBytes, err := proto.Marshal(reply)
-	if err != nil {
-		log.Fatal(err)
-	}
-	if _, err := g.s.WriteToUDP(replyBytes, sender); err != nil {
+	if _, err := protodelim.MarshalTo(conn, reply); err != nil {
 		log.Fatal(err)
 	}
 }
 
-func (g *Game) handleMessage(msg *IncomingMessage, s *net.UDPConn) {
+func (g *Game) handleMessage(msg *IncomingMessage) {
 	log.Info("received msg")
 	switch x := msg.Data.Payload.(type) {
 	case *protos.ToServer_IWantPlayer:
-		g.handleIWantPlayer(x.IWantPlayer, msg.Address)
+		g.handleIWantPlayer(x.IWantPlayer, msg.Connection)
 	case *protos.ToServer_IWantMovePlayer:
-		g.handleIWantMovePlayer(x.IWantMovePlayer, msg.Address)
+		g.handleIWantMovePlayer(x.IWantMovePlayer, msg.Connection)
 	case *protos.ToServer_IWantChangeBlock:
-		g.handleIWantChangeBlock(x.IWantChangeBlock, msg.Address)
+		g.handleIWantChangeBlock(x.IWantChangeBlock, msg.Connection)
 	case *protos.ToServer_IWantColumn:
-		g.handleIWantColumn(x.IWantColumn, msg.Address)
+		g.handleIWantColumn(x.IWantColumn, msg.Connection)
 	default:
 		log.Warn("unknown msg type", x)
 	}
@@ -170,18 +163,18 @@ func (g *Game) HandleMessages() {
 	// Move on if there are no packets to receive.
 	nMsgs := len(g.msgBuf)
 	for i := 0; i < nMsgs; i++ {
-		g.handleMessage(<-g.msgBuf, g.s)
+		g.handleMessage(<-g.msgBuf)
 	}
 }
 
 func (g *Game) Start() error {
 	g.running = true
 
-	udpAddr, err := net.ResolveUDPAddr("udp", "0.0.0.0:7979")
+	udpAddr, err := net.ResolveTCPAddr("tcp", ":7979")
 	if err != nil {
 		return err
 	}
-	g.s, err = net.ListenUDP("udp", udpAddr)
+	g.s, err = net.ListenTCP("tcp", udpAddr)
 	if err != nil {
 		return err
 	}
@@ -193,45 +186,32 @@ func (g *Game) Start() error {
 		defer g.s.Close()
 		for g.running {
 			log.Infoln("running")
-			buf := make([]byte, 512)
-			n, addr, err := g.s.ReadFromUDP(buf[0:])
+			conn, err := g.s.Accept()
+			log.Infof("accepted connection from %v", conn.RemoteAddr())
 			if err != nil {
-				log.Warn(err)
 				return
 			}
-			log.Infof("read %v bytes", n)
-			var msg protos.ToServer
-			if err := proto.Unmarshal(buf[:n], &msg); err != nil {
-				log.Warn(err)
-				continue
-			}
+			go func(conn net.Conn) {
+				defer conn.Close()
+				for {
+					rdr := bufio.NewReader(conn)
+					var msg protos.ToServer
+					if err := protodelim.UnmarshalFrom(rdr, &msg); err != nil {
+						log.Warn(err)
+						break
+					}
 
-			log.Infof("got msg %v from %v", msg.String(), addr)
+					log.Infof("got msg %v from %v", msg.String(), conn.RemoteAddr())
 
-			iMsg := IncomingMessage{
-				Address: addr,
-				Data:    &msg,
-			}
-			g.msgBuf <- &iMsg
+					iMsg := IncomingMessage{
+						Connection: conn,
+						Data:       &msg,
+					}
+					g.msgBuf <- &iMsg
+				}
+			}(conn)
 		}
 	}()
-
-	// go func() {
-	// 	for g.running {
-	// 		start := time.Now()
-
-	// 		g.HandleMessages()
-
-	// 		elapsed := time.Since(start)
-	// 		sleepTime := g.TickDuration - elapsed
-	// 		if sleepTime > 0 {
-	// 			// log.Infof("sleeping %v\n", sleepTime)
-	// 			time.Sleep(sleepTime)
-	// 		} else {
-	// 			log.Warn("server overloaded!")
-	// 		}
-	// 	}
-	// }()
 
 	return nil
 }
