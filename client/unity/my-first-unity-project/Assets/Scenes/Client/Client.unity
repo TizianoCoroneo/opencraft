@@ -836,11 +836,11 @@ MonoBehaviour:
   networking: {fileID: 775416439}
   extraArguments:
   - --host
-  - 18.196.95.164
+  - localhost
   - --port
   - 7979
   - --user
-  - 8
+  - 1
 --- !u!4 &838066201
 Transform:
   m_ObjectHideFlags: 0
