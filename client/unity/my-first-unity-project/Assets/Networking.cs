@@ -4,11 +4,11 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Opencraft.NetCode;
 using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
 using System.Linq;
 using System.Net;
 using UnityEngine.Assertions;
 using System;
+using System.IO;
 
 /// <summary>
 /// This class takes care of the client-server networking. It sends packets to
@@ -21,8 +21,8 @@ public class Networking : MonoBehaviour
     [SerializeField] private bool automaticLogin = default;
     [SerializeField] private GameManager gameManager = default;
 
-    private UdpClient client;
-    private ConcurrentQueue<UdpReceiveResult> messageQueue = default;
+    private TcpClient client;
+    private ConcurrentQueue<(ToClient, TcpClient)> messageQueue = default;
     private ConcurrentQueue<ToServer> outgoingMessages = default;
     private bool running = true;
     private Task receiveLoop = default;
@@ -46,9 +46,8 @@ public class Networking : MonoBehaviour
         {
             if (outgoingMessages.TryDequeue(out var message))
             {
-                var b = message.ToByteArray();
-                Debug.Log($"tx {b.Length} byte msg {message}");
-                client?.Send(b, b.Length);
+                // Debug.Log($"Sending {message} to {client.Client.RemoteEndPoint}");
+                message.WriteDelimitedTo(client.GetStream());
             }
         }
 
@@ -57,7 +56,7 @@ public class Networking : MonoBehaviour
         {
             if (messageQueue.TryDequeue(out var message))
             {
-                HandleMessage(message);
+                HandleMessage(message.Item1, message.Item2);
             }
         }
     }
@@ -78,7 +77,7 @@ public class Networking : MonoBehaviour
         {
             IWantPlayer = new IWantPlayer { PlayerID = (uint)playerID }
         };
-        outgoingMessages.Enqueue(loginMsg);
+        SendToServer(loginMsg);
     }
 
     public void SendToServer(ToServer message)
@@ -86,10 +85,8 @@ public class Networking : MonoBehaviour
         outgoingMessages.Enqueue(message);
     }
 
-    private void HandleMessage(UdpReceiveResult message)
+    private void HandleMessage(ToClient toClient, TcpClient client)
     {
-        var toClient = ToClient.Parser.ParseFrom(message.Buffer);
-        Debug.Log($"rx {message.Buffer.Length} byte msg {toClient}");
         switch (toClient.PayloadCase)
         {
             case ToClient.PayloadOneofCase.YouArePlayer:
@@ -144,21 +141,24 @@ public class Networking : MonoBehaviour
         client = new();
         client.Connect(server);
         gameManager.ServerEndpoint = server;
-        receiveLoop = Task.Run(async () =>
+        receiveLoop = Task.Run(() =>
         {
             running = true;
+            var stream = client.GetStream();
             while (running)
             {
                 try
                 {
-                    var msg = await client.ReceiveAsync();
-                    messageQueue.Enqueue(msg);
+                    var msg = ToClient.Parser.ParseDelimitedFrom(stream);
+                    messageQueue.Enqueue((msg, client));
                 }
-                catch (ObjectDisposedException e)
+                catch (Exception e) when (e is ObjectDisposedException
+                    || e is SocketException
+                    || e is IOException)
                 {
                     if (running)
                     {
-                        Debug.Log(e);
+                        Debug.LogError(e);
                     }
                 }
             }

@@ -45,8 +45,8 @@ namespace Opencraft.NetCode {
             "cGRhdGVIAEIJCgdwYXlsb2FkIkgKDFlvdUFyZVBsYXllchIQCghwbGF5ZXJJ",
             "RBgBIAEoDRImCg1zcGF3bkxvY2F0aW9uGAIgASgLMg8ub3BlbmNyYWZ0LlZl",
             "YzMiJwoEVmVjMxIJCgF4GAEgASgCEgkKAXkYAiABKAISCQoBehgDIAEoAiIc",
-            "CgRQb3MyEgkKAXgYASABKAUSCQoBehgCIAEoBSInCgRQb3MzEgkKAXgYASAB",
-            "KAUSCQoBeRgCIAEoBRIJCgF6GAMgASgFIkMKDFBsYXllclVwZGF0ZRIQCghw",
+            "CgRQb3MyEgkKAXgYASABKBESCQoBehgCIAEoESInCgRQb3MzEgkKAXgYASAB",
+            "KBESCQoBeRgCIAEoERIJCgF6GAMgASgRIkMKDFBsYXllclVwZGF0ZRIQCghw",
             "bGF5ZXJJRBgBIAEoDRIhCghwb3NpdGlvbhgCIAEoCzIPLm9wZW5jcmFmdC5W",
             "ZWMzIh8KCUNodW5rRGF0YRISCgpibG9ja1R5cGVzGAEgASgMIlUKCkNvbHVt",
             "bkRhdGESIQoIcG9zaXRpb24YASABKAsyDy5vcGVuY3JhZnQuUG9zMhIkCgZj",
@@ -1760,11 +1760,11 @@ namespace Opencraft.NetCode {
     public void WriteTo(pb::CodedOutputStream output) {
       if (X != 0) {
         output.WriteRawTag(8);
-        output.WriteInt32(X);
+        output.WriteSInt32(X);
       }
       if (Z != 0) {
         output.WriteRawTag(16);
-        output.WriteInt32(Z);
+        output.WriteSInt32(Z);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1775,10 +1775,10 @@ namespace Opencraft.NetCode {
     public int CalculateSize() {
       int size = 0;
       if (X != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(X);
+        size += 1 + pb::CodedOutputStream.ComputeSInt32Size(X);
       }
       if (Z != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Z);
+        size += 1 + pb::CodedOutputStream.ComputeSInt32Size(Z);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1809,11 +1809,11 @@ namespace Opencraft.NetCode {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            X = input.ReadInt32();
+            X = input.ReadSInt32();
             break;
           }
           case 16: {
-            Z = input.ReadInt32();
+            Z = input.ReadSInt32();
             break;
           }
         }
@@ -1931,15 +1931,15 @@ namespace Opencraft.NetCode {
     public void WriteTo(pb::CodedOutputStream output) {
       if (X != 0) {
         output.WriteRawTag(8);
-        output.WriteInt32(X);
+        output.WriteSInt32(X);
       }
       if (Y != 0) {
         output.WriteRawTag(16);
-        output.WriteInt32(Y);
+        output.WriteSInt32(Y);
       }
       if (Z != 0) {
         output.WriteRawTag(24);
-        output.WriteInt32(Z);
+        output.WriteSInt32(Z);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1950,13 +1950,13 @@ namespace Opencraft.NetCode {
     public int CalculateSize() {
       int size = 0;
       if (X != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(X);
+        size += 1 + pb::CodedOutputStream.ComputeSInt32Size(X);
       }
       if (Y != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Y);
+        size += 1 + pb::CodedOutputStream.ComputeSInt32Size(Y);
       }
       if (Z != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Z);
+        size += 1 + pb::CodedOutputStream.ComputeSInt32Size(Z);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1990,15 +1990,15 @@ namespace Opencraft.NetCode {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            X = input.ReadInt32();
+            X = input.ReadSInt32();
             break;
           }
           case 16: {
-            Y = input.ReadInt32();
+            Y = input.ReadSInt32();
             break;
           }
           case 24: {
-            Z = input.ReadInt32();
+            Z = input.ReadSInt32();
             break;
           }
         }

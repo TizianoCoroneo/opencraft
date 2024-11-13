@@ -5,7 +5,6 @@ using System.Collections.Specialized;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
-using System.Threading;
 using System.Threading.Tasks;
 using Unity.RenderStreaming;
 using UnityEngine;
@@ -114,6 +113,8 @@ public class HttpServer : MonoBehaviour
         var req = context.Request;
         using var res = context.Response;
 
+        Debug.Log($"received request: {req.Url}");
+
         // http://example.com/login/to/your/site gets parsed as
         // ["/","login/","to/","your/","site"] in req.Url.Segments
         var segments = req.Url.Segments
@@ -182,26 +183,90 @@ public class HttpServer : MonoBehaviour
         var renderIP = addresses.Where(x => x.AddressFamily == AddressFamily.InterNetwork).First();
 
         var portStr = v["port"] ?? "7980";
-        var portIsInt = int.TryParse(portStr, out var port);
-        if (!portIsInt)
+        if (!int.TryParse(portStr, out var port))
         {
             Debug.LogWarning($"thinclient attempt with invalid port: {portStr}");
             return;
         }
 
+        var signalingPortStr = v["signalingPort"] ?? "7981";
+        if (!int.TryParse(signalingPortStr, out var signalingPort))
+        {
+            Debug.LogWarning($"thinclient attempt with invalid signaling port: {signalingPortStr}");
+            return;
+        }
+
+        var iceServers = ParseIceServers(v["iceServers"]);
+        if (iceServers == null)
+        {
+            return;
+        }
+
+        var serverHostStr = v["serverHost"];
+        var serverPortStr = v["serverPort"];
+        IPEndPoint server = default;
+        if (serverHostStr != null || serverPortStr != null)
+        {
+            IPAddress serverHost = default;
+            if (serverHostStr != null)
+            {
+                var serverHosts = Dns.GetHostAddresses(serverHostStr);
+                if (serverHosts.Length == 0)
+                {
+                    Debug.LogWarning($"could not parse serverHost: {serverHostStr}");
+                    return;
+                }
+                serverHost = serverHosts
+                    .Where(x => x.AddressFamily == AddressFamily.InterNetwork)
+                    .First();
+                if (serverHost == null)
+                {
+                    Debug.LogWarning($"could not find an IPv4 addr for serverHost: {serverHostStr}");
+                    return;
+                }
+            }
+            else
+            {
+                serverHost = gameManager.ServerEndpoint.Address;
+            }
+
+            int serverPort = default;
+            if (serverPortStr != null)
+            {
+                if (!int.TryParse(serverPortStr, out serverPort))
+                {
+                    Debug.LogWarning($"could not parse serverPort: {serverPortStr}");
+                    return;
+                }
+            }
+            else
+            {
+                serverPort = gameManager.ServerEndpoint.Port;
+            }
+
+            server = new IPEndPoint(serverHost, serverPort);
+        }
+        else
+        {
+            server = gameManager.ServerEndpoint;
+        }
+
         var render = new IPEndPoint(renderIP, port);
-        var server = gameManager.ServerEndpoint;
         var playerID = gameManager.PlayerID;
-        StartCoroutine(BecomeThinClientRoutine(render, server, playerID));
+        StartCoroutine(BecomeThinClientRoutine(render, server, signalingPort, playerID, iceServers));
     }
 
-    private IEnumerator BecomeThinClientRoutine(IPEndPoint render, IPEndPoint server, uint playerID)
+    private IEnumerator BecomeThinClientRoutine(IPEndPoint render, IPEndPoint server, int signalingPort, uint playerID, IceServer[] iceServers)
     {
+        var iceServerArr = iceServers.SelectMany(x => x.urls).ToArray();
+        var iceServerStr = string.Join(",", iceServerArr);
         var uri = $"http://{render.Address}:{render.Port}/become/client" +
             $"?host={server.Address}" +
             $"&port={server.Port}" +
             $"&playerID={playerID}" +
-            $"&broadcast={true}";
+            $"&broadcast={true}" +
+            $"&signalingPort={signalingPort}" +
+            $"&iceServers={iceServerStr}";
         Debug.Log(uri);
 
         UnityWebRequest request = null;
@@ -223,16 +288,17 @@ public class HttpServer : MonoBehaviour
 
         yield return StartCoroutine(gameManager.SwitchSceneRoutine(GameScenes.ThinClient));
 
-        ConnectToRenderer(render.Address);
+        ConnectToRenderer(new IPEndPoint(render.Address, signalingPort), iceServers);
     }
 
-    private void ConnectToRenderer(IPAddress renderIP)
+    private void ConnectToRenderer(IPEndPoint renderEndpoint, IceServer[] iceServers = null)
     {
-        var url = $"ws://{renderIP}";
-        var iceServers = new IceServer[] { new(urls: new[] { "stun:stun.l.google.com:19302" }) };
+        iceServers ??= new IceServer[] { new(urls: new[] { "stun: stun.l.google.com:19302" }) };
+        var url = $"ws://{renderEndpoint}";
         var settings = new WebSocketSignalingSettings(url, iceServers);
         var receiver = FindObjectOfType<SignalingManager>();
         Assert.IsNotNull(receiver);
+        Debug.Log($"connecting to signaling at {settings.url}");
         receiver.Run(settings);
     }
 
@@ -256,6 +322,7 @@ public class HttpServer : MonoBehaviour
         if (!bool.TryParse(broadcastStr, out var broadcast))
         {
             Debug.LogWarning($"login attempt with invalid broadcast: {broadcastStr}");
+            yield break;
         }
 
         // Make sure the Client scene is loaded
@@ -263,10 +330,80 @@ public class HttpServer : MonoBehaviour
 
         if (broadcast)
         {
-            ConnectToRenderer(IPAddress.Loopback);
+            var hostStr = v["host"] ?? "localhost";
+            var host = Dns.GetHostAddresses(hostStr)
+                .Where(x => x.AddressFamily == AddressFamily.InterNetwork)
+                .First();
+            if (host == null)
+            {
+                Debug.LogWarning($"could not parse host: {hostStr}");
+                yield break;
+            }
+
+            string signalingPortStr = v["signalingPort"] ?? "80";
+            if (!int.TryParse(signalingPortStr, out var signalingPort))
+            {
+                yield break;
+            }
+
+            var endPoint = new IPEndPoint(host, signalingPort);
+
+            var iceServers = ParseIceServers(v["iceServers"]);
+            if (iceServers == null)
+            {
+                yield break;
+            }
+
+            ConnectToRenderer(endPoint, iceServers);
         }
 
         // Perform login
         HandleRequestLogin(v);
+    }
+
+    private IPEndPoint ParseSignalingServerEndpoint(string signalingServerStr)
+    {
+        signalingServerStr ??= "localhost:80";
+        var signalingServerParts = signalingServerStr.Trim().Split(":");
+        if (signalingServerParts.Length != 2)
+        {
+            Debug.LogWarning($"expecting host:port for signalingServer, but got: {signalingServerStr}");
+            return null;
+        }
+
+        var IPStr = signalingServerParts[0];
+        var signalingServerIP = Dns.GetHostAddresses(IPStr)
+            .Where(x => x.AddressFamily == AddressFamily.InterNetwork)
+            .First();
+        if (signalingServerIP == null)
+        {
+            Debug.LogWarning($"could not resolve to IPv4 addr: {IPStr}");
+            return null;
+        }
+
+        var portStr = signalingServerParts[1];
+        if (!int.TryParse(portStr, out var port))
+        {
+            Debug.LogWarning($"expecting host:port for signalingServer, but could not parse port: {portStr}");
+            return null;
+        }
+
+        var endpoint = new IPEndPoint(signalingServerIP, port);
+        return endpoint;
+    }
+
+    private IceServer[] ParseIceServers(string iceServersStr)
+    {
+        iceServersStr ??= "stun:stun.l.google.com:19302";
+        var iceServerParts = iceServersStr.Trim().Split(",");
+        if (iceServerParts.Length < 1)
+        {
+            Debug.LogWarning($"want to broadcast but no ice servers");
+            return null;
+        }
+
+        return iceServerParts
+            .Select(x => new IceServer(urls: new[] { x }))
+            .ToArray();
     }
 }

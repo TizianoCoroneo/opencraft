@@ -87,7 +87,7 @@ public class Receiver : MonoBehaviour
             renderStreaming.useDefaultSettings = settings.UseDefaultSettings;
         if (settings?.SignalingSettings != null)
             renderStreaming.SetSignalingSettings(settings.SignalingSettings);
-        renderStreaming.Run();
+        // renderStreaming.Run();
 
         // OnStart
         if (string.IsNullOrEmpty(connectionId))
@@ -98,9 +98,9 @@ public class Receiver : MonoBehaviour
             receiveVideoViewer.SetCodec(settings.ReceiverVideoCodec);
         receiveAudioViewer.targetAudioSource = remoteAudioSource;
 
-        renderStreaming.Internal.onStart += () =>
+        renderStreaming.onStart += () =>
         {
-            Debug.Log("IS THIS THING ON?");
+            Debug.Log($"creating connectiod with id {connectionId}");
             connection.CreateConnection(connectionId);
         };
     }

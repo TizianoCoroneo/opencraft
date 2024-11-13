@@ -59,7 +59,6 @@ public class playerscript : MonoBehaviour
 
     private void OnFirePerformed()
     {
-        Debug.Log("!FIRE!");
     }
 
     // Update is called once per frame
