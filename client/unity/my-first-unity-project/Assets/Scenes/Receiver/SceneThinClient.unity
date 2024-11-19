@@ -1802,9 +1802,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_useDefault: 1
-  signalingSettingsObject: {fileID: 0}
+  signalingSettingsObject: {fileID: 11400000, guid: 571ff29e34be474469dc1a5643cd4c8c,
+    type: 2}
   signalingSettings:
-    rid: 0
+    rid: 8619384347861712896
   handlers:
   - {fileID: 1915034404}
   runOnAwake: 0
@@ -1812,7 +1813,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 0
+    - rid: 8619384347861712896
       type: {class: WebSocketSignalingSettings, ns: Unity.RenderStreaming, asm: Unity.RenderStreaming}
       data:
         m_url: ws://127.0.0.1

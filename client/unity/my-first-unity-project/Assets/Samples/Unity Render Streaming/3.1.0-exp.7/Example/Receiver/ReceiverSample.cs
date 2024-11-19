@@ -26,7 +26,7 @@ namespace Unity.RenderStreaming.Samples
         }
     }
 
-    class ReceiverSample : MonoBehaviour
+    public class ReceiverSample : MonoBehaviour
     {
 #pragma warning disable 0649
         [SerializeField] private SignalingManager renderStreaming;
@@ -46,7 +46,7 @@ namespace Unity.RenderStreaming.Samples
         private RenderStreamingSettings settings;
         private Vector2 lastSize;
 
-        void Awake()
+        public void Awake()
         {
             startButton.onClick.AddListener(OnStart);
             stopButton.onClick.AddListener(OnStop);
@@ -66,7 +66,7 @@ namespace Unity.RenderStreaming.Samples
             settings = SampleManager.Instance.Settings;
         }
 
-        void Start()
+        public void Start()
         {
             if (renderStreaming.runOnAwake)
                 return;
@@ -88,13 +88,13 @@ namespace Unity.RenderStreaming.Samples
             CalculateInputRegion();
         }
 
-        void OnUpdateReceiveTexture(Texture texture)
+        public void OnUpdateReceiveTexture(Texture texture)
         {
             remoteVideoImage.texture = texture;
             CalculateInputRegion();
         }
 
-        void OnStartedChannel(string connectionId)
+        public void OnStartedChannel(string connectionId)
         {
             CalculateInputRegion();
         }
@@ -114,7 +114,7 @@ namespace Unity.RenderStreaming.Samples
             inputSender.EnableInputPositionCorrection(true);
         }
 
-        private void OnStart()
+        public void OnStart()
         {
             if (string.IsNullOrEmpty(connectionId))
             {
@@ -131,7 +131,7 @@ namespace Unity.RenderStreaming.Samples
             stopButton.gameObject.SetActive(true);
         }
 
-        private void OnStop()
+        public void OnStop()
         {
             connection.DeleteConnection(connectionId);
             connectionId = String.Empty;

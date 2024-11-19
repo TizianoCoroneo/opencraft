@@ -35,4 +35,12 @@
 .history
 .ionide
 
+# ParrelSync clones
+client/unity/my-first-unity-project_clone_*
+
+# Mono crashes
+client/unity/my-first-unity-project/mono_crash.mem.*
+
+
+
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,git

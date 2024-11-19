@@ -11,8 +11,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ThinClient/ThinClient.unity
     guid: 1bbef8a5a70ab414baa1f431429fbb1f
+  - enabled: 1
+    path: Assets/Scenes/Receiver/SceneThinClient.unity
+    guid: d5017e8aa6936ca4c9a3c7db5ead7b78
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: b8dc01e4188f9fa4884820cc8510ca66,
       type: 2}
-    com.unity.renderstreaming.settings: {fileID: 11400000, guid: 96e985a757dc28340bd74e971714fc25,
+    com.unity.renderstreaming.settings: {fileID: 11400000, guid: 63a426df4894b1f4b94574475120a261,
       type: 2}
