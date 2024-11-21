@@ -5,8 +5,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 using Unity.RenderStreaming.Samples;
+using UnityEngine.InputSystem;
 
-public class Experiment
+public class Experiment : InputTestFixture
 {
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
     // `yield return null;` to skip a frame.
@@ -23,8 +24,23 @@ public class Experiment
         
         component.OnStart();
         
+        yield return new WaitForSeconds(1);
+
+        var keyboard = InputSystem.AddDevice<Keyboard>();
+        var mouse = Mouse.current;
+        
+        Move(mouse.delta, new Vector2(100, 100));
+        
         while (true)
         {
+            Press(keyboard.wKey);
+        
+            yield return new WaitForSeconds(5);
+        
+            Release(keyboard.wKey);
+            
+            Move(mouse.delta, new Vector2(100, 100));
+            
             yield return new WaitForSeconds(1);
         }
     }

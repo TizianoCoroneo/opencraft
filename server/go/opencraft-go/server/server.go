@@ -63,6 +63,7 @@ func (g *Game) Stop() {
 }
 
 func (g *Game) handleIWantPlayer(msg *protos.IWantPlayer, conn net.Conn) {
+	log.Info("processing I want player")
 	var i uint32
 
 	if msg.PlayerID == 0 {
@@ -101,6 +102,7 @@ func (g *Game) handleIWantPlayer(msg *protos.IWantPlayer, conn net.Conn) {
 }
 
 func (g *Game) handleIWantMovePlayer(msg *protos.IWantMovePlayer, conn net.Conn) {
+	log.Info("processing I want move player")
 	p, ok := g.Players[msg.PlayerID]
 	if ok {
 		// No checks whatsoever!
@@ -111,6 +113,7 @@ func (g *Game) handleIWantMovePlayer(msg *protos.IWantMovePlayer, conn net.Conn)
 }
 
 func (g *Game) handleIWantChangeBlock(msg *protos.IWantChangeBlock, conn net.Conn) {
+	log.Info("processing I want change block")
 	msgPos := msg.BlockPosition
 	msgTyp := msg.BlockType
 	pos := model.IntPos3{X: int(msgPos.X), Y: int(msgPos.Y), Z: int(msgPos.Z)}
@@ -121,6 +124,7 @@ func (g *Game) handleIWantChangeBlock(msg *protos.IWantChangeBlock, conn net.Con
 }
 
 func (g *Game) handleIWantColumn(msg *protos.IWantColumn, conn net.Conn) {
+	log.Info("processing I want column")
 	pos := &protos.Pos2{X: msg.ColumnPos.X, Z: msg.ColumnPos.Z}
 	chunks := make([]*protos.ChunkData, 1)
 	buf := make([]byte, 16*16*16)

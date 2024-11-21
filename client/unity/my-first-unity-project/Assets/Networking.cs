@@ -46,7 +46,7 @@ public class Networking : MonoBehaviour
         {
             if (outgoingMessages.TryDequeue(out var message))
             {
-                // Debug.Log($"Sending {message} to {client.Client.RemoteEndPoint}");
+                Debug.Log($"Sending {message} to {client.Client.RemoteEndPoint}");
                 message.WriteDelimitedTo(client.GetStream());
             }
         }
@@ -101,6 +101,19 @@ public class Networking : MonoBehaviour
         }
     }
 
+    public void RequestColumn(Pos2 position) {
+        Debug.Log($"Requesting column at {position}");
+        
+        var getColumn = new ToServer
+        {
+            IWantColumn = new IWantColumn
+            {
+                ColumnPos = position
+            }
+        };
+        outgoingMessages.Enqueue(getColumn);
+    }
+
     private void HandleMessageLogin(YouArePlayer youArePlayer)
     {
         Debug.Log(youArePlayer.ToString());
@@ -109,14 +122,7 @@ public class Networking : MonoBehaviour
         playerCharacter.GetComponent<playerscript>().Teleport(new(pos.X, pos.Y, pos.Z));
 
         // Immediately ask for the column at 0,0
-        var getColumn = new ToServer
-        {
-            IWantColumn = new IWantColumn
-            {
-                ColumnPos = new Pos2 { X = 0, Z = 0 }
-            }
-        };
-        outgoingMessages.Enqueue(getColumn);
+        RequestColumn(new Pos2 { X = 0, Z = 0 });
     }
 
     private void HandleMessageColumnData(ColumnData columnData)
