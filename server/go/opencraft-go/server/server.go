@@ -12,16 +12,26 @@ import (
 	"google.golang.org/protobuf/encoding/protodelim"
 )
 
+// IncomingMessage is a struct used to wrap messages that come in from clients.
+// In includes the client connection (to enable sending a reply) and the
+// original protobuf message.
 type IncomingMessage struct {
 	Connection net.Conn
 	Data       *protos.ToServer
 }
 
+// ServerPlayer represents a player on the server. It contains the data
+// associated with the player's avatar and a slice of connections. We allow a
+// slice of connections, instead of a single connection, to enable a player to
+// log simultaneously via multiple connections to facilitate easy handover when
+// a player switches connection, for example when switching between a regular
+// client to a thin client.
 type ServerPlayer struct {
 	model.Player
 	controllers []net.Conn
 }
 
+// The default constructor for the ServerPlayer struct.
 func newServerPlayer() *ServerPlayer {
 	p := &ServerPlayer{
 		controllers: make([]net.Conn, 0),
@@ -30,7 +40,7 @@ func newServerPlayer() *ServerPlayer {
 	return p
 }
 
-// A single game.
+// Game is the root struct of a single game instance.
 type Game struct {
 	World        model.World
 	Players      map[uint32]*ServerPlayer
@@ -41,6 +51,7 @@ type Game struct {
 	s       net.Listener
 }
 
+// The default constructor for the Game struct.
 func NewGame() *Game {
 	return &Game{
 		World:        *model.NewWorld(),
@@ -49,19 +60,28 @@ func NewGame() *Game {
 	}
 }
 
-// Update the game by one step.
+// Updates the game by one step.
 func (g *Game) Update() {
 	g.HandleMessages()
 }
 
+// Returns true iff the game is running and has not been instructed to stop.
 func (g *Game) IsRunning() bool {
 	return g.running
 }
 
+// Stops the game. The game stops sending and receiving messages.
 func (g *Game) Stop() {
 	g.running = false
 }
 
+// Handles the IWantPlayer message sent by a client. This message is sent when a
+// client initially connects to the server and wants to log in. The client can
+// request to log in with a specific player ID by sending a value > 0. If the
+// received player ID is 0, the game automatically assigns a player ID. Clients
+// logged in with the same player ID control the same player/avatar. On a
+// successful login, the server replies to the client with a YouArePlayer
+// message telling the client their player ID and avatar location.
 func (g *Game) handleIWantPlayer(msg *protos.IWantPlayer, conn net.Conn) {
 	var i uint32
 
@@ -100,6 +120,10 @@ func (g *Game) handleIWantPlayer(msg *protos.IWantPlayer, conn net.Conn) {
 	}
 }
 
+// Handles the IWantMovePlayer message from the client. This moves a player
+// avatar to a new position in the world. Currently, the game performs no checks
+// whatsoever if this move is valid. It simply accepts the new position. It does
+// not send a reply.
 func (g *Game) handleIWantMovePlayer(msg *protos.IWantMovePlayer, conn net.Conn) {
 	p, ok := g.Players[msg.PlayerID]
 	if ok {
@@ -110,6 +134,8 @@ func (g *Game) handleIWantMovePlayer(msg *protos.IWantMovePlayer, conn net.Conn)
 	}
 }
 
+// Handles the IWantChangeBlock message from the client. Tries to set the block
+// at the specified location to the specified type. It does not send a reply.
 func (g *Game) handleIWantChangeBlock(msg *protos.IWantChangeBlock, conn net.Conn) {
 	msgPos := msg.BlockPosition
 	msgTyp := msg.BlockType
@@ -120,6 +146,10 @@ func (g *Game) handleIWantChangeBlock(msg *protos.IWantChangeBlock, conn net.Con
 	}
 }
 
+// Handles the IWantColumn message from the client. Currently, the game does not
+// keep track of the world and simply generates a column with a flat 1-block
+// thick layer of non-air blocks in a ColumnData message.
+// TODO the game should generate and keep track of the world.
 func (g *Game) handleIWantColumn(msg *protos.IWantColumn, conn net.Conn) {
 	pos := &protos.Pos2{X: msg.ColumnPos.X, Z: msg.ColumnPos.Z}
 	chunks := make([]*protos.ChunkData, 1)
@@ -142,6 +172,8 @@ func (g *Game) handleIWantColumn(msg *protos.IWantColumn, conn net.Conn) {
 	}
 }
 
+// Handles a single incoming message from a client and sends a reply if
+// necessary.
 func (g *Game) handleMessage(msg *IncomingMessage) {
 	log.Info("received msg")
 	switch x := msg.Data.Payload.(type) {
@@ -158,15 +190,22 @@ func (g *Game) handleMessage(msg *IncomingMessage) {
 	}
 }
 
+// Handles incoming messages from clients. This method first checks the length
+// of the message queue and then processes exactly that number of messages. As
+// such, the method is guaranteed to terminate, even when the incoming message
+// rate exceeds the message processing rate.
 func (g *Game) HandleMessages() {
-	// Handle incoming packets.
-	// Move on if there are no packets to receive.
 	nMsgs := len(g.msgBuf)
 	for i := 0; i < nMsgs; i++ {
 		g.handleMessage(<-g.msgBuf)
 	}
 }
 
+// Starts the game server. Specifically, starts listening on a socket for
+// incoming client messages and enqueues them. This function does not start
+// simulating the game world and does not process incoming messages, that needs
+// to be done seperately by the caller of this function by calling
+// Game.Update().
 func (g *Game) Start() error {
 	g.running = true
 

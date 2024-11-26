@@ -15,6 +15,9 @@ import (
 //go:embed data/blocks.yml
 var blocks string
 
+// GameData represents the types of objects that be present in the game such as
+// blocks and items. These can be specified in yaml format to make them easy to
+// change.
 type GameData struct {
 	Blocks []struct {
 		Name  string `yaml:"name"`
@@ -26,7 +29,6 @@ type GameData struct {
 }
 
 func main() {
-	// timeoutChan := time.NewTimer(10 * time.Second)
 	osSignalChan := make(chan os.Signal, 1)
 	signal.Notify(osSignalChan, os.Interrupt, syscall.SIGINT, syscall.SIGTERM)
 	ticker := time.NewTicker(50 * time.Millisecond)
@@ -40,8 +42,6 @@ func main() {
 	func() {
 		for {
 			select {
-			// case <-timeoutChan.C:
-			// 	return
 			case <-osSignalChan:
 				return
 			case <-ticker.C:
@@ -49,27 +49,4 @@ func main() {
 			}
 		}
 	}()
-
-	// fmt.Println()
-
-	// fmt.Println(blocks)
-
-	// b := []byte(blocks)
-	// var gameData GameData
-
-	// start := time.Now()
-	// fmt.Print("Parsing game data... ")
-	// if err := yaml.Unmarshal(b, &gameData); err != nil {
-	// 	panic(err)
-	// }
-	// done := time.Since(start)
-	// fmt.Printf("done! (%v)\n", done)
-
-	// for _, block := range gameData.Blocks {
-	// 	fmt.Println(block.Name, block.Color)
-	// }
-
-	// for _, item := range gameData.Items {
-	// 	fmt.Println(item.Name)
-	// }
 }
