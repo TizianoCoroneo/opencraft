@@ -7,6 +7,8 @@ A open-source research platform for modifiable virtual environments
 
 ### Switching between Regular and Thin Client
 
+Although the instructions below are for Windows, they can be easily translated to work on Linux or MacOS.
+
 1. Start the [Go server](server/go/opencraft-go), which will start listening on port 7979, by simply running
    `.\opencraft-go.exe`
 2. Start the signaling [web app](https://docs.unity3d.com/Packages/com.unity.renderstreaming@3.1/manual/webapp.html),
