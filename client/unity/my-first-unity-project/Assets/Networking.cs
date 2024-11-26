@@ -38,7 +38,10 @@ public class Networking : MonoBehaviour
             LogIn("localhost");
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Send all queued outgoing messages to the server, and process all queued
+    /// incoming messages from the server.
+    /// </summary>
     void Update()
     {
         var nOutgoing = outgoingMessages.Count;
@@ -61,6 +64,14 @@ public class Networking : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Log in to a server.
+    /// </summary>
+    /// <param name="serverHost">Server address.</param>
+    /// <param name="port">Server port.</param>
+    /// <param name="playerID">Player ID. If 0, the server will assign us a
+    /// player ID. If larger than 0, we request to log in as that player. A
+    /// player can be logged in multiple times.</param>
     public void LogIn(string serverHost = "localhost", int port = 7979, int playerID = 0)
     {
         var addresses = Dns.GetHostAddresses(serverHost);
@@ -69,6 +80,13 @@ public class Networking : MonoBehaviour
         LogIn(new(ip, port), playerID);
     }
 
+    /// <summary>
+    /// Log in to a server.
+    /// </summary>
+    /// <param name="server">The server endpoint (ip+port).</param>
+    /// <param name="playerID">Player ID. If 0, the server will assign us a
+    /// player ID. If larger than 0, we request to log in as that player. A
+    /// player can be logged in multiple times.</param>
     public void LogIn(IPEndPoint server, int playerID = 0)
     {
         ReInitSocket(server);
@@ -80,11 +98,22 @@ public class Networking : MonoBehaviour
         SendToServer(loginMsg);
     }
 
+    /// <summary>
+    /// Enqueue a message to be send to the server. Will be sent when <see
+    /// cref="Update"/> is called.
+    /// </summary>
+    /// <param name="message">The message to send.</param>
     public void SendToServer(ToServer message)
     {
         outgoingMessages.Enqueue(message);
     }
 
+    /// <summary>
+    /// Handle a single incoming message from the server.
+    /// </summary>
+    /// <param name="toClient">The received message.</param>
+    /// <param name="client">The connection the message was received
+    /// from.</param>
     private void HandleMessage(ToClient toClient, TcpClient client)
     {
         switch (toClient.PayloadCase)
@@ -101,6 +130,11 @@ public class Networking : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Handle the server's reply to our <see cref="LogIn"/> request. If the
+    /// login was successful, we should receive a player ID.
+    /// </summary>
+    /// <param name="youArePlayer">The received reply.</param>
     private void HandleMessageLogin(YouArePlayer youArePlayer)
     {
         Debug.Log(youArePlayer.ToString());
@@ -119,6 +153,11 @@ public class Networking : MonoBehaviour
         outgoingMessages.Enqueue(getColumn);
     }
 
+    /// <summary>
+    /// Handle a server message containing a column of blocks in the world. We
+    /// should create that chunk and show it to the player.
+    /// </summary>
+    /// <param name="columnData">The received column of blocks.</param>
     private void HandleMessageColumnData(ColumnData columnData)
     {
         var pos = columnData.Position;
@@ -130,12 +169,22 @@ public class Networking : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Close our current socket and create a new socket to start sending and
+    /// receiving messages from the provided endpoint.
+    /// </summary>
+    /// <param name="server">The new endpoint to which to connect.</param>
     private void ReInitSocket(IPEndPoint server)
     {
         StopSocketReceive();
         StartSocketReceive(server);
     }
 
+    /// <summary>
+    /// Start a new thread that listens for incoming messages and enqueues them
+    /// for later processing in our main game loop.
+    /// </summary>
+    /// <param name="server">The server to connect to.</param>
     private void StartSocketReceive(IPEndPoint server)
     {
         client = new();
@@ -165,6 +214,9 @@ public class Networking : MonoBehaviour
         });
     }
 
+    /// <summary>
+    /// Stop listening to and receiving packets from the server endpoint.
+    /// </summary>
     private async void StopSocketReceive()
     {
         running = false;

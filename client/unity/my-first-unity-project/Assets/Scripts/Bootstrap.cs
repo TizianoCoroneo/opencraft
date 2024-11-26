@@ -6,12 +6,33 @@ using CommandLine;
 using UnityEngine;
 using UnityEngine.Assertions;
 
+/// <summary>
+/// Bootstrap is responsible for configuring the client networking correctly
+/// when starting, such as connecting to a server at the correct address.
+///
+/// <para>
+/// The <c>extraArguments</c> field allows users to use command-line arguments
+/// when running the client via the editor. When using a standalone build, these
+/// arguments are read from the command-line interface and the ones set in the
+/// editor are ignored.
+/// </para>
+/// </summary>
+/// <seealso cref="Networking"/>
+/// <seealso cref="CommandLineInterface"/>
 public class Bootstrap : MonoBehaviour
 {
     [SerializeField] Networking networking;
     [SerializeField] private string[] extraArguments;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Called when this script is enabled, before the first frame, connects the
+    /// client to the configured server by parsing the command-line options
+    /// provided via the editor (when in editor mode) or on the command line
+    /// (when using a stand-alone build).
+    ///
+    /// </summary>
+    /// <seealso
+    /// href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.Start.html"/>
     void Start()
     {
         var args = Environment.GetCommandLineArgs();
@@ -43,6 +64,10 @@ public class Bootstrap : MonoBehaviour
         RunOptions(result.Value);
     }
 
+    /// <summary>
+    /// Starts the client in the way indicated by the provides command line options <c>opts</c>.
+    /// </summary>
+    /// <param name="opts">The command line options</param>
     private void RunOptions(CommandLineInterface opts)
     {
         if (string.IsNullOrEmpty(opts.Hostname))
