@@ -29,7 +29,7 @@ public class HttpServer : MonoBehaviour
     /// server is not meant to serve (HTML) content, it is better to use a
     /// custom port, and stay away from 80, 8080, and the likes.
     /// </summary>
-    [SerializeField] private int listenPort = 7980;
+    public int ListenPort { get; private set; }
 
     private HttpListener httpListener = default;
     private bool listening = default;
@@ -65,8 +65,10 @@ public class HttpServer : MonoBehaviour
     /// <summary>
     /// Start the HTTP Server when this script is enabled.
     /// </summary>
-    void OnEnable()
+    void Start()
     {
+        var bootstrap = FindAnyObjectByType<Bootstrap>();
+        ListenPort = bootstrap.CommandLineArgs.HttpServerPort;
         StartHttpServer();
     }
 
@@ -103,7 +105,7 @@ public class HttpServer : MonoBehaviour
     /// </summary>
     private void StartHttpServer()
     {
-        Debug.Log("Starting HTTP Server");
+        Debug.Log($"Starting HTTP Server on port {ListenPort}");
         if (httpListener != null)
         {
             Debug.LogWarning("there is already an http server!");
@@ -111,7 +113,7 @@ public class HttpServer : MonoBehaviour
         }
         listening = true;
         httpListener = new();
-        httpListener.Prefixes.Add($"http://*:{listenPort}/");
+        httpListener.Prefixes.Add($"http://*:{ListenPort}/");
         foreach (var r in requests)
         {
             r.Response.Close();
@@ -575,6 +577,8 @@ public class HttpServer : MonoBehaviour
     /// <param name="v">The dictionary with parameter values.</param>
     private IEnumerator HandleRequestBecomeClientRoutine(NameValueCollection v)
     {
+        // TODO if we are currently a thin client, tell the renderer to log out.
+
         // Start broadcast if requested
         var broadcastStr = v["broadcast"] ?? "false";
         if (!bool.TryParse(broadcastStr, out var broadcast))

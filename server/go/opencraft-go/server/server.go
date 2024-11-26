@@ -116,7 +116,7 @@ func (g *Game) handleIWantPlayer(msg *protos.IWantPlayer, conn net.Conn) {
 		},
 	}
 	if _, err := protodelim.MarshalTo(conn, reply); err != nil {
-		log.Fatal(err)
+		log.Warn(err)
 	}
 }
 
@@ -168,7 +168,7 @@ func (g *Game) handleIWantColumn(msg *protos.IWantColumn, conn net.Conn) {
 		},
 	}
 	if _, err := protodelim.MarshalTo(conn, reply); err != nil {
-		log.Fatal(err)
+		log.Warn(err)
 	}
 }
 

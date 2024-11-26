@@ -154,7 +154,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 11400000, guid: d50faa7a25b0a654685026ff2dacfb2a, type: 2}
-  listenPort: 7980
 --- !u!4 &292567536
 Transform:
   m_ObjectHideFlags: 0

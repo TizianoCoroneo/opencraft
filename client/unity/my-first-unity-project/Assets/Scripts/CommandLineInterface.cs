@@ -1,15 +1,22 @@
 using CommandLine;
 
 /// <summary>
-/// A simple class used to define command-line options. Used in <see cref="Bootstrap"/>.
+/// A simple class used to define command-line options. Used in <see
+/// cref="Bootstrap"/>.
 /// </summary>
 public class CommandLineInterface
 {
     /// <summary>
+    /// Prevents login. When set, client stays idle at startup.
+    /// </summary>
+    [Option("noLogin", Default = false, Required = false, HelpText = "Prevents login. When set, client stays idle at startup.")]
+    public bool NoLogin { get; set; }
+
+    /// <summary>
     /// The server to which the client should connect. The provided string must
     /// be able to be parsed to an IPv4 address or a hostname.
     /// </summary>
-    [Option("host", Required = false, HelpText = "Server hostname")]
+    [Option("host", Default = "localhost", Required = false, HelpText = "Server hostname")]
     public string Hostname { get; set; }
 
     /// <summary>
@@ -26,4 +33,12 @@ public class CommandLineInterface
     /// </summary>
     [Option("user", Default = 0, Required = false, HelpText = "User ID")]
     public int UserID { get; set; }
+
+    /// <summary>
+    /// The port on which this client's HTTP port is listening for incoming
+    /// requests.
+    /// </summary>
+    /// <seealso cref="HttpServer"/>
+    [Option("httpPort", Default = 7980, Required = false, HelpText = "Listen port for this client's HTTP server")]
+    public int HttpServerPort { get; set; }
 }
