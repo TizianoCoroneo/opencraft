@@ -1,0 +1,13 @@
+2024-11-29T04:03:47+01:00 I! Loading config: client/unity/my-first-unity-project/telegraf.conf
+2024-11-29T04:03:47+01:00 I! Starting Telegraf 1.32.3 brought to you by InfluxData the makers of InfluxDB
+2024-11-29T04:03:47+01:00 I! Available plugins: 235 inputs, 9 aggregators, 32 processors, 26 parsers, 62 outputs, 5 secret-stores
+2024-11-29T04:03:47+01:00 I! Loaded inputs: cpu mem
+2024-11-29T04:03:47+01:00 I! Loaded aggregators:
+2024-11-29T04:03:47+01:00 I! Loaded processors: printer
+2024-11-29T04:03:47+01:00 I! Loaded secretstores:
+2024-11-29T04:03:47+01:00 I! Loaded outputs: influxdb
+2024-11-29T04:03:47+01:00 I! Tags enabled: host=Tizianos-M1-Pro.arnhem.chello.nl
+2024-11-29T04:03:47+01:00 I! [agent] Config: Interval:10s, Quiet:false, Hostname:"Tizianos-M1-Pro.arnhem.chello.nl", Flush Interval:10s
+2024-11-29T04:03:47+01:00 W! [outputs.influxdb] When writing to [http://localhost:8086]: database "telegraf" creation failed: Post "http://localhost:8086/query": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:06:31+01:00 I! [agent] Hang on, flushing any cached metrics before shutdown
+2024-11-29T04:06:31+01:00 I! [agent] Stopping running outputs

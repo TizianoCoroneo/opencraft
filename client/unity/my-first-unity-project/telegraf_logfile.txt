@@ -1,0 +1,404 @@
+2024-11-29T03:07:07+01:00 I! Loading config: telegraf.conf
+2024-11-29T03:07:07+01:00 I! Starting Telegraf 1.32.3 brought to you by InfluxData the makers of InfluxDB
+2024-11-29T03:07:07+01:00 I! Available plugins: 235 inputs, 9 aggregators, 32 processors, 26 parsers, 62 outputs, 5 secret-stores
+2024-11-29T03:07:07+01:00 I! Loaded inputs: cpu mem
+2024-11-29T03:07:07+01:00 I! Loaded aggregators:
+2024-11-29T03:07:07+01:00 I! Loaded processors: printer
+2024-11-29T03:07:07+01:00 I! Loaded secretstores:
+2024-11-29T03:07:07+01:00 I! Loaded outputs: influxdb
+2024-11-29T03:07:07+01:00 I! Tags enabled: host=Tizianos-M1-Pro.arnhem.chello.nl
+2024-11-29T03:07:07+01:00 I! [agent] Config: Interval:10s, Quiet:false, Hostname:"Tizianos-M1-Pro.arnhem.chello.nl", Flush Interval:10s
+2024-11-29T03:07:27+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:07:27+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:07:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:07:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:07:46+01:00 I! Loading config: telegraf.conf
+2024-11-29T03:07:46+01:00 I! Starting Telegraf 1.32.3 brought to you by InfluxData the makers of InfluxDB
+2024-11-29T03:07:46+01:00 I! Available plugins: 235 inputs, 9 aggregators, 32 processors, 26 parsers, 62 outputs, 5 secret-stores
+2024-11-29T03:07:46+01:00 I! Loaded inputs: cpu mem
+2024-11-29T03:07:46+01:00 I! Loaded aggregators:
+2024-11-29T03:07:46+01:00 I! Loaded processors: printer
+2024-11-29T03:07:46+01:00 I! Loaded secretstores:
+2024-11-29T03:07:46+01:00 I! Loaded outputs: influxdb
+2024-11-29T03:07:46+01:00 I! Tags enabled: host=Tizianos-M1-Pro.arnhem.chello.nl
+2024-11-29T03:07:46+01:00 I! [agent] Config: Interval:10s, Quiet:false, Hostname:"Tizianos-M1-Pro.arnhem.chello.nl", Flush Interval:10s
+2024-11-29T03:55:32+01:00 I! Reloading Telegraf config
+2024-11-29T03:55:32+01:00 I! [agent] Hang on, flushing any cached metrics before shutdown
+2024-11-29T03:55:32+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:55:32+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:55:32+01:00 I! [agent] Stopping running outputs
+2024-11-29T03:55:32+01:00 I! Loading config: telegraf.conf
+2024-11-29T03:55:32+01:00 I! Starting Telegraf 1.32.3 brought to you by InfluxData the makers of InfluxDB
+2024-11-29T03:55:32+01:00 I! Available plugins: 235 inputs, 9 aggregators, 32 processors, 26 parsers, 62 outputs, 5 secret-stores
+2024-11-29T03:55:32+01:00 I! Loaded inputs: cpu mem
+2024-11-29T03:55:32+01:00 I! Loaded aggregators:
+2024-11-29T03:55:32+01:00 I! Loaded processors: printer
+2024-11-29T03:55:32+01:00 I! Loaded secretstores:
+2024-11-29T03:55:32+01:00 I! Loaded outputs: influxdb
+2024-11-29T03:55:32+01:00 I! Tags enabled: host=Tizianos-M1-Pro.arnhem.chello.nl
+2024-11-29T03:55:32+01:00 I! [agent] Config: Interval:10s, Quiet:false, Hostname:"Tizianos-M1-Pro.arnhem.chello.nl", Flush Interval:10s
+2024-11-29T03:55:32+01:00 W! [outputs.influxdb] When writing to [http://localhost:8086]: database "telegraf" creation failed: Post "http://localhost:8086/query": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:55:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:55:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:55:42+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:55:42+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:55:47+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:55:47+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:55:52+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:55:52+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:55:57+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:55:57+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:56:02+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:56:02+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:56:07+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:56:07+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:56:12+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:56:12+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:56:17+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:56:17+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:56:22+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:56:22+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:56:27+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:56:27+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:56:32+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:56:32+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:56:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:56:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:56:42+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:56:42+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:56:47+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:56:47+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:56:52+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:56:52+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:56:57+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:56:57+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:57:02+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:57:02+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:57:07+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:57:07+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:57:12+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:57:12+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:57:17+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:57:17+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:57:22+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:57:22+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:57:27+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:57:27+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:57:32+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:57:32+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:57:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:57:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:57:42+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:57:42+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:57:47+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:57:47+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:57:52+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:57:52+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:57:57+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:57:57+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:58:02+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:58:02+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:58:07+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:58:07+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:58:12+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:58:12+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:58:17+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:58:17+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:58:22+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:58:22+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:58:27+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:58:27+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:58:32+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:58:32+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:58:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:58:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:58:42+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:58:42+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:58:47+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:58:47+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:58:52+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:58:52+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:58:57+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:58:57+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:59:02+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:59:02+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:59:07+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:59:07+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:59:12+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:59:12+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:59:17+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:59:17+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:59:22+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:59:22+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:59:27+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:59:27+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:59:32+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:59:32+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:59:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:59:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:59:42+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:59:42+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:59:47+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:59:47+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:59:52+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:59:52+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T03:59:57+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T03:59:57+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:00:02+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:00:02+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:00:07+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:00:07+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:00:12+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:00:12+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:00:17+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:00:17+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:00:22+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:00:22+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:00:27+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:00:27+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:00:32+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:00:32+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:00:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:00:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:00:42+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:00:42+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:00:47+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:00:47+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:00:52+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:00:52+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:00:57+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:00:57+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:01:02+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:01:02+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:01:07+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:01:07+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:01:12+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:01:12+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:01:17+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:01:17+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:01:22+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:01:22+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:01:27+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:01:27+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:01:32+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:01:32+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:01:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:01:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:01:42+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:01:42+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:01:47+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:01:47+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:01:52+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:01:52+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:01:57+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:01:57+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:02:02+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:02:02+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:02:07+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:02:07+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:02:12+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:02:12+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:02:17+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:02:17+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:02:22+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:02:22+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:02:27+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:02:27+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:02:32+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:02:32+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:02:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:02:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:02:42+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:02:42+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:02:47+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:02:47+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:02:52+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:02:52+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:02:57+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:02:57+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:03:02+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:03:02+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:03:07+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:03:07+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:03:12+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:03:12+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:03:17+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:03:17+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:03:22+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:03:22+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:03:27+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:03:27+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:03:32+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:03:32+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:03:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:03:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:03:42+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:03:42+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:06:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:06:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:06:42+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:06:42+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:06:46+01:00 I! [agent] Hang on, flushing any cached metrics before shutdown
+2024-11-29T04:06:46+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:06:46+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:06:46+01:00 I! [agent] Stopping running outputs
+2024-11-29T04:06:47+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:06:47+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:06:57+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:06:57+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:07:07+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:07:07+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:07:17+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:07:17+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:07:27+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:07:27+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:07:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:07:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:07:47+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:07:47+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:07:57+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:07:57+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:08:07+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:08:07+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:08:17+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:08:17+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:08:27+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:08:27+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:08:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:08:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:08:47+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:08:47+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:08:57+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:08:57+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:09:07+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:09:07+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:09:17+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:09:17+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:09:27+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:09:27+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:09:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:09:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:09:47+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:09:47+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:09:57+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:09:57+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:10:07+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:10:07+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:10:17+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:10:17+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:10:27+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:10:27+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:10:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:10:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:10:47+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:10:47+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:10:57+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:10:57+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:11:07+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:11:07+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:11:17+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:11:17+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:11:27+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:11:27+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:11:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:11:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:11:47+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:11:47+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:11:57+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:11:57+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:12:07+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:12:07+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:12:17+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:12:17+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:12:27+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:12:27+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:12:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:12:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:12:47+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:12:47+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:12:57+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:12:57+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:13:07+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:13:07+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:13:17+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:13:17+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:13:27+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:13:27+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:13:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:13:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:13:47+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:13:47+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:13:57+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:13:57+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:14:07+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:14:07+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:14:17+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:14:17+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:14:27+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:14:27+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:14:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:14:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:14:47+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:14:47+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:14:57+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:14:57+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:15:07+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:15:07+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:15:17+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:15:17+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:15:27+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:15:27+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:15:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:15:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:15:47+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:15:47+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:15:57+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:15:57+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:16:07+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:16:07+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:16:17+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:16:17+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:16:27+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:16:27+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:16:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:16:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:16:47+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:16:47+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:16:57+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:16:57+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:17:07+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:17:07+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:17:17+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:17:17+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:17:27+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:17:27+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:17:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:17:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:17:47+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:17:47+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:17:57+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:17:57+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:18:07+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:18:07+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:18:17+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:18:17+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:18:27+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:18:27+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:18:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:18:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:18:47+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:18:47+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:18:57+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:18:57+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:19:07+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:19:07+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:19:17+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:19:17+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:19:27+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:19:27+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:19:37+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:19:37+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:19:47+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:19:47+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
+2024-11-29T04:19:57+01:00 E! [outputs.influxdb] When writing to [http://localhost:8086]: failed doing req: Post "http://localhost:8086/write?db=telegraf": dial tcp [::1]:8086: connect: connection refused
+2024-11-29T04:19:57+01:00 E! [agent] Error writing to outputs.influxdb: could not write any address
