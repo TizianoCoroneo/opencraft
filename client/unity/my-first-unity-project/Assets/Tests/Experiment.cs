@@ -29,7 +29,9 @@ public class Experiment : InputTestFixture
         
         Press(keyboard.wKey);
         
-        yield return new WaitForSeconds(60);
+        yield return new WaitForSeconds(5);
+
+        Debug.Log("Starting to flip");
 
         yield return KeepFlipping();
     }
@@ -50,7 +52,7 @@ public class Experiment : InputTestFixture
     }
 
     IEnumerator BecomeThinClient() {
-        using var www = UnityWebRequest.Get("http://localhost:7980/become/thinclient?host=localhost&port=7999&signalingPort=7981");
+        using var www = UnityWebRequest.Get("http://localhost:7980/become/thinclient?host=192.168.1.142&port=7999&signalingPort=7981");
         yield return www.SendWebRequest();
 
         if (www.result != UnityWebRequest.Result.Success) Debug.Log(www.error);
@@ -58,7 +60,7 @@ public class Experiment : InputTestFixture
     }
     
     IEnumerator BecomeClient() {
-        using var www = UnityWebRequest.Get("http://localhost:7980/become/client?host=localhost&port=7979&playerID=1");
+        using var www = UnityWebRequest.Get("http://localhost:7980/become/client?host=192.168.1.142&port=7979&playerID=1");
         yield return www.SendWebRequest();
 
         if (www.result != UnityWebRequest.Result.Success) Debug.Log(www.error);
