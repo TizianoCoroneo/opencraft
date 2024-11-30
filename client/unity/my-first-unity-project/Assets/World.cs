@@ -8,6 +8,7 @@ using UnityEngine.PlayerLoop;
 public class World : MonoBehaviour
 {
     public GameObject BlockPrefab;
+    public GameObject GrassPrefab;
     public GameObject Player;
     public Networking Net;
 
@@ -59,7 +60,11 @@ public class World : MonoBehaviour
             var z = i % (16 * 16) / 16;
             var y = i / (16 * 16);
             var pos = new Vector3(x + position.x, y, z + position.y);
-            Instantiate(BlockPrefab, pos, Quaternion.identity);
+            switch (v)
+            {
+                case 1: Instantiate(BlockPrefab, pos, Quaternion.identity); break; 
+                default: Instantiate(GrassPrefab, pos, Quaternion.identity); break;
+            }
         }
     }
 }

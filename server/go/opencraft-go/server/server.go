@@ -2,14 +2,14 @@ package server
 
 import (
 	"bufio"
-	"net"
-	"time"
-
 	"github.com/g3n/engine/math32"
 	"github.com/jdonkervliet/opencraft-go/model"
 	"github.com/jdonkervliet/opencraft-go/protos"
 	log "github.com/sirupsen/logrus"
 	"google.golang.org/protobuf/encoding/protodelim"
+	"math/rand"
+	"net"
+	"time"
 )
 
 type IncomingMessage struct {
@@ -42,6 +42,8 @@ type Game struct {
 }
 
 func NewGame() *Game {
+	rand.Seed(time.Now().UnixNano())
+
 	return &Game{
 		World:        *model.NewWorld(),
 		Players:      make(map[uint32]*ServerPlayer),
@@ -129,7 +131,11 @@ func (g *Game) handleIWantColumn(msg *protos.IWantColumn, conn net.Conn) {
 	chunks := make([]*protos.ChunkData, 1)
 	buf := make([]byte, 16*16*16)
 	for i := 0; i < 16*16; i++ {
-		buf[i] = 1
+		if rand.Intn(2) == 0 {
+			buf[i] = 1
+		} else {
+			buf[i] = 2
+		}
 	}
 	chunkData := &protos.ChunkData{BlockTypes: buf}
 	chunks[0] = chunkData

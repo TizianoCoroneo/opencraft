@@ -1056,6 +1056,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BlockPrefab: {fileID: 2867210926734458378, guid: 85318610a031c7d45bf0ebf01d978774,
     type: 3}
+  GrassPrefab: {fileID: 2867210926734458378, guid: 99c1e76dbff094307b08af88a1189135,
+    type: 3}
   Player: {fileID: 1229785342}
   Net: {fileID: 775416439}
 --- !u!1660057539 &9223372036854775807
