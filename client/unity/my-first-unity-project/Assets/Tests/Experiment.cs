@@ -13,7 +13,7 @@ public class Experiment : InputTestFixture
     [UnityTest]
     public IEnumerator GoForward60Seconds()
     {
-        SceneManager.LoadScene("Scenes/Receiver/SceneThinClient");
+        SceneManager.LoadScene("Scenes/Client/Client");
         Debug.Log("Scene loaded");
 
         yield return new WaitForSeconds(1);

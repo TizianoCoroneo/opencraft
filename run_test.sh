@@ -8,5 +8,8 @@ DB_ADDRESS=192.168.1.1 # influxDB instance address
 DB_PORT=8086 # influxDB HTTP port
 
 telegraf --config telegraf.conf & # Telegraf agent
+
 $UNITY_PATH -runTests -batchmode -testResults ./test_results.xml -testPlatform PlayMode -testFilter GoForward60Seconds # Unity client
+
+
 
