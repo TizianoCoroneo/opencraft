@@ -6,42 +6,62 @@ using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 using Unity.RenderStreaming.Samples;
 using UnityEngine.InputSystem;
+using UnityEngine.Networking;
 
 public class Experiment : InputTestFixture
 {
-    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-    // `yield return null;` to skip a frame.
     [UnityTest]
-    public IEnumerator ExperimentWithEnumeratorPasses()
+    public IEnumerator GoForward60Seconds()
     {
         SceneManager.LoadScene("Scenes/Receiver/SceneThinClient");
         Debug.Log("Scene loaded");
 
         yield return new WaitForSeconds(1);
-
-        var receiver = GameObject.Find("ReceiverSample");
-        var component = receiver.GetComponent<ReceiverSample>();
         
-        component.OnStart();
+        // var receiver = GameObject.Find("ReceiverSample");
+        // var component = receiver.GetComponent<ReceiverSample>();
+        //
+        // component.OnStart();
         
-        yield return new WaitForSeconds(1);
-
         var keyboard = InputSystem.AddDevice<Keyboard>();
-        var mouse = Mouse.current;
+        // var mouse = Mouse.current;
+        // Move(mouse.delta, new Vector2(100, 100));
         
-        Move(mouse.delta, new Vector2(100, 100));
+        Press(keyboard.wKey);
         
-        while (true)
-        {
-            Press(keyboard.wKey);
-        
-            yield return new WaitForSeconds(5);
-        
-            Release(keyboard.wKey);
-            
-            Move(mouse.delta, new Vector2(100, 100));
-            
-            yield return new WaitForSeconds(1);
-        }
+        yield return new WaitForSeconds(60);
+
+        yield return KeepFlipping();
+    }
+
+    IEnumerator KeepFlipping()
+    {
+        var isThinClient = false;
+
+        for (int i = 0; i < 10; i++)
+        { 
+            yield return new WaitForSeconds(10);
+
+            if (isThinClient) yield return BecomeThinClient();
+            else yield return BecomeClient();
+
+            isThinClient = !isThinClient;
+        }        
+    }
+
+    IEnumerator BecomeThinClient() {
+        using var www = UnityWebRequest.Get("http://localhost:7980/become/thinclient?host=localhost&port=7999&signalingPort=7981");
+        yield return www.SendWebRequest();
+
+        if (www.result != UnityWebRequest.Result.Success) Debug.Log(www.error);
+        else Debug.Log("Became thin client!");
+    }
+    
+    IEnumerator BecomeClient() {
+        using var www = UnityWebRequest.Get("http://localhost:7980/become/client?host=localhost&port=7979&playerID=1");
+        yield return www.SendWebRequest();
+
+        if (www.result != UnityWebRequest.Result.Success) Debug.Log(www.error);
+        else Debug.Log("Became client!");
     }
 }
