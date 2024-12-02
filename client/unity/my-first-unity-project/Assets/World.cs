@@ -9,6 +9,9 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 
+/// <summary>
+/// A trivial class responsible for keeping track of the game's world state.
+/// </summary>
 public class World : MonoBehaviour
 {
     public GameObject BlockPrefab;
@@ -19,13 +22,7 @@ public class World : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // for (var i = 0; i < 100; i++)
-        // {
-        //     for (var j = 0; j < 100; j++)
-        //     {
-        //         Instantiate(BlockPrefab, new Vector3(i, 0, j), Quaternion.identity);
-        //     }
-        // }
+
     }
     
     private Dictionary<Vector2Int, List<GameObject>> _loadedChunksDict = new Dictionary<Vector2Int, List<GameObject>>();

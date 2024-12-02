@@ -6,13 +6,40 @@ using CommandLine;
 using UnityEngine;
 using UnityEngine.Assertions;
 
+/// <summary>
+/// Bootstrap is responsible for configuring the client networking correctly
+/// when starting, such as connecting to a server at the correct address.
+///
+/// <para>
+/// The <c>extraArguments</c> field allows users to use command-line arguments
+/// when running the client via the editor. When using a standalone build, these
+/// arguments are read from the command-line interface and the ones set in the
+/// editor are ignored.
+/// </para>
+/// </summary>
+/// <seealso cref="Networking"/>
+/// <seealso cref="CommandLineInterface"/>
 public class Bootstrap : MonoBehaviour
 {
     [SerializeField] Networking networking;
     [SerializeField] private string[] extraArguments;
 
-    // Start is called before the first frame update
-    void Start()
+    /// <summary>
+    /// Read-only command line arguments, as passed via the command line, or as
+    /// extra arguments via the editor.
+    /// </summary>
+    public CommandLineInterface CommandLineArgs { get; private set; }
+
+    /// <summary>
+    /// Called when this script is enabled, before the first frame, connects the
+    /// client to the configured server by parsing the command-line options
+    /// provided via the editor (when in editor mode) or on the command line
+    /// (when using a stand-alone build).
+    ///
+    /// </summary>
+    /// <seealso
+    /// href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.Start.html"/>
+    void Awake()
     {
         var args = Environment.GetCommandLineArgs();
         var parser = new Parser(with =>
@@ -40,14 +67,23 @@ public class Bootstrap : MonoBehaviour
         }
         Assert.IsNotNull(result);
         Assert.IsNotNull(result.Value);
-        RunOptions(result.Value);
+        CommandLineArgs = result.Value;
     }
 
-    private void RunOptions(CommandLineInterface opts)
+    void Start()
     {
-        if (string.IsNullOrEmpty(opts.Hostname))
+        RunOptions();
+    }
+
+    /// <summary>
+    /// Starts the client in the way indicated by the provides command line options <c>opts</c>.
+    /// </summary>
+    private void RunOptions()
+    {
+        var opts = CommandLineArgs;
+
+        if (opts.NoLogin)
         {
-            Debug.LogWarning("no --host specified");
             return;
         }
 
@@ -60,6 +96,7 @@ public class Bootstrap : MonoBehaviour
 
         var ip = addrs.Where(x => x.AddressFamily == AddressFamily.InterNetwork).First();
         var ep = new IPEndPoint(ip, opts.Port);
+
         networking.LogIn(ep, opts.UserID);
     }
 

@@ -7,6 +7,10 @@ using Unity.RenderStreaming;
 
 namespace Opencraft.RenderStreaming
 {
+    /// <summary>
+    /// This script is responsible for receiving video and audio from, and
+    /// sending user input to, a render client. It runs on thin clients.
+    /// </summary>
     static class InputSenderExtension
     {
         public static (Rect, Vector2Int) GetRegionAndSize(this RawImage image)
