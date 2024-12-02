@@ -1,5 +1,5 @@
 #! /bin/sh
 set -eu
 
-signaling-server/webserver_mac
-
+machine=$(uname -s | grep -qi darwin && echo "mac" || echo "linux")
+signaling-server/webserver_${machine}
