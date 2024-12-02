@@ -1,4 +1,5 @@
 #! /bin/sh
 set -eu
 
-server/go/opencraft-go/opencraft-go # Game server port: 7979
+machine=$(uname -s | grep -qi darwin && echo "mac" || echo "linux")
+server/go/opencraft-go/opencraft-go-${machine} # Game server port: 7979

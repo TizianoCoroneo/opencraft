@@ -144,20 +144,6 @@ public class Networking : MonoBehaviour
         outgoingMessages.Enqueue(getColumn);
     }
 
-    public void RequestColumn(Pos2 position)
-    {
-        Debug.Log($"Requesting column at {position}");
-
-        var getColumn = new ToServer
-        {
-            IWantColumn = new IWantColumn
-            {
-                ColumnPos = position
-            }
-        };
-        outgoingMessages.Enqueue(getColumn);
-    }
-
     /// <summary>
     /// Handle the server's reply to our <see cref="LogIn"/> request. If the
     /// login was successful, we should receive a player ID.
