@@ -23,23 +23,9 @@
     <Language>en-US</Language>
     <DocumentationSources>
       <DocumentationSource sourceFile="Temp\bin\Debug\Assembly-CSharp.dll" />
-<DocumentationSource sourceFile="Temp\bin\Debug\Assembly-CSharp.xml" />
-<DocumentationSource sourceFile="Temp\bin\Debug\Unity.RenderStreaming.dll" />
-<DocumentationSource sourceFile="Temp\bin\Debug\Unity.RenderStreaming.xml" />
-<DocumentationSource sourceFile="Temp\bin\Debug\Unity.RenderStreaming.Editor.dll" />
-<DocumentationSource sourceFile="Temp\bin\Debug\Unity.RenderStreaming.Editor.xml" />
-<DocumentationSource sourceFile="Temp\bin\Debug\Unity.RenderStreaming.RuntimeTests.dll" />
-<DocumentationSource sourceFile="Temp\bin\Debug\Unity.RenderStreaming.RuntimeTests.xml" />
-<DocumentationSource sourceFile="Temp\bin\Debug\Unity.RenderStreaming.Sample.dll" />
-<DocumentationSource sourceFile="Temp\bin\Debug\Unity.RenderStreaming.Sample.xml" />
-<DocumentationSource sourceFile="Temp\bin\Debug\Unity.RenderStreaming.Sample.Editor.dll" />
-<DocumentationSource sourceFile="Temp\bin\Debug\Unity.RenderStreaming.Sample.Editor.xml" />
-<DocumentationSource sourceFile="Temp\bin\Debug\Unity.RenderStreaming.Sample.Stats.dll" />
-<DocumentationSource sourceFile="Temp\bin\Debug\Unity.RenderStreaming.Sample.Stats.xml" />
-<DocumentationSource sourceFile="Temp\bin\Debug\Unity.RenderStreaming.Sample.WebBrowserInput.dll" />
-<DocumentationSource sourceFile="Temp\bin\Debug\Unity.RenderStreaming.Sample.WebBrowserInput.xml" /></DocumentationSources>
+<DocumentationSource sourceFile="Temp\bin\Debug\Assembly-CSharp.xml" /></DocumentationSources>
     <HelpFileFormat>Markdown</HelpFileFormat>
-    <SyntaxFilters>Standard</SyntaxFilters>
+    <SyntaxFilters>C#</SyntaxFilters>
     <PresentationStyle>Markdown</PresentationStyle>
     <CleanIntermediates>True</CleanIntermediates>
     <KeepLogFile>True</KeepLogFile>
@@ -57,10 +43,43 @@
     <assemblyIdentity name="Unity.InputSystem" />
     <assemblyIdentity name="Google.Protobuf" />
     <assemblyIdentity name="CommandLine" />
+    <assemblyIdentity name="UnityEngine.UI" />
+    <assemblyIdentity name="Unity.WebRTC" />
+    <assemblyIdentity name="Unity.TextMeshPro" />
+    <assemblyIdentity name="websocket-sharp" />
+    <assemblyIdentity name="UnityEngine.TestRunner" />
+    <assemblyIdentity name="nunit.framework" />
   </ignoreIfUnresolved>
 </configuration>
       </PlugInConfig>
     </PlugInConfigurations>
+    <VisibleItems>InheritedMembers, InheritedFrameworkMembers, Protected, ProtectedInternalAsProtected, NonBrowsable</VisibleItems>
+    <ApiFilter>
+      <Filter entryType="Namespace" fullName="" isExposed="False" xmlns="">
+  <Filter entryType="Class" fullName="Bootstrap" isExposed="True" />
+  <Filter entryType="Class" fullName="CommandLineInterface" isExposed="True" />
+  <Filter entryType="Class" fullName="FrameRateManager" isExposed="True" />
+  <Filter entryType="Class" fullName="GameManager" isExposed="True" />
+  <Filter entryType="Enumeration" fullName="GameScenes" isExposed="True" />
+  <Filter entryType="Class" fullName="HttpServer" isExposed="True" />
+  <Filter entryType="Class" fullName="Networking" isExposed="True" />
+  <Filter entryType="Class" fullName="playerscript" isExposed="True" />
+  <Filter entryType="Class" fullName="Readme" isExposed="True" />
+  <Filter entryType="Class" fullName="Readme.Section" isExposed="True" />
+  <Filter entryType="Class" fullName="Receiver" isExposed="True" />
+  <Filter entryType="Class" fullName="RenderStreamingSettings" isExposed="True" />
+  <Filter entryType="Class" fullName="SampleManager" isExposed="True" />
+  <Filter entryType="Enumeration" fullName="SignalingType" isExposed="True" />
+  <Filter entryType="Class" fullName="UserInputManager" isExposed="True" />
+  <Filter entryType="Class" fullName="World" isExposed="True" />
+</Filter>
+<Filter entryType="Namespace" fullName="Unity.RenderStreaming" isExposed="False" xmlns="" />
+<Filter entryType="Namespace" fullName="Unity.RenderStreaming.Editor" isExposed="False" xmlns="" />
+<Filter entryType="Namespace" fullName="Unity.RenderStreaming.InputSystem" isExposed="False" xmlns="" />
+<Filter entryType="Namespace" fullName="Unity.RenderStreaming.RuntimeTest" isExposed="False" xmlns="" />
+<Filter entryType="Namespace" fullName="Unity.RenderStreaming.Samples" isExposed="False" xmlns="" />
+<Filter entryType="Namespace" fullName="Unity.RenderStreaming.Signaling" isExposed="False" xmlns="" />
+<Filter entryType="Namespace" fullName="UnityEngine.InputSystem" isExposed="False" xmlns="" /></ApiFilter>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->
@@ -94,14 +113,53 @@
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Unity.RenderStreaming">
+      <HintPath>Temp\bin\Debug\Unity.RenderStreaming.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderStreaming.Editor">
+      <HintPath>Temp\bin\Debug\Unity.RenderStreaming.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderStreaming.RuntimeTests">
+      <HintPath>Temp\bin\Debug\Unity.RenderStreaming.RuntimeTests.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderStreaming.Sample">
+      <HintPath>Temp\bin\Debug\Unity.RenderStreaming.Sample.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderStreaming.Sample.Editor">
+      <HintPath>Temp\bin\Debug\Unity.RenderStreaming.Sample.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderStreaming.Sample.Stats">
+      <HintPath>Temp\bin\Debug\Unity.RenderStreaming.Sample.Stats.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderStreaming.Sample.WebBrowserInput">
+      <HintPath>Temp\bin\Debug\Unity.RenderStreaming.Sample.WebBrowserInput.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.CoreModule">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Unity\Hub\Editor\2022.3.26f1\Editor\Data\Managed\UnityEngine\UnityEditor.CoreModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>..\..\..\..\..\..\..\Program Files\Unity\Hub\Editor\2022.3.26f1\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Unity\Hub\Editor\2022.3.26f1\Editor\Data\Managed\UnityEngine\UnityEngine.AudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>..\..\..\..\..\..\..\Program Files\Unity\Hub\Editor\2022.3.26f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Unity\Hub\Editor\2022.3.26f1\Editor\Data\Managed\UnityEngine\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.InputModule">
       <HintPath>..\..\..\..\..\..\..\Program Files\Unity\Hub\Editor\2022.3.26f1\Editor\Data\Managed\UnityEngine\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Unity\Hub\Editor\2022.3.26f1\Editor\Data\Managed\UnityEngine\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Unity\Hub\Editor\2022.3.26f1\Editor\Data\Managed\UnityEngine\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Unity\Hub\Editor\2022.3.26f1\Editor\Data\Managed\UnityEngine\UnityEngine.UIElementsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
       <HintPath>..\..\..\..\..\..\..\Program Files\Unity\Hub\Editor\2022.3.26f1\Editor\Data\Managed\UnityEngine\UnityEngine.UIModule.dll</HintPath>
