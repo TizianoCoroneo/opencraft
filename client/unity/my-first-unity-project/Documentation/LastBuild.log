@@ -1,0 +1,1078 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2024.9.12.0" projectFile="C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\documentation.shfbproj" started="03/12/2024 11:47:16">
+<buildStep step="Initializing">
+The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder&#39;
+Locating components in the following folder(s):
+    C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project
+    C:\ProgramData\EWSoftware\Sandcastle Help File Builder\Components and Plug-Ins
+    C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components
+Using framework reflection data for &#39;.NET Framework 4.7.2&#39; located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Data\.NETFramework&#39;
+Using presentation style &#39;Markdown&#39; located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\Markdown&#39;
+Loading and initializing plug-ins...
+Assembly Binding Redirection Version 2024.9.12.0
+Copyright &#169; 2006-2024, Eric Woodruff, All Rights Reserved
+</buildStep>
+<buildStep step="ClearWorkFolder">
+Clearing working folder...
+-------------------------------
+Clearing any prior web/markdown output...
+</buildStep>
+<buildStep step="ValidatingDocumentationSources">
+Validating and copying documentation source information
+Source: C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Temp\bin\Debug\Assembly-CSharp.dll
+    Found assembly &#39;C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Temp\bin\Debug\Assembly-CSharp.dll&#39;
+Source: C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Temp\bin\Debug\Assembly-CSharp.xml
+
+References to include:
+    Unity.RenderStreaming
+    Unity.RenderStreaming.Editor
+    Unity.RenderStreaming.RuntimeTests
+    Unity.RenderStreaming.Sample
+    Unity.RenderStreaming.Sample.Editor
+    Unity.RenderStreaming.Sample.Stats
+    Unity.RenderStreaming.Sample.WebBrowserInput
+    UnityEditor.CoreModule
+    UnityEngine
+    UnityEngine.AudioModule
+    UnityEngine.CoreModule
+    UnityEngine.IMGUIModule
+    UnityEngine.InputModule
+    UnityEngine.PhysicsModule
+    UnityEngine.TextRenderingModule
+    UnityEngine.UIElementsModule
+    UnityEngine.UIModule
+    UnityEngine.UnityWebRequestModule
+
+Copying XML comments files
+    C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Temp\bin\Debug\Assembly-CSharp.xml -&gt; C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\Assembly-CSharp.xml
+</buildStep>
+<buildStep step="GenerateSharedContent">
+Generating shared content files (en-US, English (United States))...
+    Last step completed in 00:00:00.0011
+</buildStep>
+<buildStep step="GenerateApiFilter">
+Generating API filter for MRefBuilder...
+    Last step completed in 00:00:00.0081
+</buildStep>
+<buildStep step="GenerateReflectionInfo">
+Generating reflection information...
+<plugIn name="Assembly Binding Redirection" behavior="Before" priority="1000">
+Adding ignored assembly names to assembly resolver configuration:
+    BusinessObjects.Licensing.KeycodeDecoder
+    Microsoft.VisualStudio.TestTools.UITest.Playback
+    Unity.InputSystem
+    Google.Protobuf
+    CommandLine
+    UnityEngine.UI
+    Unity.WebRTC
+    Unity.TextMeshPro
+    websocket-sharp
+    UnityEngine.TestRunner
+    nunit.framework
+</plugIn>[C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\MSBuild.exe - GenerateRefInfo-cb07fcf4-1617-4297-8cae-7f22f5f4370d.proj]
+Build started 03/12/2024 11:47:25.
+
+Project &quot;C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-cb07fcf4-1617-4297-8cae-7f22f5f4370d.proj&quot; on node 1 (default targets).
+PrepareForBuild:
+  Creating directory &quot;obj\Debug\&quot;.
+GenerateRefInfo:
+  Microsoft.Build (v17.12.6+db5f6012cb7f6e2dd7066c50c573c0d352713407)
+  c Microsoft Corporation. All rights reserved.
+  No source code context base path specified.  Source context information is unavailable.
+  Loaded 1 assemblies for reflection and 19 dependency assemblies.
+MRefBuilder : warning : Ignoring unresolved assembly reference: Unity.InputSystem (Unity.InputSystem, Version=1.7.0.0, Culture=neutral, PublicKeyToken=null) required by Assembly-CSharp [C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-cb07fcf4-1617-4297-8cae-7f22f5f4370d.proj]
+MRefBuilder : warning : Ignoring unresolved assembly reference: Google.Protobuf (Google.Protobuf, Version=3.28.2.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604) required by Assembly-CSharp [C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-cb07fcf4-1617-4297-8cae-7f22f5f4370d.proj]
+MRefBuilder : warning : Ignoring unresolved assembly reference: CommandLine (CommandLine, Version=2.9.1.0, Culture=neutral, PublicKeyToken=5a870481e358d379) required by Assembly-CSharp [C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-cb07fcf4-1617-4297-8cae-7f22f5f4370d.proj]
+MRefBuilder : warning : Ignoring unresolved assembly reference: UnityEngine.UI (UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null) required by Assembly-CSharp [C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-cb07fcf4-1617-4297-8cae-7f22f5f4370d.proj]
+MRefBuilder : warning : Ignoring unresolved assembly reference: UnityEngine.UI (UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null) required by Unity.RenderStreaming [C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-cb07fcf4-1617-4297-8cae-7f22f5f4370d.proj]
+MRefBuilder : warning : Ignoring unresolved assembly reference: Unity.WebRTC (Unity.WebRTC, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null) required by Unity.RenderStreaming [C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-cb07fcf4-1617-4297-8cae-7f22f5f4370d.proj]
+  Wrote information on 3 namespaces, 33 types, and 533 members
+  Merging duplicate type and member information
+  Merged 0 duplicate type(s) and 0 duplicate member(s)
+Done Building Project &quot;C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-cb07fcf4-1617-4297-8cae-7f22f5f4370d.proj&quot; (default targets).
+    Last step completed in 00:00:02.6737
+</buildStep>
+<buildStep step="ApplyDocumentModel">
+Applying document model to reflection output...
+    Last step completed in 00:00:00.0401
+</buildStep>
+<buildStep step="AddApiTopicFilenames">
+Adding topic filenames to API members...
+    Unique name M_Networking_LogIn_1 generated for M:Networking.LogIn(System.String,System.Int32,System.Int32)
+    Unique name M_Opencraft_NetCode_BlockUpdate__ctor_1 generated for M:Opencraft.NetCode.BlockUpdate.#ctor(Opencraft.NetCode.BlockUpdate)
+    Unique name M_Opencraft_NetCode_BlockUpdate_Equals_1 generated for M:Opencraft.NetCode.BlockUpdate.Equals(System.Object)
+    Unique name M_Opencraft_NetCode_BlockUpdate_MergeFrom_1 generated for M:Opencraft.NetCode.BlockUpdate.MergeFrom(Opencraft.NetCode.BlockUpdate)
+    Unique name M_Opencraft_NetCode_ChunkData__ctor_1 generated for M:Opencraft.NetCode.ChunkData.#ctor(Opencraft.NetCode.ChunkData)
+    Unique name M_Opencraft_NetCode_ChunkData_Equals_1 generated for M:Opencraft.NetCode.ChunkData.Equals(System.Object)
+    Unique name M_Opencraft_NetCode_ChunkData_MergeFrom_1 generated for M:Opencraft.NetCode.ChunkData.MergeFrom(Opencraft.NetCode.ChunkData)
+    Unique name M_Opencraft_NetCode_ColumnData__ctor_1 generated for M:Opencraft.NetCode.ColumnData.#ctor(Opencraft.NetCode.ColumnData)
+    Unique name M_Opencraft_NetCode_ColumnData_Equals_1 generated for M:Opencraft.NetCode.ColumnData.Equals(System.Object)
+    Unique name M_Opencraft_NetCode_ColumnData_MergeFrom_1 generated for M:Opencraft.NetCode.ColumnData.MergeFrom(Opencraft.NetCode.ColumnData)
+    Unique name M_Opencraft_NetCode_IWantChangeBlock__ctor_1 generated for M:Opencraft.NetCode.IWantChangeBlock.#ctor(Opencraft.NetCode.IWantChangeBlock)
+    Unique name M_Opencraft_NetCode_IWantChangeBlock_Equals_1 generated for M:Opencraft.NetCode.IWantChangeBlock.Equals(System.Object)
+    Unique name M_Opencraft_NetCode_IWantChangeBlock_MergeFrom_1 generated for M:Opencraft.NetCode.IWantChangeBlock.MergeFrom(Opencraft.NetCode.IWantChangeBlock)
+    Unique name M_Opencraft_NetCode_IWantColumn__ctor_1 generated for M:Opencraft.NetCode.IWantColumn.#ctor(Opencraft.NetCode.IWantColumn)
+    Unique name M_Opencraft_NetCode_IWantColumn_Equals_1 generated for M:Opencraft.NetCode.IWantColumn.Equals(System.Object)
+    Unique name M_Opencraft_NetCode_IWantColumn_MergeFrom_1 generated for M:Opencraft.NetCode.IWantColumn.MergeFrom(Opencraft.NetCode.IWantColumn)
+    Unique name M_Opencraft_NetCode_IWantMovePlayer__ctor_1 generated for M:Opencraft.NetCode.IWantMovePlayer.#ctor(Opencraft.NetCode.IWantMovePlayer)
+    Unique name M_Opencraft_NetCode_IWantMovePlayer_Equals_1 generated for M:Opencraft.NetCode.IWantMovePlayer.Equals(System.Object)
+    Unique name M_Opencraft_NetCode_IWantMovePlayer_MergeFrom_1 generated for M:Opencraft.NetCode.IWantMovePlayer.MergeFrom(Opencraft.NetCode.IWantMovePlayer)
+    Unique name M_Opencraft_NetCode_IWantPlayer__ctor_1 generated for M:Opencraft.NetCode.IWantPlayer.#ctor(Opencraft.NetCode.IWantPlayer)
+    Unique name M_Opencraft_NetCode_IWantPlayer_Equals_1 generated for M:Opencraft.NetCode.IWantPlayer.Equals(System.Object)
+    Unique name M_Opencraft_NetCode_IWantPlayer_MergeFrom_1 generated for M:Opencraft.NetCode.IWantPlayer.MergeFrom(Opencraft.NetCode.IWantPlayer)
+    Unique name M_Opencraft_NetCode_MultiBlockUpdate__ctor_1 generated for M:Opencraft.NetCode.MultiBlockUpdate.#ctor(Opencraft.NetCode.MultiBlockUpdate)
+    Unique name M_Opencraft_NetCode_MultiBlockUpdate_Equals_1 generated for M:Opencraft.NetCode.MultiBlockUpdate.Equals(System.Object)
+    Unique name M_Opencraft_NetCode_MultiBlockUpdate_MergeFrom_1 generated for M:Opencraft.NetCode.MultiBlockUpdate.MergeFrom(Opencraft.NetCode.MultiBlockUpdate)
+    Unique name M_Opencraft_NetCode_PlayerUpdate__ctor_1 generated for M:Opencraft.NetCode.PlayerUpdate.#ctor(Opencraft.NetCode.PlayerUpdate)
+    Unique name M_Opencraft_NetCode_PlayerUpdate_Equals_1 generated for M:Opencraft.NetCode.PlayerUpdate.Equals(System.Object)
+    Unique name M_Opencraft_NetCode_PlayerUpdate_MergeFrom_1 generated for M:Opencraft.NetCode.PlayerUpdate.MergeFrom(Opencraft.NetCode.PlayerUpdate)
+    Unique name M_Opencraft_NetCode_Pos2__ctor_1 generated for M:Opencraft.NetCode.Pos2.#ctor(Opencraft.NetCode.Pos2)
+    Unique name M_Opencraft_NetCode_Pos2_Equals_1 generated for M:Opencraft.NetCode.Pos2.Equals(System.Object)
+    Unique name M_Opencraft_NetCode_Pos2_MergeFrom_1 generated for M:Opencraft.NetCode.Pos2.MergeFrom(Opencraft.NetCode.Pos2)
+    Unique name M_Opencraft_NetCode_Pos3__ctor_1 generated for M:Opencraft.NetCode.Pos3.#ctor(Opencraft.NetCode.Pos3)
+    Unique name M_Opencraft_NetCode_Pos3_Equals_1 generated for M:Opencraft.NetCode.Pos3.Equals(System.Object)
+    Unique name M_Opencraft_NetCode_Pos3_MergeFrom_1 generated for M:Opencraft.NetCode.Pos3.MergeFrom(Opencraft.NetCode.Pos3)
+    Unique name M_Opencraft_NetCode_ToClient__ctor_1 generated for M:Opencraft.NetCode.ToClient.#ctor(Opencraft.NetCode.ToClient)
+    Unique name M_Opencraft_NetCode_ToClient_Equals_1 generated for M:Opencraft.NetCode.ToClient.Equals(System.Object)
+    Unique name M_Opencraft_NetCode_ToClient_MergeFrom_1 generated for M:Opencraft.NetCode.ToClient.MergeFrom(Opencraft.NetCode.ToClient)
+    Unique name M_Opencraft_NetCode_ToServer__ctor_1 generated for M:Opencraft.NetCode.ToServer.#ctor(Opencraft.NetCode.ToServer)
+    Unique name M_Opencraft_NetCode_ToServer_Equals_1 generated for M:Opencraft.NetCode.ToServer.Equals(System.Object)
+    Unique name M_Opencraft_NetCode_ToServer_MergeFrom_1 generated for M:Opencraft.NetCode.ToServer.MergeFrom(Opencraft.NetCode.ToServer)
+    Unique name M_Opencraft_NetCode_Vec3__ctor_1 generated for M:Opencraft.NetCode.Vec3.#ctor(Opencraft.NetCode.Vec3)
+    Unique name M_Opencraft_NetCode_Vec3_Equals_1 generated for M:Opencraft.NetCode.Vec3.Equals(System.Object)
+    Unique name M_Opencraft_NetCode_Vec3_MergeFrom_1 generated for M:Opencraft.NetCode.Vec3.MergeFrom(Opencraft.NetCode.Vec3)
+    Unique name M_Opencraft_NetCode_YouArePlayer__ctor_1 generated for M:Opencraft.NetCode.YouArePlayer.#ctor(Opencraft.NetCode.YouArePlayer)
+    Unique name M_Opencraft_NetCode_YouArePlayer_Equals_1 generated for M:Opencraft.NetCode.YouArePlayer.Equals(System.Object)
+    Unique name M_Opencraft_NetCode_YouArePlayer_MergeFrom_1 generated for M:Opencraft.NetCode.YouArePlayer.MergeFrom(Opencraft.NetCode.YouArePlayer)
+    Last step completed in 00:00:00.0407
+</buildStep>
+<buildStep step="GenerateApiTopicManifest">
+Generating API topic manifest...
+    Last step completed in 00:00:00.0248
+</buildStep>
+<buildStep step="GenerateNamespaceSummaries">
+Generating namespace summary information...
+    Last step completed in 00:00:00.5992
+</buildStep>
+<buildStep step="CopyAdditionalContent">
+Copying additional content files...
+No additional content to copy
+    Last step completed in 00:00:00.0000
+</buildStep>
+<buildStep step="MergeTablesOfContents">
+Merging conceptual and additional tables of contents...
+    Last step completed in 00:00:00.0000
+</buildStep>
+<buildStep step="GenerateIntermediateTableOfContents">
+Generating intermediate table of contents file for API content...
+Generating conceptual content intermediate TOC file...
+    Last step completed in 00:00:00.0257
+</buildStep>
+<buildStep step="CreateBuildAssemblerConfigs">
+Creating Sandcastle configuration files...
+    Last step completed in 00:00:00.3580
+</buildStep>
+<buildStep step="CombiningIntermediateTocFiles">
+Combining conceptual and API intermediate TOC files...
+    Last step completed in 00:00:00.0010
+</buildStep>
+<buildStep step="MergeCustomConfigs">
+Merging custom build component configurations
+C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\BuildAssembler.config
+  Updating reference topic configurations.
+  No conceptual content.  Removing conceptual content components.
+    Last step completed in 00:00:00.0163
+</buildStep>
+<buildStep step="BuildTopics">
+Building help topics...
+Loading configuration...
+Processing topics...
+SHFB: Warning BE0066: ShowMissingComponent: [N:] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Bootstrap] Unknown reference link target &#39;T:UnityEngine.Object&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Bootstrap] Unknown reference link target &#39;T:UnityEngine.Component&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Bootstrap] Unknown reference link target &#39;T:UnityEngine.Behaviour&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Bootstrap] Unknown reference link target &#39;T:UnityEngine.MonoBehaviour&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Bootstrap.extraArguments] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Bootstrap.networking] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Bootstrap.Start] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Bootstrap.Update] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:FrameRateManager] Unknown reference link target &#39;T:UnityEngine.Object&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:FrameRateManager] Unknown reference link target &#39;T:UnityEngine.Component&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:FrameRateManager] Unknown reference link target &#39;T:UnityEngine.Behaviour&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:FrameRateManager] Unknown reference link target &#39;T:UnityEngine.MonoBehaviour&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:FrameRateManager.Awake] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:FrameRateManager.Instance] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:GameManager] Unknown reference link target &#39;T:UnityEngine.Object&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:GameManager] Unknown reference link target &#39;T:UnityEngine.ScriptableObject&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:GameManager.inputManager] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:GameManager.OnDestroy] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:GameManager.SwitchToScene(GameScenes)] Unknown reference link target &#39;T:UnityEngine.AsyncOperation&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:GameManager.Update] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:HttpServer] Unknown reference link target &#39;T:UnityEngine.Object&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:HttpServer] Unknown reference link target &#39;T:UnityEngine.Component&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:HttpServer] Unknown reference link target &#39;T:UnityEngine.Behaviour&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:HttpServer] Unknown reference link target &#39;T:UnityEngine.MonoBehaviour&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:HttpServer.BecomeThinClientRoutine(System.Net.IPEndPoint,System.Net.IPEndPoint,System.Int32,System.UInt32,Unity.RenderStreaming.IceServer[])] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:HttpServer.BecomeThinClientRoutine(System.Net.IPEndPoint,System.Net.IPEndPoint,System.Int32,System.UInt32,Unity.RenderStreaming.IceServer[])] Unknown reference link target &#39;T:Unity.RenderStreaming.IceServer&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:HttpServer.ConnectToRenderer(System.Net.IPEndPoint,Unity.RenderStreaming.IceServer[])] Unknown reference link target &#39;T:Unity.RenderStreaming.IceServer&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:HttpServer.gameManager] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:HttpServer.GetRequest(System.String,System.Action{UnityEngine.Networking.UnityWebRequest})] Unknown reference link target &#39;T:UnityEngine.Networking.UnityWebRequest&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:HttpServer.HandleRequestBecomeClientRoutine(System.Collections.Specialized.NameValueCollection)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:HttpServer.httpListener] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:HttpServer.listening] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:HttpServer.listenLoop] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:HttpServer.ParseIceServers(System.String)] Unknown reference link target &#39;T:Unity.RenderStreaming.IceServer&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:HttpServer.ParseSignalingServerEndpoint(System.String)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:HttpServer.ParseSignalingServerEndpoint(System.String)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:HttpServer.ParseSignalingServerEndpoint(System.String)] Missing &lt;param name=&quot;signalingServerStr&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Networking] Unknown reference link target &#39;T:UnityEngine.Object&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Networking] Unknown reference link target &#39;T:UnityEngine.Component&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Networking] Unknown reference link target &#39;T:UnityEngine.Behaviour&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Networking] Unknown reference link target &#39;T:UnityEngine.MonoBehaviour&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Networking.automaticLogin] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Networking.client] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Networking.gameManager] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Networking.messageQueue] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Networking.OnDestroy] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Networking.outgoingMessages] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Networking.playerCharacter] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Networking.playerCharacter] Unknown reference link target &#39;T:UnityEngine.GameObject&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Networking.receiveLoop] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Networking.running] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Networking.Start] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Networking.world] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [T:playerscript] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:playerscript] Unknown reference link target &#39;T:UnityEngine.Object&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:playerscript] Unknown reference link target &#39;T:UnityEngine.Component&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:playerscript] Unknown reference link target &#39;T:UnityEngine.Behaviour&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:playerscript] Unknown reference link target &#39;T:UnityEngine.MonoBehaviour&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:playerscript.Awake] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:playerscript.characterController] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:playerscript.characterController] Unknown reference link target &#39;T:UnityEngine.CharacterController&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:playerscript.gameManager] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:playerscript.gravity] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:playerscript.inputManager] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:playerscript.lookInput] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:playerscript.lookInput] Unknown reference link target &#39;T:UnityEngine.Vector2&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:playerscript.lookSpeed] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:playerscript.moveInput] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:playerscript.moveInput] Unknown reference link target &#39;T:UnityEngine.Vector2&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:playerscript.moveSpeed] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:playerscript.networking] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:playerscript.OnDisable] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:playerscript.OnEnable] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:playerscript.OnFirePerformed] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:playerscript.OnLookPerformed(UnityEngine.Vector2)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:playerscript.OnLookPerformed(UnityEngine.Vector2)] Missing &lt;param name=&quot;look&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:playerscript.OnLookPerformed(UnityEngine.Vector2)] Unknown reference link target &#39;T:UnityEngine.Vector2&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:playerscript.OnMovePerformed(UnityEngine.Vector2)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:playerscript.OnMovePerformed(UnityEngine.Vector2)] Missing &lt;param name=&quot;move&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:playerscript.OnMovePerformed(UnityEngine.Vector2)] Unknown reference link target &#39;T:UnityEngine.Vector2&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:playerscript.playerCamera] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:playerscript.playerCamera] Unknown reference link target &#39;T:UnityEngine.Camera&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:playerscript.Start] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:playerscript.Teleport(UnityEngine.Vector3)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:playerscript.Teleport(UnityEngine.Vector3)] Missing &lt;param name=&quot;newPos&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:playerscript.Teleport(UnityEngine.Vector3)] Unknown reference link target &#39;T:UnityEngine.Vector3&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:playerscript.Update] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [T:Readme] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Readme] Unknown reference link target &#39;T:UnityEngine.Object&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Readme] Unknown reference link target &#39;T:UnityEngine.ScriptableObject&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Readme.icon] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Readme.icon] Unknown reference link target &#39;T:UnityEngine.Texture2D&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Readme.loadedLayout] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Readme.sections] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Readme.title] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [T:Readme.Section] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Readme.Section.heading] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Readme.Section.linkText] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Readme.Section.text] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Readme.Section.url] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [T:Receiver] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Receiver] Unknown reference link target &#39;T:UnityEngine.Object&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Receiver] Unknown reference link target &#39;T:UnityEngine.Component&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Receiver] Unknown reference link target &#39;T:UnityEngine.Behaviour&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Receiver] Unknown reference link target &#39;T:UnityEngine.MonoBehaviour&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Receiver.Awake] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Receiver.CalculateInputRegion] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Receiver.connection] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Receiver.connection] Unknown reference link target &#39;T:Unity.RenderStreaming.SingleConnection&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Receiver.connectionId] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Receiver.inputSender] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Receiver.inputSender] Unknown reference link target &#39;T:Unity.RenderStreaming.InputSender&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Receiver.lastSize] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Receiver.lastSize] Unknown reference link target &#39;T:UnityEngine.Vector2&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Receiver.OnDestroy] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Receiver.OnStartedChannel(System.String)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Receiver.OnStartedChannel(System.String)] Missing &lt;param name=&quot;connectionId&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Receiver.OnUpdateReceiveTexture(UnityEngine.Texture)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Receiver.OnUpdateReceiveTexture(UnityEngine.Texture)] Missing &lt;param name=&quot;texture&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Receiver.OnUpdateReceiveTexture(UnityEngine.Texture)] Unknown reference link target &#39;T:UnityEngine.Texture&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Receiver.receiveAudioViewer] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Receiver.receiveAudioViewer] Unknown reference link target &#39;T:Unity.RenderStreaming.AudioStreamReceiver&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Receiver.receiveVideoViewer] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Receiver.receiveVideoViewer] Unknown reference link target &#39;T:Unity.RenderStreaming.VideoStreamReceiver&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Receiver.remoteAudioSource] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Receiver.remoteAudioSource] Unknown reference link target &#39;T:UnityEngine.AudioSource&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Receiver.remoteVideoImage] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Receiver.remoteVideoImage] Unknown reference link target &#39;T:UnityEngine.UI.RawImage&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Receiver.renderStreaming] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Receiver.renderStreaming] Unknown reference link target &#39;T:Unity.RenderStreaming.SignalingManager&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Receiver.settings] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Receiver.settings] Unknown reference link target &#39;T:RenderStreamingSettings&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Receiver.Start] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Receiver.Update] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [T:UserInputManager] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:UserInputManager] Unknown reference link target &#39;T:UnityEngine.Object&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:UserInputManager] Unknown reference link target &#39;T:UnityEngine.ScriptableObject&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.Awake] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [E:UserInputManager.FireEvent] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [E:UserInputManager.FireEvent] Unknown reference link target &#39;T:UnityEngine.Events.UnityAction&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:UserInputManager.gameInput] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:UserInputManager.gameInput] Unknown reference link target &#39;T:UnityEngine.InputSystem.PlayerInputActions&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [E:UserInputManager.LookEvent] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [E:UserInputManager.LookEvent] Unknown reference link target &#39;T:UnityEngine.Events.UnityAction`1&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [E:UserInputManager.LookEvent] Unknown reference link target &#39;T:UnityEngine.Vector2&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [E:UserInputManager.MoveEvent] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [E:UserInputManager.MoveEvent] Unknown reference link target &#39;T:UnityEngine.Events.UnityAction`1&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [E:UserInputManager.MoveEvent] Unknown reference link target &#39;T:UnityEngine.Vector2&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.OnDestroy] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.OnDisable] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.OnEnable] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.OnFire(UnityEngine.InputSystem.InputAction.CallbackContext)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.OnFire(UnityEngine.InputSystem.InputAction.CallbackContext)] Missing &lt;param name=&quot;context&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:UserInputManager.OnFire(UnityEngine.InputSystem.InputAction.CallbackContext)] Unknown reference link target &#39;T:UnityEngine.InputSystem.InputAction.CallbackContext&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.OnLook(UnityEngine.InputSystem.InputAction.CallbackContext)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.OnLook(UnityEngine.InputSystem.InputAction.CallbackContext)] Missing &lt;param name=&quot;context&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:UserInputManager.OnLook(UnityEngine.InputSystem.InputAction.CallbackContext)] Unknown reference link target &#39;T:UnityEngine.InputSystem.InputAction.CallbackContext&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.OnMove(UnityEngine.InputSystem.InputAction.CallbackContext)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.OnMove(UnityEngine.InputSystem.InputAction.CallbackContext)] Missing &lt;param name=&quot;context&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:UserInputManager.OnMove(UnityEngine.InputSystem.InputAction.CallbackContext)] Unknown reference link target &#39;T:UnityEngine.InputSystem.InputAction.CallbackContext&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.OnToggleThinClient(UnityEngine.InputSystem.InputAction.CallbackContext)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.OnToggleThinClient(UnityEngine.InputSystem.InputAction.CallbackContext)] Missing &lt;param name=&quot;context&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:UserInputManager.OnToggleThinClient(UnityEngine.InputSystem.InputAction.CallbackContext)] Unknown reference link target &#39;T:UnityEngine.InputSystem.InputAction.CallbackContext&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [E:UserInputManager.ToggleThinClientEvent] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [E:UserInputManager.ToggleThinClientEvent] Unknown reference link target &#39;T:UnityEngine.Events.UnityAction&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:World] Unknown reference link target &#39;T:UnityEngine.Object&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:World] Unknown reference link target &#39;T:UnityEngine.Component&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:World] Unknown reference link target &#39;T:UnityEngine.Behaviour&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:World] Unknown reference link target &#39;T:UnityEngine.MonoBehaviour&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:World.BlockPrefab] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:World.BlockPrefab] Unknown reference link target &#39;T:UnityEngine.GameObject&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:World.InstantiateChunk(UnityEngine.Vector2Int,System.Byte[])] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:World.InstantiateChunk(UnityEngine.Vector2Int,System.Byte[])] Missing &lt;param name=&quot;position&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:World.InstantiateChunk(UnityEngine.Vector2Int,System.Byte[])] Missing &lt;param name=&quot;blockData&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:World.InstantiateChunk(UnityEngine.Vector2Int,System.Byte[])] Unknown reference link target &#39;T:UnityEngine.Vector2Int&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:World.Start] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:World.Update] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [N:Opencraft.NetCode] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [T:Opencraft.NetCode.BlockUpdate] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.BlockUpdate] Unknown reference link target &#39;T:Google.Protobuf.IDeepCloneable`1&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.BlockUpdate] Unknown reference link target &#39;T:Google.Protobuf.IMessage&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.BlockUpdate] Unknown reference link target &#39;T:Google.Protobuf.IMessage`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.BlockUpdate.#ctor(Opencraft.NetCode.BlockUpdate)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.BlockUpdate._parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.BlockUpdate._parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.BlockUpdate._unknownFields] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.BlockUpdate._unknownFields] Unknown reference link target &#39;T:Google.Protobuf.UnknownFieldSet&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.BlockUpdate.BlockPosition] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.BlockUpdate.blockPosition_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.BlockUpdate.BlockType] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.BlockUpdate.blockType_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.BlockUpdate.CalculateSize] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.BlockUpdate.CalculateSize] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.BlockUpdate.Clone] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.BlockUpdate.Clone] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.BlockUpdate.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.BlockUpdate.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.BlockUpdate.Equals(Opencraft.NetCode.BlockUpdate)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.BlockUpdate.Equals(Opencraft.NetCode.BlockUpdate)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.BlockUpdate.Equals(Opencraft.NetCode.BlockUpdate)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.BlockUpdate.Equals(System.Object)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.BlockUpdate.Equals(System.Object)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.BlockUpdate.Equals(System.Object)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.BlockUpdate.GetHashCode] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.BlockUpdate.GetHashCode] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.BlockUpdate.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.BlockUpdate.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;param name=&quot;input&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.BlockUpdate.MergeFrom(Google.Protobuf.CodedInputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedInputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.BlockUpdate.MergeFrom(Opencraft.NetCode.BlockUpdate)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.BlockUpdate.MergeFrom(Opencraft.NetCode.BlockUpdate)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.BlockUpdate.Parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.BlockUpdate.Parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.BlockUpdate.pb::Google.Protobuf.IMessage.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.BlockUpdate.pb::Google.Protobuf.IMessage.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.BlockUpdate.ToString] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.BlockUpdate.ToString] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.BlockUpdate.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.BlockUpdate.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;param name=&quot;output&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.BlockUpdate.WriteTo(Google.Protobuf.CodedOutputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedOutputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [T:Opencraft.NetCode.ChunkData] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.ChunkData] Unknown reference link target &#39;T:Google.Protobuf.IDeepCloneable`1&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.ChunkData] Unknown reference link target &#39;T:Google.Protobuf.IMessage&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.ChunkData] Unknown reference link target &#39;T:Google.Protobuf.IMessage`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ChunkData.#ctor(Opencraft.NetCode.ChunkData)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.ChunkData._parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.ChunkData._parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.ChunkData._unknownFields] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.ChunkData._unknownFields] Unknown reference link target &#39;T:Google.Protobuf.UnknownFieldSet&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ChunkData.BlockTypes] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.ChunkData.BlockTypes] Unknown reference link target &#39;T:Google.Protobuf.ByteString&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.ChunkData.blockTypes_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.ChunkData.blockTypes_] Unknown reference link target &#39;T:Google.Protobuf.ByteString&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ChunkData.CalculateSize] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ChunkData.CalculateSize] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ChunkData.Clone] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ChunkData.Clone] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ChunkData.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.ChunkData.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ChunkData.Equals(Opencraft.NetCode.ChunkData)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ChunkData.Equals(Opencraft.NetCode.ChunkData)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ChunkData.Equals(Opencraft.NetCode.ChunkData)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ChunkData.Equals(System.Object)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ChunkData.Equals(System.Object)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ChunkData.Equals(System.Object)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ChunkData.GetHashCode] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ChunkData.GetHashCode] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ChunkData.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ChunkData.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;param name=&quot;input&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.ChunkData.MergeFrom(Google.Protobuf.CodedInputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedInputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ChunkData.MergeFrom(Opencraft.NetCode.ChunkData)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ChunkData.MergeFrom(Opencraft.NetCode.ChunkData)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ChunkData.Parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.ChunkData.Parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ChunkData.pb::Google.Protobuf.IMessage.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.ChunkData.pb::Google.Protobuf.IMessage.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ChunkData.ToString] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ChunkData.ToString] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ChunkData.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ChunkData.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;param name=&quot;output&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.ChunkData.WriteTo(Google.Protobuf.CodedOutputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedOutputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [T:Opencraft.NetCode.ColumnData] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.ColumnData] Unknown reference link target &#39;T:Google.Protobuf.IDeepCloneable`1&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.ColumnData] Unknown reference link target &#39;T:Google.Protobuf.IMessage&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.ColumnData] Unknown reference link target &#39;T:Google.Protobuf.IMessage`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ColumnData.#ctor(Opencraft.NetCode.ColumnData)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.ColumnData._parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.ColumnData._parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.ColumnData._repeated_chunks_codec] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.ColumnData._repeated_chunks_codec] Unknown reference link target &#39;T:Google.Protobuf.FieldCodec`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.ColumnData._unknownFields] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.ColumnData._unknownFields] Unknown reference link target &#39;T:Google.Protobuf.UnknownFieldSet&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ColumnData.CalculateSize] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ColumnData.CalculateSize] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ColumnData.Chunks] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.ColumnData.Chunks] Unknown reference link target &#39;T:Google.Protobuf.Collections.RepeatedField`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.ColumnData.chunks_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.ColumnData.chunks_] Unknown reference link target &#39;T:Google.Protobuf.Collections.RepeatedField`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ColumnData.Clone] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ColumnData.Clone] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ColumnData.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.ColumnData.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ColumnData.Equals(Opencraft.NetCode.ColumnData)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ColumnData.Equals(Opencraft.NetCode.ColumnData)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ColumnData.Equals(Opencraft.NetCode.ColumnData)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ColumnData.Equals(System.Object)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ColumnData.Equals(System.Object)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ColumnData.Equals(System.Object)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ColumnData.GetHashCode] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ColumnData.GetHashCode] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ColumnData.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ColumnData.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;param name=&quot;input&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.ColumnData.MergeFrom(Google.Protobuf.CodedInputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedInputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ColumnData.MergeFrom(Opencraft.NetCode.ColumnData)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ColumnData.MergeFrom(Opencraft.NetCode.ColumnData)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ColumnData.Parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.ColumnData.Parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ColumnData.pb::Google.Protobuf.IMessage.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.ColumnData.pb::Google.Protobuf.IMessage.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ColumnData.Position] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.ColumnData.position_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ColumnData.ToString] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ColumnData.ToString] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ColumnData.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ColumnData.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;param name=&quot;output&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.ColumnData.WriteTo(Google.Protobuf.CodedOutputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedOutputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [T:Opencraft.NetCode.IWantChangeBlock] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.IWantChangeBlock] Unknown reference link target &#39;T:Google.Protobuf.IDeepCloneable`1&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.IWantChangeBlock] Unknown reference link target &#39;T:Google.Protobuf.IMessage&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.IWantChangeBlock] Unknown reference link target &#39;T:Google.Protobuf.IMessage`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantChangeBlock.#ctor(Opencraft.NetCode.IWantChangeBlock)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.IWantChangeBlock._parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.IWantChangeBlock._parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.IWantChangeBlock._unknownFields] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.IWantChangeBlock._unknownFields] Unknown reference link target &#39;T:Google.Protobuf.UnknownFieldSet&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.IWantChangeBlock.BlockPosition] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.IWantChangeBlock.blockPosition_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.IWantChangeBlock.BlockType] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.IWantChangeBlock.blockType_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantChangeBlock.CalculateSize] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantChangeBlock.CalculateSize] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantChangeBlock.Clone] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantChangeBlock.Clone] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.IWantChangeBlock.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.IWantChangeBlock.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantChangeBlock.Equals(Opencraft.NetCode.IWantChangeBlock)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantChangeBlock.Equals(Opencraft.NetCode.IWantChangeBlock)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantChangeBlock.Equals(Opencraft.NetCode.IWantChangeBlock)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantChangeBlock.Equals(System.Object)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantChangeBlock.Equals(System.Object)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantChangeBlock.Equals(System.Object)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantChangeBlock.GetHashCode] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantChangeBlock.GetHashCode] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantChangeBlock.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantChangeBlock.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;param name=&quot;input&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.IWantChangeBlock.MergeFrom(Google.Protobuf.CodedInputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedInputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantChangeBlock.MergeFrom(Opencraft.NetCode.IWantChangeBlock)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantChangeBlock.MergeFrom(Opencraft.NetCode.IWantChangeBlock)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.IWantChangeBlock.Parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.IWantChangeBlock.Parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.IWantChangeBlock.pb::Google.Protobuf.IMessage.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.IWantChangeBlock.pb::Google.Protobuf.IMessage.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantChangeBlock.ToString] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantChangeBlock.ToString] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantChangeBlock.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantChangeBlock.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;param name=&quot;output&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.IWantChangeBlock.WriteTo(Google.Protobuf.CodedOutputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedOutputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [T:Opencraft.NetCode.IWantColumn] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.IWantColumn] Unknown reference link target &#39;T:Google.Protobuf.IDeepCloneable`1&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.IWantColumn] Unknown reference link target &#39;T:Google.Protobuf.IMessage&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.IWantColumn] Unknown reference link target &#39;T:Google.Protobuf.IMessage`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantColumn.#ctor(Opencraft.NetCode.IWantColumn)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.IWantColumn._parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.IWantColumn._parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.IWantColumn._unknownFields] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.IWantColumn._unknownFields] Unknown reference link target &#39;T:Google.Protobuf.UnknownFieldSet&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantColumn.CalculateSize] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantColumn.CalculateSize] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantColumn.Clone] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantColumn.Clone] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.IWantColumn.ColumnPos] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.IWantColumn.columnPos_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.IWantColumn.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.IWantColumn.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantColumn.Equals(Opencraft.NetCode.IWantColumn)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantColumn.Equals(Opencraft.NetCode.IWantColumn)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantColumn.Equals(Opencraft.NetCode.IWantColumn)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantColumn.Equals(System.Object)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantColumn.Equals(System.Object)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantColumn.Equals(System.Object)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantColumn.GetHashCode] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantColumn.GetHashCode] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantColumn.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantColumn.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;param name=&quot;input&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.IWantColumn.MergeFrom(Google.Protobuf.CodedInputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedInputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantColumn.MergeFrom(Opencraft.NetCode.IWantColumn)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantColumn.MergeFrom(Opencraft.NetCode.IWantColumn)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.IWantColumn.Parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.IWantColumn.Parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.IWantColumn.pb::Google.Protobuf.IMessage.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.IWantColumn.pb::Google.Protobuf.IMessage.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantColumn.ToString] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantColumn.ToString] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantColumn.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantColumn.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;param name=&quot;output&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.IWantColumn.WriteTo(Google.Protobuf.CodedOutputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedOutputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [T:Opencraft.NetCode.IWantMovePlayer] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.IWantMovePlayer] Unknown reference link target &#39;T:Google.Protobuf.IDeepCloneable`1&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.IWantMovePlayer] Unknown reference link target &#39;T:Google.Protobuf.IMessage&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.IWantMovePlayer] Unknown reference link target &#39;T:Google.Protobuf.IMessage`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantMovePlayer.#ctor(Opencraft.NetCode.IWantMovePlayer)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.IWantMovePlayer._parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.IWantMovePlayer._parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.IWantMovePlayer._unknownFields] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.IWantMovePlayer._unknownFields] Unknown reference link target &#39;T:Google.Protobuf.UnknownFieldSet&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantMovePlayer.CalculateSize] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantMovePlayer.CalculateSize] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantMovePlayer.Clone] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantMovePlayer.Clone] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.IWantMovePlayer.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.IWantMovePlayer.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantMovePlayer.Equals(Opencraft.NetCode.IWantMovePlayer)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantMovePlayer.Equals(Opencraft.NetCode.IWantMovePlayer)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantMovePlayer.Equals(Opencraft.NetCode.IWantMovePlayer)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantMovePlayer.Equals(System.Object)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantMovePlayer.Equals(System.Object)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantMovePlayer.Equals(System.Object)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantMovePlayer.GetHashCode] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantMovePlayer.GetHashCode] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantMovePlayer.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantMovePlayer.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;param name=&quot;input&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.IWantMovePlayer.MergeFrom(Google.Protobuf.CodedInputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedInputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantMovePlayer.MergeFrom(Opencraft.NetCode.IWantMovePlayer)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantMovePlayer.MergeFrom(Opencraft.NetCode.IWantMovePlayer)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.IWantMovePlayer.NewPosition] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.IWantMovePlayer.newPosition_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.IWantMovePlayer.Parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.IWantMovePlayer.Parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.IWantMovePlayer.pb::Google.Protobuf.IMessage.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.IWantMovePlayer.pb::Google.Protobuf.IMessage.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.IWantMovePlayer.PlayerID] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.IWantMovePlayer.playerID_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantMovePlayer.ToString] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantMovePlayer.ToString] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantMovePlayer.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantMovePlayer.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;param name=&quot;output&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.IWantMovePlayer.WriteTo(Google.Protobuf.CodedOutputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedOutputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [T:Opencraft.NetCode.IWantPlayer] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.IWantPlayer] Unknown reference link target &#39;T:Google.Protobuf.IDeepCloneable`1&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.IWantPlayer] Unknown reference link target &#39;T:Google.Protobuf.IMessage&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.IWantPlayer] Unknown reference link target &#39;T:Google.Protobuf.IMessage`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantPlayer.#ctor(Opencraft.NetCode.IWantPlayer)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.IWantPlayer._parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.IWantPlayer._parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.IWantPlayer._unknownFields] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.IWantPlayer._unknownFields] Unknown reference link target &#39;T:Google.Protobuf.UnknownFieldSet&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantPlayer.CalculateSize] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantPlayer.CalculateSize] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantPlayer.Clone] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantPlayer.Clone] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.IWantPlayer.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.IWantPlayer.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantPlayer.Equals(Opencraft.NetCode.IWantPlayer)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantPlayer.Equals(Opencraft.NetCode.IWantPlayer)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantPlayer.Equals(Opencraft.NetCode.IWantPlayer)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantPlayer.Equals(System.Object)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantPlayer.Equals(System.Object)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantPlayer.Equals(System.Object)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantPlayer.GetHashCode] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantPlayer.GetHashCode] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantPlayer.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantPlayer.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;param name=&quot;input&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.IWantPlayer.MergeFrom(Google.Protobuf.CodedInputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedInputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantPlayer.MergeFrom(Opencraft.NetCode.IWantPlayer)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantPlayer.MergeFrom(Opencraft.NetCode.IWantPlayer)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.IWantPlayer.Parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.IWantPlayer.Parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.IWantPlayer.pb::Google.Protobuf.IMessage.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.IWantPlayer.pb::Google.Protobuf.IMessage.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.IWantPlayer.PlayerID] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.IWantPlayer.playerID_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantPlayer.ToString] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantPlayer.ToString] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantPlayer.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.IWantPlayer.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;param name=&quot;output&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.IWantPlayer.WriteTo(Google.Protobuf.CodedOutputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedOutputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [T:Opencraft.NetCode.MultiBlockUpdate] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.MultiBlockUpdate] Unknown reference link target &#39;T:Google.Protobuf.IDeepCloneable`1&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.MultiBlockUpdate] Unknown reference link target &#39;T:Google.Protobuf.IMessage&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.MultiBlockUpdate] Unknown reference link target &#39;T:Google.Protobuf.IMessage`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.MultiBlockUpdate.#ctor(Opencraft.NetCode.MultiBlockUpdate)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.MultiBlockUpdate._parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.MultiBlockUpdate._parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.MultiBlockUpdate._repeated_updates_codec] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.MultiBlockUpdate._repeated_updates_codec] Unknown reference link target &#39;T:Google.Protobuf.FieldCodec`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.MultiBlockUpdate._unknownFields] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.MultiBlockUpdate._unknownFields] Unknown reference link target &#39;T:Google.Protobuf.UnknownFieldSet&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.MultiBlockUpdate.CalculateSize] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.MultiBlockUpdate.CalculateSize] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.MultiBlockUpdate.Clone] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.MultiBlockUpdate.Clone] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.MultiBlockUpdate.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.MultiBlockUpdate.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.MultiBlockUpdate.Equals(Opencraft.NetCode.MultiBlockUpdate)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.MultiBlockUpdate.Equals(Opencraft.NetCode.MultiBlockUpdate)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.MultiBlockUpdate.Equals(Opencraft.NetCode.MultiBlockUpdate)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.MultiBlockUpdate.Equals(System.Object)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.MultiBlockUpdate.Equals(System.Object)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.MultiBlockUpdate.Equals(System.Object)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.MultiBlockUpdate.GetHashCode] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.MultiBlockUpdate.GetHashCode] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.MultiBlockUpdate.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.MultiBlockUpdate.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;param name=&quot;input&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.MultiBlockUpdate.MergeFrom(Google.Protobuf.CodedInputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedInputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.MultiBlockUpdate.MergeFrom(Opencraft.NetCode.MultiBlockUpdate)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.MultiBlockUpdate.MergeFrom(Opencraft.NetCode.MultiBlockUpdate)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.MultiBlockUpdate.Parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.MultiBlockUpdate.Parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.MultiBlockUpdate.pb::Google.Protobuf.IMessage.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.MultiBlockUpdate.pb::Google.Protobuf.IMessage.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.MultiBlockUpdate.ToString] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.MultiBlockUpdate.ToString] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.MultiBlockUpdate.Updates] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.MultiBlockUpdate.Updates] Unknown reference link target &#39;T:Google.Protobuf.Collections.RepeatedField`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.MultiBlockUpdate.updates_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.MultiBlockUpdate.updates_] Unknown reference link target &#39;T:Google.Protobuf.Collections.RepeatedField`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.MultiBlockUpdate.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.MultiBlockUpdate.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;param name=&quot;output&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.MultiBlockUpdate.WriteTo(Google.Protobuf.CodedOutputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedOutputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.OpencraftReflection.descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.OpencraftReflection.descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.FileDescriptor&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.OpencraftReflection.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.FileDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [T:Opencraft.NetCode.PlayerUpdate] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.PlayerUpdate] Unknown reference link target &#39;T:Google.Protobuf.IDeepCloneable`1&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.PlayerUpdate] Unknown reference link target &#39;T:Google.Protobuf.IMessage&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.PlayerUpdate] Unknown reference link target &#39;T:Google.Protobuf.IMessage`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.PlayerUpdate.#ctor(Opencraft.NetCode.PlayerUpdate)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.PlayerUpdate._parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.PlayerUpdate._parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.PlayerUpdate._unknownFields] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.PlayerUpdate._unknownFields] Unknown reference link target &#39;T:Google.Protobuf.UnknownFieldSet&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.PlayerUpdate.CalculateSize] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.PlayerUpdate.CalculateSize] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.PlayerUpdate.Clone] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.PlayerUpdate.Clone] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.PlayerUpdate.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.PlayerUpdate.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.PlayerUpdate.Equals(Opencraft.NetCode.PlayerUpdate)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.PlayerUpdate.Equals(Opencraft.NetCode.PlayerUpdate)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.PlayerUpdate.Equals(Opencraft.NetCode.PlayerUpdate)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.PlayerUpdate.Equals(System.Object)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.PlayerUpdate.Equals(System.Object)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.PlayerUpdate.Equals(System.Object)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.PlayerUpdate.GetHashCode] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.PlayerUpdate.GetHashCode] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.PlayerUpdate.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.PlayerUpdate.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;param name=&quot;input&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.PlayerUpdate.MergeFrom(Google.Protobuf.CodedInputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedInputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.PlayerUpdate.MergeFrom(Opencraft.NetCode.PlayerUpdate)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.PlayerUpdate.MergeFrom(Opencraft.NetCode.PlayerUpdate)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.PlayerUpdate.Parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.PlayerUpdate.Parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.PlayerUpdate.pb::Google.Protobuf.IMessage.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.PlayerUpdate.pb::Google.Protobuf.IMessage.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.PlayerUpdate.PlayerID] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.PlayerUpdate.playerID_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.PlayerUpdate.Position] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.PlayerUpdate.position_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.PlayerUpdate.ToString] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.PlayerUpdate.ToString] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.PlayerUpdate.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.PlayerUpdate.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;param name=&quot;output&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.PlayerUpdate.WriteTo(Google.Protobuf.CodedOutputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedOutputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [T:Opencraft.NetCode.Pos2] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.Pos2] Unknown reference link target &#39;T:Google.Protobuf.IDeepCloneable`1&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.Pos2] Unknown reference link target &#39;T:Google.Protobuf.IMessage&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.Pos2] Unknown reference link target &#39;T:Google.Protobuf.IMessage`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos2.#ctor(Opencraft.NetCode.Pos2)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.Pos2._parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.Pos2._parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.Pos2._unknownFields] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.Pos2._unknownFields] Unknown reference link target &#39;T:Google.Protobuf.UnknownFieldSet&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos2.CalculateSize] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos2.CalculateSize] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos2.Clone] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos2.Clone] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.Pos2.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.Pos2.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos2.Equals(Opencraft.NetCode.Pos2)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos2.Equals(Opencraft.NetCode.Pos2)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos2.Equals(Opencraft.NetCode.Pos2)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos2.Equals(System.Object)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos2.Equals(System.Object)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos2.Equals(System.Object)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos2.GetHashCode] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos2.GetHashCode] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos2.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos2.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;param name=&quot;input&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.Pos2.MergeFrom(Google.Protobuf.CodedInputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedInputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos2.MergeFrom(Opencraft.NetCode.Pos2)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos2.MergeFrom(Opencraft.NetCode.Pos2)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.Pos2.Parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.Pos2.Parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.Pos2.pb::Google.Protobuf.IMessage.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.Pos2.pb::Google.Protobuf.IMessage.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos2.ToString] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos2.ToString] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos2.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos2.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;param name=&quot;output&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.Pos2.WriteTo(Google.Protobuf.CodedOutputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedOutputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.Pos2.X] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.Pos2.x_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.Pos2.Z] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.Pos2.z_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [T:Opencraft.NetCode.Pos3] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.Pos3] Unknown reference link target &#39;T:Google.Protobuf.IDeepCloneable`1&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.Pos3] Unknown reference link target &#39;T:Google.Protobuf.IMessage&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.Pos3] Unknown reference link target &#39;T:Google.Protobuf.IMessage`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos3.#ctor(Opencraft.NetCode.Pos3)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.Pos3._parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.Pos3._parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.Pos3._unknownFields] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.Pos3._unknownFields] Unknown reference link target &#39;T:Google.Protobuf.UnknownFieldSet&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos3.CalculateSize] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos3.CalculateSize] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos3.Clone] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos3.Clone] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.Pos3.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.Pos3.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos3.Equals(Opencraft.NetCode.Pos3)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos3.Equals(Opencraft.NetCode.Pos3)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos3.Equals(Opencraft.NetCode.Pos3)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos3.Equals(System.Object)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos3.Equals(System.Object)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos3.Equals(System.Object)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos3.GetHashCode] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos3.GetHashCode] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos3.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos3.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;param name=&quot;input&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.Pos3.MergeFrom(Google.Protobuf.CodedInputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedInputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos3.MergeFrom(Opencraft.NetCode.Pos3)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos3.MergeFrom(Opencraft.NetCode.Pos3)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.Pos3.Parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.Pos3.Parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.Pos3.pb::Google.Protobuf.IMessage.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.Pos3.pb::Google.Protobuf.IMessage.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos3.ToString] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos3.ToString] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos3.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Pos3.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;param name=&quot;output&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.Pos3.WriteTo(Google.Protobuf.CodedOutputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedOutputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.Pos3.X] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.Pos3.x_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.Pos3.Y] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.Pos3.y_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.Pos3.Z] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.Pos3.z_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.ToClient] Unknown reference link target &#39;T:Google.Protobuf.IDeepCloneable`1&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.ToClient] Unknown reference link target &#39;T:Google.Protobuf.IMessage&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.ToClient] Unknown reference link target &#39;T:Google.Protobuf.IMessage`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToClient.#ctor(Opencraft.NetCode.ToClient)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.ToClient._parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.ToClient._parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.ToClient._unknownFields] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.ToClient._unknownFields] Unknown reference link target &#39;T:Google.Protobuf.UnknownFieldSet&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ToClient.BlockUpdate] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToClient.CalculateSize] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToClient.CalculateSize] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ToClient.ChunkData] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToClient.ClearPayload] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToClient.Clone] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToClient.Clone] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ToClient.ColumnData] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ToClient.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.ToClient.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToClient.Equals(Opencraft.NetCode.ToClient)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToClient.Equals(Opencraft.NetCode.ToClient)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToClient.Equals(Opencraft.NetCode.ToClient)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToClient.Equals(System.Object)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToClient.Equals(System.Object)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToClient.Equals(System.Object)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToClient.GetHashCode] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToClient.GetHashCode] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToClient.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToClient.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;param name=&quot;input&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.ToClient.MergeFrom(Google.Protobuf.CodedInputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedInputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToClient.MergeFrom(Opencraft.NetCode.ToClient)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToClient.MergeFrom(Opencraft.NetCode.ToClient)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ToClient.MultiBlockUpdate] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ToClient.Parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.ToClient.Parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.ToClient.payload_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ToClient.PayloadCase] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.ToClient.payloadCase_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ToClient.pb::Google.Protobuf.IMessage.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.ToClient.pb::Google.Protobuf.IMessage.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ToClient.PlayerUpdate] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToClient.ToString] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToClient.ToString] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToClient.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToClient.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;param name=&quot;output&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.ToClient.WriteTo(Google.Protobuf.CodedOutputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedOutputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ToClient.YouArePlayer] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.ToServer] Unknown reference link target &#39;T:Google.Protobuf.IDeepCloneable`1&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.ToServer] Unknown reference link target &#39;T:Google.Protobuf.IMessage&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.ToServer] Unknown reference link target &#39;T:Google.Protobuf.IMessage`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToServer.#ctor(Opencraft.NetCode.ToServer)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.ToServer._parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.ToServer._parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.ToServer._unknownFields] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.ToServer._unknownFields] Unknown reference link target &#39;T:Google.Protobuf.UnknownFieldSet&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToServer.CalculateSize] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToServer.CalculateSize] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToServer.ClearPayload] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToServer.Clone] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToServer.Clone] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ToServer.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.ToServer.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToServer.Equals(Opencraft.NetCode.ToServer)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToServer.Equals(Opencraft.NetCode.ToServer)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToServer.Equals(Opencraft.NetCode.ToServer)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToServer.Equals(System.Object)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToServer.Equals(System.Object)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToServer.Equals(System.Object)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToServer.GetHashCode] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToServer.GetHashCode] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ToServer.IWantChangeBlock] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ToServer.IWantColumn] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ToServer.IWantMovePlayer] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ToServer.IWantPlayer] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToServer.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToServer.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;param name=&quot;input&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.ToServer.MergeFrom(Google.Protobuf.CodedInputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedInputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToServer.MergeFrom(Opencraft.NetCode.ToServer)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToServer.MergeFrom(Opencraft.NetCode.ToServer)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ToServer.Parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.ToServer.Parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.ToServer.payload_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ToServer.PayloadCase] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.ToServer.payloadCase_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.ToServer.pb::Google.Protobuf.IMessage.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.ToServer.pb::Google.Protobuf.IMessage.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToServer.ToString] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToServer.ToString] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToServer.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.ToServer.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;param name=&quot;output&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.ToServer.WriteTo(Google.Protobuf.CodedOutputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedOutputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [T:Opencraft.NetCode.Vec3] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.Vec3] Unknown reference link target &#39;T:Google.Protobuf.IDeepCloneable`1&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.Vec3] Unknown reference link target &#39;T:Google.Protobuf.IMessage&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.Vec3] Unknown reference link target &#39;T:Google.Protobuf.IMessage`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Vec3.#ctor(Opencraft.NetCode.Vec3)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.Vec3._parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.Vec3._parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.Vec3._unknownFields] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.Vec3._unknownFields] Unknown reference link target &#39;T:Google.Protobuf.UnknownFieldSet&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Vec3.CalculateSize] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Vec3.CalculateSize] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Vec3.Clone] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Vec3.Clone] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.Vec3.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.Vec3.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Vec3.Equals(Opencraft.NetCode.Vec3)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Vec3.Equals(Opencraft.NetCode.Vec3)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Vec3.Equals(Opencraft.NetCode.Vec3)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Vec3.Equals(System.Object)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Vec3.Equals(System.Object)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Vec3.Equals(System.Object)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Vec3.GetHashCode] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Vec3.GetHashCode] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Vec3.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Vec3.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;param name=&quot;input&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.Vec3.MergeFrom(Google.Protobuf.CodedInputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedInputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Vec3.MergeFrom(Opencraft.NetCode.Vec3)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Vec3.MergeFrom(Opencraft.NetCode.Vec3)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.Vec3.Parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.Vec3.Parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.Vec3.pb::Google.Protobuf.IMessage.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.Vec3.pb::Google.Protobuf.IMessage.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Vec3.ToString] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Vec3.ToString] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Vec3.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.Vec3.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;param name=&quot;output&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.Vec3.WriteTo(Google.Protobuf.CodedOutputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedOutputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.Vec3.X] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.Vec3.x_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.Vec3.Y] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.Vec3.y_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.Vec3.Z] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.Vec3.z_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [T:Opencraft.NetCode.YouArePlayer] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.YouArePlayer] Unknown reference link target &#39;T:Google.Protobuf.IDeepCloneable`1&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.YouArePlayer] Unknown reference link target &#39;T:Google.Protobuf.IMessage&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.NetCode.YouArePlayer] Unknown reference link target &#39;T:Google.Protobuf.IMessage`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.YouArePlayer.#ctor(Opencraft.NetCode.YouArePlayer)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.YouArePlayer._parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.YouArePlayer._parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.YouArePlayer._unknownFields] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.NetCode.YouArePlayer._unknownFields] Unknown reference link target &#39;T:Google.Protobuf.UnknownFieldSet&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.YouArePlayer.CalculateSize] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.YouArePlayer.CalculateSize] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.YouArePlayer.Clone] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.YouArePlayer.Clone] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.YouArePlayer.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.YouArePlayer.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.YouArePlayer.Equals(Opencraft.NetCode.YouArePlayer)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.YouArePlayer.Equals(Opencraft.NetCode.YouArePlayer)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.YouArePlayer.Equals(Opencraft.NetCode.YouArePlayer)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.YouArePlayer.Equals(System.Object)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.YouArePlayer.Equals(System.Object)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.YouArePlayer.Equals(System.Object)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.YouArePlayer.GetHashCode] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.YouArePlayer.GetHashCode] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.YouArePlayer.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.YouArePlayer.MergeFrom(Google.Protobuf.CodedInputStream)] Missing &lt;param name=&quot;input&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.YouArePlayer.MergeFrom(Google.Protobuf.CodedInputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedInputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.YouArePlayer.MergeFrom(Opencraft.NetCode.YouArePlayer)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.YouArePlayer.MergeFrom(Opencraft.NetCode.YouArePlayer)] Missing &lt;param name=&quot;other&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.YouArePlayer.Parser] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.YouArePlayer.Parser] Unknown reference link target &#39;T:Google.Protobuf.MessageParser`1&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.YouArePlayer.pb::Google.Protobuf.IMessage.Descriptor] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [P:Opencraft.NetCode.YouArePlayer.pb::Google.Protobuf.IMessage.Descriptor] Unknown reference link target &#39;T:Google.Protobuf.Reflection.MessageDescriptor&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.YouArePlayer.PlayerID] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.YouArePlayer.playerID_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:Opencraft.NetCode.YouArePlayer.SpawnLocation] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.NetCode.YouArePlayer.spawnLocation_] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.YouArePlayer.ToString] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.YouArePlayer.ToString] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.YouArePlayer.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.NetCode.YouArePlayer.WriteTo(Google.Protobuf.CodedOutputStream)] Missing &lt;param name=&quot;output&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.NetCode.YouArePlayer.WriteTo(Google.Protobuf.CodedOutputStream)] Unknown reference link target &#39;T:Google.Protobuf.CodedOutputStream&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [N:Opencraft.RenderStreaming] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.RenderStreaming.InputSenderExtension.GetRegionAndSize(UnityEngine.UI.RawImage)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.RenderStreaming.InputSenderExtension.GetRegionAndSize(UnityEngine.UI.RawImage)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.RenderStreaming.InputSenderExtension.GetRegionAndSize(UnityEngine.UI.RawImage)] Missing &lt;param name=&quot;image&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.RenderStreaming.InputSenderExtension.GetRegionAndSize(UnityEngine.UI.RawImage)] Unknown reference link target &#39;T:UnityEngine.UI.RawImage&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.RenderStreaming.InputSenderExtension.GetRegionAndSize(UnityEngine.UI.RawImage)] Unknown reference link target &#39;T:UnityEngine.Rect&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.RenderStreaming.InputSenderExtension.GetRegionAndSize(UnityEngine.UI.RawImage)] Unknown reference link target &#39;T:UnityEngine.Vector2Int&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.RenderStreaming.InputSenderExtension.GetRegionAndSize(UnityEngine.UI.RawImage)] Unknown reference link target &#39;T:UnityEngine.UI.RawImage&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [T:Opencraft.RenderStreaming.ReceiverScript] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.RenderStreaming.ReceiverScript] Unknown reference link target &#39;T:UnityEngine.Object&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.RenderStreaming.ReceiverScript] Unknown reference link target &#39;T:UnityEngine.Component&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.RenderStreaming.ReceiverScript] Unknown reference link target &#39;T:UnityEngine.Behaviour&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Opencraft.RenderStreaming.ReceiverScript] Unknown reference link target &#39;T:UnityEngine.MonoBehaviour&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.RenderStreaming.ReceiverScript.Awake] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.RenderStreaming.ReceiverScript.CalculateInputRegion] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.RenderStreaming.ReceiverScript.connection] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.RenderStreaming.ReceiverScript.connection] Unknown reference link target &#39;T:Unity.RenderStreaming.SingleConnection&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.RenderStreaming.ReceiverScript.connectionId] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.RenderStreaming.ReceiverScript.inputSender] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.RenderStreaming.ReceiverScript.inputSender] Unknown reference link target &#39;T:Unity.RenderStreaming.InputSender&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.RenderStreaming.ReceiverScript.lastSize] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.RenderStreaming.ReceiverScript.lastSize] Unknown reference link target &#39;T:UnityEngine.Vector2&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.RenderStreaming.ReceiverScript.OnStartedChannel(System.String)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.RenderStreaming.ReceiverScript.OnStartedChannel(System.String)] Missing &lt;param name=&quot;connectionId&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.RenderStreaming.ReceiverScript.OnUpdateReceiveTexture(UnityEngine.Texture)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.RenderStreaming.ReceiverScript.OnUpdateReceiveTexture(UnityEngine.Texture)] Missing &lt;param name=&quot;texture&quot;/&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:Opencraft.RenderStreaming.ReceiverScript.OnUpdateReceiveTexture(UnityEngine.Texture)] Unknown reference link target &#39;T:UnityEngine.Texture&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.RenderStreaming.ReceiverScript.receiveAudioViewer] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.RenderStreaming.ReceiverScript.receiveAudioViewer] Unknown reference link target &#39;T:Unity.RenderStreaming.AudioStreamReceiver&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.RenderStreaming.ReceiverScript.receiveVideoViewer] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.RenderStreaming.ReceiverScript.receiveVideoViewer] Unknown reference link target &#39;T:Unity.RenderStreaming.VideoStreamReceiver&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.RenderStreaming.ReceiverScript.remoteAudioSource] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.RenderStreaming.ReceiverScript.remoteAudioSource] Unknown reference link target &#39;T:UnityEngine.AudioSource&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.RenderStreaming.ReceiverScript.remoteVideoImage] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.RenderStreaming.ReceiverScript.remoteVideoImage] Unknown reference link target &#39;T:UnityEngine.UI.RawImage&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:Opencraft.RenderStreaming.ReceiverScript.renderStreaming] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.RenderStreaming.ReceiverScript.renderStreaming] Unknown reference link target &#39;T:Unity.RenderStreaming.SignalingManager&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.RenderStreaming.ReceiverScript.Start] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.RenderStreaming.ReceiverScript.Update] Missing &lt;summary&gt; documentation
+Processed 691 topic(s)
+850 warning(s)
+CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 8 of 15.
+CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 1 of 30.
+    Last step completed in 00:00:05.2183
+</buildStep>
+<buildStep step="CopyStandardHelpContent">
+Copying standard help content...
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\Markdown\media\AlertCaution.png -&gt; C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\Output\Markdown\media\AlertCaution.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\Markdown\media\AlertLanguage.png -&gt; C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\Output\Markdown\media\AlertLanguage.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\Markdown\media\AlertNote.png -&gt; C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\Output\Markdown\media\AlertNote.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\Markdown\media\AlertSecurity.png -&gt; C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\Output\Markdown\media\AlertSecurity.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\Markdown\media\AlertToDo.png -&gt; C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\Output\Markdown\media\AlertToDo.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\Markdown\MarkdownContent\_Footer.md -&gt; C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\Output\Markdown\_Footer.md
+    Last step completed in 00:00:00.0216
+</buildStep>
+<buildStep step="GenerateHelpProject">
+Executing informational Generate Help Project build step for plug-ins (not used for Markdown)
+    Last step completed in 00:00:00.0010
+</buildStep>
+<buildStep step="CompilingHelpFile">
+Generating markdown content...
+500 topics generated
+Finished generating 691 topics
+Copying content to output folder...
+Copied 500 files
+Finished copying 699 files
+    Last step completed in 00:00:01.8388
+</buildStep>
+<buildStep step="CleanIntermediates">
+Removing intermediate files...
+    Last step completed in 00:00:00.1565
+</buildStep>
+<buildStep step="Completed">
+
+Build completed successfully at 03/12/2024 11:47:35.  Total time: 00:00:19.4939
+
+</buildStep>
+</shfbBuild>
