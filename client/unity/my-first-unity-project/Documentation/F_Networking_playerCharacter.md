@@ -1,7 +1,7 @@
 # playerCharacter Field
 
 
-\[Missing &lt;summary&gt; documentation for "F:Networking.playerCharacter"\]
+Reference to the player avatar object. Used to move the avatar to the correct location upon login. The field is set through the Unity editor.
 
 
 
@@ -25,3 +25,4 @@ GameObject
 #### Reference
 <a href="T_Networking.md">Networking Class</a>  
 <a href="N_.md">(Default Namespace) Namespace</a>  
+<a href="M_Networking_HandleMessageLogin.md">HandleMessageLogin(YouArePlayer)</a>  

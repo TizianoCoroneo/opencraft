@@ -1,7 +1,7 @@
 # Instance Property
 
 
-\[Missing &lt;summary&gt; documentation for "P:FrameRateManager.Instance"\]
+A reference to an instance of this class. Used to implement the singleton pattern and prevent multiple instances of this class being created within the same game.
 
 
 

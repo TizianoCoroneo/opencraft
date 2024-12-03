@@ -1,7 +1,7 @@
 # ParseSignalingServerEndpoint Method
 
 
-\[Missing &lt;summary&gt; documentation for "M:HttpServer.ParseSignalingServerEndpoint(System.String)"\]
+Parses the given string and returns a corresponding <a href="https://learn.microsoft.com/dotnet/api/system.net.ipendpoint" target="_blank" rel="noopener noreferrer">IPEndPoint</a>. If the parameter is null, the function returns an endpoint corresponding to `localhost:80`
 
 
 
@@ -19,11 +19,11 @@ private IPEndPoint ParseSignalingServerEndpoint(
 
 
 #### Parameters
-<dl><dt>  <a href="https://learn.microsoft.com/dotnet/api/system.string" target="_blank" rel="noopener noreferrer">String</a></dt><dd>\[Missing &lt;param name="signalingServerStr"/&gt; documentation for "M:HttpServer.ParseSignalingServerEndpoint(System.String)"\]</dd></dl>
+<dl><dt>  <a href="https://learn.microsoft.com/dotnet/api/system.string" target="_blank" rel="noopener noreferrer">String</a></dt><dd>The string to parse.</dd></dl>
 
 #### Return Value
 <a href="https://learn.microsoft.com/dotnet/api/system.net.ipendpoint" target="_blank" rel="noopener noreferrer">IPEndPoint</a>  
-\[Missing &lt;returns&gt; documentation for "M:HttpServer.ParseSignalingServerEndpoint(System.String)"\]
+The parsed IPEndPoint
 
 ## See Also
 

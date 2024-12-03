@@ -1,7 +1,7 @@
 # listenLoop Field
 
 
-\[Missing &lt;summary&gt; documentation for "F:HttpServer.listenLoop"\]
+The asynchronous task (i.e., loop) that receives incoming HTTP requests. Stored in a field so that it can be neatly interrupted and stopped when existing the game.
 
 
 
@@ -25,3 +25,7 @@ private Task listenLoop
 #### Reference
 <a href="T_HttpServer.md">HttpServer Class</a>  
 <a href="N_.md">(Default Namespace) Namespace</a>  
+<a href="F_HttpServer_listening.md">listening</a>  
+<a href="M_HttpServer_StartHttpServer.md">StartHttpServer()</a>  
+<a href="M_HttpServer_StopHttpServer.md">StopHttpServer()</a>  
+<a href="M_HttpServer_ListenForRequests.md">ListenForRequests()</a>  

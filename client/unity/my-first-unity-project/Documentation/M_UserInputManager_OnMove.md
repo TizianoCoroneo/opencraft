@@ -1,7 +1,7 @@
 # OnMove Method
 
 
-\[Missing &lt;summary&gt; documentation for "M:UserInputManager.OnMove(UnityEngine.InputSystem.InputAction.CallbackContext)"\]
+Invokes the callbacks registered on <a href="E_UserInputManager_MoveEvent.md">MoveEvent</a> when a move input is received.
 
 
 
@@ -19,7 +19,7 @@ public void OnMove(
 
 
 #### Parameters
-<dl><dt>  CallbackContext</dt><dd>\[Missing &lt;param name="context"/&gt; documentation for "M:UserInputManager.OnMove(UnityEngine.InputSystem.InputAction.CallbackContext)"\]</dd></dl>
+<dl><dt>  CallbackContext</dt><dd /></dl>
 
 ## See Also
 

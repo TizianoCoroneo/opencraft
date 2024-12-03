@@ -12,12 +12,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
 namespace UnityEngine.InputSystem
 {
-    public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
+    public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     {
         public InputActionAsset asset { get; }
         public @PlayerInputActions()

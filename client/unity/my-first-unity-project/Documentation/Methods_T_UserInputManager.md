@@ -13,22 +13,22 @@
 <td> </td></tr>
 <tr>
 <td><a href="M_UserInputManager_OnDisable.md">OnDisable</a></td>
-<td> </td></tr>
+<td>Disables user inputs.</td></tr>
 <tr>
 <td><a href="M_UserInputManager_OnEnable.md">OnEnable</a></td>
-<td> </td></tr>
+<td>Enables inputs and registers callbacks.</td></tr>
 <tr>
 <td><a href="M_UserInputManager_OnFire.md">OnFire</a></td>
-<td> </td></tr>
+<td>Invokes the callbacks registered on <a href="E_UserInputManager_FireEvent.md">FireEvent</a> when a fire input is received.</td></tr>
 <tr>
 <td><a href="M_UserInputManager_OnLook.md">OnLook</a></td>
-<td> </td></tr>
+<td>Invokes the callbacks registered on <a href="E_UserInputManager_LookEvent.md">LookEvent</a> when a look input is received.</td></tr>
 <tr>
 <td><a href="M_UserInputManager_OnMove.md">OnMove</a></td>
-<td> </td></tr>
+<td>Invokes the callbacks registered on <a href="E_UserInputManager_MoveEvent.md">MoveEvent</a> when a move input is received.</td></tr>
 <tr>
 <td><a href="M_UserInputManager_OnToggleThinClient.md">OnToggleThinClient</a></td>
-<td> </td></tr>
+<td>Toggles this client between being a regular client and a thin client when a <a href="E_UserInputManager_ToggleThinClientEvent.md">ToggleThinClientEvent</a> input is received.<br /><strong>Obsolete.</strong></td></tr>
 </table>
 
 ## See Also

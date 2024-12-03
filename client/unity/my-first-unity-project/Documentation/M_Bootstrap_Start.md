@@ -1,7 +1,7 @@
 # Start Method
 
 
-\[Missing &lt;summary&gt; documentation for "M:Bootstrap.Start"\]
+Automatically called when the game starts. Calls <a href="M_Bootstrap_RunOptions.md">RunOptions()</a>.
 
 
 

@@ -12,33 +12,91 @@ using UnityEngine.Assertions;
 using UnityEngine.Networking;
 
 /// <summary>
-/// An HTTP server that listents for incoming requests that tell the client what
-/// to do.
+/// HttpServer runs on clients, both on user clients and render clients, and
+/// allows remote controlling the client.
+///
+/// <para>
+/// This class is mainly used to allow dynamically changing the game's
+/// deployment, by instructing this client to connect to a server or render
+/// client.
+/// </para>
+///
+/// <para>
+/// You can send requests to this server manually or automate it, for example by
+/// creating a new MonoBehavior that issues commands to this server.
+/// </para>
 /// </summary>
+/// <seealso cref="gameManager"/>
+/// <seealso cref="GameManager"/>
 public class HttpServer : MonoBehaviour
 {
     /// <summary>
-    /// The actual HTTP Server object.
+    /// Contains a reference to an HttpServer object, used to implement the
+    /// singleton pattern and make sure only one instance of the HttpServer is
+    /// created in every client.
     /// </summary>
+    /// <seealso cref="Awake"/>
     public static HttpServer Instance { get; private set; }
 
+    /// <summary>
+    /// A link to the <see cref="GameManager"/>, assigned through the editor.
+    /// This is the object that performs the scene switch (see <see
+    /// cref="GameManager.SwitchToScene"/>) and keeps track of game data such as
+    /// the server IP+port and the player ID.
+    ///
+    /// <para>
+    /// <see cref="GameManager"/> is a <see cref="ScriptableObject"/>, which are
+    /// used to hold all sorts of data that other components want to look up at
+    /// runtime. The HttpServer user the GameManager to store and look up the
+    /// player ID and the server endpoint. For example, when receiving a request
+    /// to switch from a regular client to a thin client, the HttpServer will in
+    /// turn use the GameManager to look up to which server we are currently
+    /// connected, and send a request to the render client telling it to connect
+    /// to the server in our name.
+    /// </para>
+    /// </summary>
     [SerializeField] private GameManager gameManager;
 
     /// <summary>
     /// The port on which the HTTP server listens for requests. Given that this
     /// server is not meant to serve (HTML) content, it is better to use a
-    /// custom port, and stay away from 80, 8080, and the likes.
+    /// custom port, and stay away from 80, 8080, and the likes. The default
+    /// value for this port can be found in the <see
+    /// cref="CommandLineInterface"/> class.
     /// </summary>
     public int ListenPort { get; private set; }
 
+    /// <summary>
+    /// The object that actually listens for and receives incoming requests.
+    /// </summary>
     private HttpListener httpListener = default;
+
+    /// <summary>
+    /// True when the HTTP server is actively listening for requests. When set
+    /// to false, the listen loop will stop listening after its next request.
+    /// </summary>
+    /// <seealso cref="StartHttpServer"/>
+    /// <seealso cref="StopHttpServer"/>
+    /// <seealso cref="ListenForRequests"/>
     private bool listening = default;
+
+    /// <summary>
+    /// The asynchronous task (i.e., loop) that receives incoming HTTP requests.
+    /// Stored in a field so that it can be neatly interrupted and stopped when
+    /// existing the game.
+    /// </summary>
+    /// <seealso cref="listening"/>
+    /// <seealso cref="StartHttpServer"/>
+    /// <seealso cref="StopHttpServer"/>
+    /// <seealso cref="ListenForRequests"/>
     private Task listenLoop = default;
 
     /// <summary>
     /// Queue for incoming requests. New requests are enqueued by a receive
     /// thread, and handled by the main thread, once per frame.
     /// </summary>
+    /// <seealso cref="listenLoop"/>
+    /// <seealso cref="ListenForRequests"/>
     private ConcurrentQueue<HttpListenerContext> requests = new();
 
     /// <summary>
@@ -49,6 +107,7 @@ public class HttpServer : MonoBehaviour
     /// that instance does not get destroyed when switching between scenes.
     /// </para>
     /// </summary>
+    /// <seealso cref="Instance"/>
     void Awake()
     {
         if (Instance == null)
@@ -63,7 +122,8 @@ public class HttpServer : MonoBehaviour
     }
 
     /// <summary>
-    /// Start the HTTP Server when this script is enabled.
+    /// Starts the HTTP Server when this script is enabled (e.g., when entering
+    /// play mode or stopping the process).
     /// </summary>
     void Start()
     {
@@ -73,7 +133,8 @@ public class HttpServer : MonoBehaviour
     }
 
     /// <summary>
-    /// Stop the HTTP server when this script is disabled.
+    /// Stop the HTTP server when this script is disabled (e.g., when exiting
+    /// play mode or stopping the process).
     /// </summary>
     void OnDisable()
     {
@@ -101,7 +162,7 @@ public class HttpServer : MonoBehaviour
     }
 
     /// <summary>
-    /// Start the HTTP server.
+    /// Start the HTTP server. Called by <see cref="Start"/>.
     /// </summary>
     private void StartHttpServer()
     {
@@ -124,7 +185,7 @@ public class HttpServer : MonoBehaviour
     }
 
     /// <summary>
-    /// Stop the HTTP server.
+    /// Stop the HTTP server. Called by <see cref="OnDisable"/>.
     /// </summary>
     private async void StopHttpServer()
     {
@@ -142,6 +203,8 @@ public class HttpServer : MonoBehaviour
     /// separate thread, mostly hanging on <see cref="httpListener"/>'s
     /// GetContext method.
     /// </summary>
+    /// <seealso cref="listening"/>
+    /// <seealso cref="listenLoop"/>
     private void ListenForRequests()
     {
         Debug.Log($"listening for http requests on {string.Join(',', httpListener.Prefixes)}");
@@ -162,7 +225,7 @@ public class HttpServer : MonoBehaviour
     }
 
     /// <summary>
-    /// Handle a single HTTP request.
+    /// Most important method of this class. Handles a single HTTP request.
     ///
     /// <para>
     /// Supported commands are:
@@ -284,9 +347,13 @@ public class HttpServer : MonoBehaviour
 
     /// <summary>
     /// Makes the client switch to the ThinClient scene and connect to another
-    /// client which it will try to use as renderer. It will instruct the remote
-    /// client to log in to the server to which this client is connected before
-    /// becoming a thin client.
+    /// client, which it will instruct to log in to a server become a renderer.
+    ///
+    /// <para>
+    /// If no serverHost and serverPort are provided, it will instruct the
+    /// remote client to log in to the server to which this client is connected
+    /// before becoming a thin client.
+    /// </para>
     ///
     /// <para>
     /// The method pulls parameters from the provided dictionary to try to
@@ -303,39 +370,48 @@ public class HttpServer : MonoBehaviour
     ///     </item>
     ///     <item>
     ///         <term>port</term>
-    ///         <description>The port of the remote client (i.e., renderer) to
-    ///         connect to.</description>
+    ///         <description>The port of the HTTP command server running on the
+    ///         render client, to which to this client can send a
+    ///         command.</description>
     ///     </item>
     ///     <item>
     ///         <term>signalingPort</term>
     ///         <description>The port on which the signaling webserver is
-    ///         running. The webserver must run on the same location as
-    ///         specified by the <c>host</c> parameter.</description>
+    ///         running on the render client. The webserver must run on the same
+    ///         location as specified by the <c>host</c>
+    ///         parameter.</description>
     ///     </item>
     ///     <item>
     ///         <term>iceServers</term>
-    ///         <description>The ICE servers to use when trying to establish a
-    ///         direct WebRTC connection between the two clients (this thin
-    ///         client and the remote renderer client).</description>
+    ///         <description>
+    ///         <i>(OPTIONAL)</i> The ICE servers to use when trying to
+    ///         establish a direct WebRTC connection between the two clients
+    ///         (this thin client and the remote renderer client).
+    ///         </description>
     ///     </item>
     ///     <item>
     ///         <term>serverHost</term>
-    ///         <description>An IPv4 address or hostname of the server the
+    ///         <description>
+    ///         <i>(OPTIONAL)</i> An IPv4 address or hostname of the server the
     ///         renderer should connect to. If not provided, the thin client
     ///         will tell the renderer to connect to the same host the thin
-    ///         client was connected to.</description>
+    ///         client was connected to.
+    ///         </description>
     ///     </item>
     ///     <item>
     ///         <term>serverPort</term>
-    ///         <description>The port of the server the renderer should connect
-    ///         to. If not provided, the thin client will tell the renderer to
-    ///         connect to the same port the thin client was connected
-    ///         to.</description>
+    ///         <description>
+    ///         <i>(OPTIONAL)</i> The port of the server the renderer should
+    ///         connect to. If not provided, the thin client will tell the
+    ///         renderer to connect to the same port the thin client was
+    ///         connected to.
+    ///         </description>
     ///     </item>
     /// </list>
     /// </para>
     /// </summary>
     /// <param name="v">The dictionary with parameter values.</param>
+    /// <seealso cref="Networking"/>
     private void HandleRequestBecomeThinClient(NameValueCollection v)
     {
         var host = v["host"] ?? "localhost";
@@ -428,9 +504,9 @@ public class HttpServer : MonoBehaviour
     /// </summary>
     /// <param name="render">Endpoint (ip+port) of the rendering client.</param>
     /// <param name="server">Endpoint of the game server.</param>
-    /// <param name="signalingPort">Port of the signaling webserver. The
-    /// webserver must be available at the same IP address as <paramref
-    /// name="render"/>.</param>
+    /// <param name="signalingPort">Port of the signaling webserver running on
+    /// the render client. The webserver must be available at the same IP
+    /// address as <paramref name="render"/>.</param>
     /// <param name="playerID">The player ID the rendering client should use to
     /// log in to the game server.</param>
     /// <param name="iceServers">The ICE server(s) to use when trying to
@@ -559,17 +635,18 @@ public class HttpServer : MonoBehaviour
     ///     </item>
     ///     <item>
     ///         <term>signalingPort</term>
-    ///         <description>The port of the signaling webserver.</description>
-    ///     </item>
-    ///     <item>
-    ///         <term>playerID</term>
-    ///         <description>The player ID with which to log in.</description>
+    ///         <description>
+    ///         <i>(REQUIRED ONLY WHEN broadcast == true)</i> The port of the
+    ///         signaling webserver.
+    ///         </description>
     ///     </item>
     ///     <item>
     ///         <term>iceServers</term>
-    ///         <description>The ICE servers to use when trying to establish a
-    ///         direct WebRTC connection between the thin client and render
-    ///         client.</description>
+    ///         <description>
+    ///         <i>(REQUIRED ONLY WHEN broadcast == true)</i> The ICE servers to
+    ///         use when trying to establish a direct WebRTC connection between
+    ///         the thin client and render client.
+    ///         </description>
     ///     </item>
     /// </list>
     /// </para>
@@ -623,6 +700,13 @@ public class HttpServer : MonoBehaviour
         HandleRequestLogin(v);
     }
 
+    /// <summary>
+    /// Parses the given string and returns a corresponding <see
+    /// cref="IPEndPoint"/>. If the parameter is null, the function returns an
+    /// endpoint corresponding to <c>localhost:80</c>
+    /// </summary>
+    /// <param name="signalingServerStr">The string to parse.</param>
+    /// <returns>The parsed IPEndPoint</returns>
     private IPEndPoint ParseSignalingServerEndpoint(string signalingServerStr)
     {
         signalingServerStr ??= "localhost:80";

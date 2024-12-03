@@ -1,7 +1,7 @@
 # BlockPrefab Field
 
 
-\[Missing &lt;summary&gt; documentation for "F:World.BlockPrefab"\]
+Prefab for a single block in the world.
 
 
 

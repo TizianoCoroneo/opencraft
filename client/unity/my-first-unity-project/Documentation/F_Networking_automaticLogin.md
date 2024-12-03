@@ -1,7 +1,12 @@
 # automaticLogin Field
+<blockquote><strong>Note: This API is now obsolete.</strong></blockquote>
 
 
-\[Missing &lt;summary&gt; documentation for "F:Networking.automaticLogin"\]
+
+
+When set to true, tries to automatically log in to a server running on localhost, using the default port of 7979, when the game starts. 
+**DEPRECATED** this field is deprecated. Set to false. Use the <a href="T_Bootstrap.md">Bootstrap</a> class to connect to a server upon boot.
+
 
 
 
@@ -11,6 +16,7 @@
 
 **C#**
 ``` C#
+[ObsoleteAttribute("Logging in is now the responsibility of the Bootstrap class. Setting this value tries to log in on localhost.")]
 private bool automaticLogin
 ```
 

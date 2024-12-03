@@ -1,7 +1,7 @@
 # networking Field
 
 
-\[Missing &lt;summary&gt; documentation for "F:Bootstrap.networking"\]
+Instance of <a href="T_Networking.md">Networking</a>, responsible for networking between the client and server. Used in this class to call <a href="M_Networking_LogIn.md">LogIn(IPEndPoint, Int32)</a>.
 
 
 

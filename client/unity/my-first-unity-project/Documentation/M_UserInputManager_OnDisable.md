@@ -1,7 +1,7 @@
 # OnDisable Method
 
 
-\[Missing &lt;summary&gt; documentation for "M:UserInputManager.OnDisable"\]
+Disables user inputs.
 
 
 

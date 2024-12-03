@@ -1,7 +1,7 @@
 # messageQueue Field
 
 
-\[Missing &lt;summary&gt; documentation for "F:Networking.messageQueue"\]
+A queue for incoming server messages, stored here when they are received but have not yet been processed.
 
 
 

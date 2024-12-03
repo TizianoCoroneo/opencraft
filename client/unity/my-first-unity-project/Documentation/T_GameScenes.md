@@ -21,11 +21,11 @@ public enum GameScenes
 <tr>
 <td>Client</td>
 <td>0</td>
-<td> </td></tr>
+<td>A client that connects to a server.</td></tr>
 <tr>
 <td>ThinClient</td>
 <td>1</td>
-<td> </td></tr>
+<td>A client that connects to another (render) client. The thin client sends user inputs and receives rendered frames that it plays back for the user.</td></tr>
 </table>
 
 ## See Also

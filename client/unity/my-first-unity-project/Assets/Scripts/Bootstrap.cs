@@ -21,7 +21,18 @@ using UnityEngine.Assertions;
 /// <seealso cref="CommandLineInterface"/>
 public class Bootstrap : MonoBehaviour
 {
+    /// <summary>
+    /// Instance of <see cref="Networking"/>, responsible for networking between
+    /// the client and server. Used in this class to call <see
+    /// cref="Networking.LogIn(IPEndPoint, int)"/>.
+    /// </summary>
     [SerializeField] Networking networking;
+
+    /// <summary>
+    /// A list of arguments, specified using the editor, that are interpreted as
+    /// additional command line arguments. This field is only used when the game
+    /// runs in the editor. Stand-alone builds ignore this field.
+    /// </summary>
     [SerializeField] private string[] extraArguments;
 
     /// <summary>
@@ -70,14 +81,20 @@ public class Bootstrap : MonoBehaviour
         CommandLineArgs = result.Value;
     }
 
+    /// <summary>
+    /// Automatically called when the game starts. Calls <see
+    /// cref="RunOptions"/>.
+    /// </summary>
     void Start()
     {
         RunOptions();
     }
 
     /// <summary>
-    /// Starts the client in the way indicated by the provides command line options <c>opts</c>.
+    /// Starts the client in the way indicated by the provides command line
+    /// options <c>opts</c>.
     /// </summary>
+    /// <seealso cref="CommandLineInterface"/>
     private void RunOptions()
     {
         var opts = CommandLineArgs;
@@ -100,7 +117,6 @@ public class Bootstrap : MonoBehaviour
         networking.LogIn(ep, opts.UserID);
     }
 
-    // Update is called once per frame
     void Update()
     {
 

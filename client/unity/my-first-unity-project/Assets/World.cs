@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 /// <summary>
@@ -8,11 +5,16 @@ using UnityEngine;
 /// </summary>
 public class World : MonoBehaviour
 {
+    /// <summary>
+    /// Prefab for a single block in the world.
+    /// </summary>
     public GameObject BlockPrefab;
 
     // Start is called before the first frame update
     void Start()
     {
+
+
 
     }
 

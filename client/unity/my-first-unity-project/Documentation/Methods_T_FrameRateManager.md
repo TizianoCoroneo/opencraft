@@ -7,7 +7,7 @@
 <table>
 <tr>
 <td><a href="M_FrameRateManager_Awake.md">Awake</a></td>
-<td> </td></tr>
+<td>Sets the target framerate when the game boots up.</td></tr>
 </table>
 
 ## See Also

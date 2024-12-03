@@ -43,7 +43,7 @@ public class World : MonoBehaviour
 <table>
 <tr>
 <td><a href="F_World_BlockPrefab.md">BlockPrefab</a></td>
-<td> </td></tr>
+<td>Prefab for a single block in the world.</td></tr>
 </table>
 
 ## See Also

@@ -1,7 +1,7 @@
 # inputManager Field
 
 
-\[Missing &lt;summary&gt; documentation for "F:GameManager.inputManager"\]
+Reference to the <a href="T_UserInputManager.md">UserInputManager</a>. Used to register a callback to toggle between a regular client and a thin client.
 
 
 

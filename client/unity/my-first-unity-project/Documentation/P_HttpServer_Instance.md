@@ -1,7 +1,7 @@
 # Instance Property
 
 
-The actual HTTP Server object.
+Contains a reference to an HttpServer object, used to implement the singleton pattern and make sure only one instance of the HttpServer is created in every client.
 
 
 
@@ -25,3 +25,4 @@ public static HttpServer Instance { get; private set; }
 #### Reference
 <a href="T_HttpServer.md">HttpServer Class</a>  
 <a href="N_.md">(Default Namespace) Namespace</a>  
+<a href="M_HttpServer_Awake.md">Awake()</a>  

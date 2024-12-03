@@ -1,7 +1,7 @@
 # ListenPort Property
 
 
-The port on which the HTTP server listens for requests. Given that this server is not meant to serve (HTML) content, it is better to use a custom port, and stay away from 80, 8080, and the likes.
+The port on which the HTTP server listens for requests. Given that this server is not meant to serve (HTML) content, it is better to use a custom port, and stay away from 80, 8080, and the likes. The default value for this port can be found in the <a href="T_CommandLineInterface.md">CommandLineInterface</a> class.
 
 
 

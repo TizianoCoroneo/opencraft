@@ -1,7 +1,7 @@
 # OnLook Method
 
 
-\[Missing &lt;summary&gt; documentation for "M:UserInputManager.OnLook(UnityEngine.InputSystem.InputAction.CallbackContext)"\]
+Invokes the callbacks registered on <a href="E_UserInputManager_LookEvent.md">LookEvent</a> when a look input is received.
 
 
 
@@ -19,7 +19,7 @@ public void OnLook(
 
 
 #### Parameters
-<dl><dt>  CallbackContext</dt><dd>\[Missing &lt;param name="context"/&gt; documentation for "M:UserInputManager.OnLook(UnityEngine.InputSystem.InputAction.CallbackContext)"\]</dd></dl>
+<dl><dt>  CallbackContext</dt><dd /></dl>
 
 ## See Also
 

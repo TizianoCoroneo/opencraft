@@ -1,7 +1,7 @@
 # running Field
 
 
-\[Missing &lt;summary&gt; documentation for "F:Networking.running"\]
+Indicates whether there is an asynchronous task listening for incoming messages from the server.
 
 
 
@@ -25,3 +25,6 @@ private bool running
 #### Reference
 <a href="T_Networking.md">Networking Class</a>  
 <a href="N_.md">(Default Namespace) Namespace</a>  
+<a href="F_Networking_messageQueue.md">messageQueue</a>  
+<a href="F_Networking_receiveLoop.md">receiveLoop</a>  
+<a href="M_Networking_StartSocketReceive.md">StartSocketReceive(IPEndPoint)</a>  

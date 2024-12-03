@@ -1,7 +1,7 @@
 # UserInputManager Class
 
 
-\[Missing &lt;summary&gt; documentation for "T:UserInputManager"\]
+A scriptable object that manages possible user inputs.
 
 
 
@@ -36,45 +36,45 @@ public class UserInputManager : ScriptableObject
 <td> </td></tr>
 <tr>
 <td><a href="M_UserInputManager_OnDisable.md">OnDisable</a></td>
-<td> </td></tr>
+<td>Disables user inputs.</td></tr>
 <tr>
 <td><a href="M_UserInputManager_OnEnable.md">OnEnable</a></td>
-<td> </td></tr>
+<td>Enables inputs and registers callbacks.</td></tr>
 <tr>
 <td><a href="M_UserInputManager_OnFire.md">OnFire</a></td>
-<td> </td></tr>
+<td>Invokes the callbacks registered on <a href="E_UserInputManager_FireEvent.md">FireEvent</a> when a fire input is received.</td></tr>
 <tr>
 <td><a href="M_UserInputManager_OnLook.md">OnLook</a></td>
-<td> </td></tr>
+<td>Invokes the callbacks registered on <a href="E_UserInputManager_LookEvent.md">LookEvent</a> when a look input is received.</td></tr>
 <tr>
 <td><a href="M_UserInputManager_OnMove.md">OnMove</a></td>
-<td> </td></tr>
+<td>Invokes the callbacks registered on <a href="E_UserInputManager_MoveEvent.md">MoveEvent</a> when a move input is received.</td></tr>
 <tr>
 <td><a href="M_UserInputManager_OnToggleThinClient.md">OnToggleThinClient</a></td>
-<td> </td></tr>
+<td>Toggles this client between being a regular client and a thin client when a <a href="E_UserInputManager_ToggleThinClientEvent.md">ToggleThinClientEvent</a> input is received.<br /><strong>Obsolete.</strong></td></tr>
 </table>
 
 ## Events
 <table>
 <tr>
 <td><a href="E_UserInputManager_FireEvent.md">FireEvent</a></td>
-<td> </td></tr>
+<td>Represents an input that interacts with the object the camera is currently looking at, or fires a weapon in the current direction.</td></tr>
 <tr>
 <td><a href="E_UserInputManager_LookEvent.md">LookEvent</a></td>
-<td> </td></tr>
+<td>Represents an input that changes the orientation of the user's camera.</td></tr>
 <tr>
 <td><a href="E_UserInputManager_MoveEvent.md">MoveEvent</a></td>
-<td> </td></tr>
+<td>Represents an input that changes the user's avatar location.</td></tr>
 <tr>
 <td><a href="E_UserInputManager_ToggleThinClientEvent.md">ToggleThinClientEvent</a></td>
-<td> </td></tr>
+<td>Represents an input that makes the client switch between being a regular client and a thin client.<br /><strong>Obsolete.</strong></td></tr>
 </table>
 
 ## Fields
 <table>
 <tr>
 <td><a href="F_UserInputManager_gameInput.md">gameInput</a></td>
-<td> </td></tr>
+<td>Can be queried for player inputs and can be used to register callbacks on certain inputs.</td></tr>
 </table>
 
 ## See Also

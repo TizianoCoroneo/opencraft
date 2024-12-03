@@ -1,7 +1,7 @@
 # client Field
 
 
-\[Missing &lt;summary&gt; documentation for "F:Networking.client"\]
+The client used to communicate with the game server.
 
 
 

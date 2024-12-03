@@ -1,7 +1,7 @@
 # OnDisable Method
 
 
-Stop the HTTP server when this script is disabled.
+Stop the HTTP server when this script is disabled (e.g., when exiting play mode or stopping the process).
 
 
 

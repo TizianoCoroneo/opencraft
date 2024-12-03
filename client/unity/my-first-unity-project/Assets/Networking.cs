@@ -16,15 +16,70 @@ using System.IO;
 /// </summary>
 public class Networking : MonoBehaviour
 {
+    /// <summary>
+    /// Reference to the player avatar object. Used to move the avatar to the
+    /// correct location upon login. The field is set through the Unity editor.
+    /// </summary>
+    /// <seealso cref="HandleMessageLogin"/>
     public GameObject playerCharacter;
+
+    /// <summary>
+    /// Reference to the game world. Used to load new chunks received from the
+    /// server. The field is set through the Unity editor.
+    /// </summary>
+    /// <seealso cref="HandleMessageColumnData"/>
     public World world;
-    [SerializeField] private bool automaticLogin = default;
+
+    /// <summary>
+    /// When set to true, tries to automatically log in to a server running on
+    /// localhost, using the default port of 7979, when the game starts.
+    ///
+    /// <para><b>DEPRECATED</b> this field is deprecated. Set to false. Use the
+    /// <see cref="Bootstrap"/> class to connect to a server upon boot.</para>
+    /// </summary>
+    [Obsolete("Logging in is now the responsibility of the Bootstrap class. Setting this value tries to log in on localhost.")]
+    [SerializeField]
+    private bool automaticLogin = default;
+
+    /// <summary>
+    /// Reference to the <see cref="GameManager"/> ScriptableObjects, which
+    /// maintains information about the (ongoing) game. This class uses the game
+    /// manager to save the player ID received from the server and the server
+    /// address after successfully logging in.
+    /// </summary>
+    /// <seealso cref="HttpServer.HandleRequestBecomeThinClient"/>
     [SerializeField] private GameManager gameManager = default;
 
+    /// <summary>
+    /// The client used to communicate with the game server.
+    /// </summary>
     private TcpClient client;
+
+    /// <summary>
+    /// A queue for incoming server messages, stored here when they are received
+    /// but have not yet been processed.
+    /// </summary>
     private ConcurrentQueue<(ToClient, TcpClient)> messageQueue = default;
+
+    /// <summary>
+    /// A queue for outgoing client messages, stored here when they have been
+    /// generated but have not yet been sent using the <see cref="client"/>.
+    /// </summary>
     private ConcurrentQueue<ToServer> outgoingMessages = default;
+
+    /// <summary>
+    /// Indicates whether there is an asynchronous task listening for incoming
+    /// messages from the server.
+    /// </summary>
+    /// <seealso cref="messageQueue"/>
+    /// <seealso cref="receiveLoop"/>
+    /// <seealso cref="StartSocketReceive"/>
     private bool running = true;
+
+    /// <summary>
+    /// The task that reads incoming messages from <see cref="TcpClient"/> and
+    /// enqueues them in the <see cref="messageQueue"/>.
+    /// </summary>
     private Task receiveLoop = default;
 
     // Start is called before the first frame update

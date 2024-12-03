@@ -1,7 +1,11 @@
 # GameManager Class
 
 
-This class can switch the client's deployment. Examples include logging in as a client to a specified server, disconnecting, or switching from client to thin-client mode.
+This class keeps track of game data that other scripts need access to, and can also switch the client's deployment. Examples include logging in as a client to a specified server, disconnecting, or switching from client to thin-client mode. 
+This being a ScriptableObject makes it a good place to take care of scene switching, because regular scripts (i.e., MonoBehaviors) are part of a scene, and therefore not a great place to take actions that work across scenes.
+
+This scene only executes switching, it does not decide when to act. Other scripts can call into this object to make the switch happen. For example, switching between a thin client and regular client via a HTTP GET request makes the <a href="T_HttpServer.md">HttpServer</a> call into this object.
+
 
 
 
@@ -65,7 +69,7 @@ public class GameManager : ScriptableObject
 <table>
 <tr>
 <td><a href="F_GameManager_inputManager.md">inputManager</a></td>
-<td> </td></tr>
+<td>Reference to the <a href="T_UserInputManager.md">UserInputManager</a>. Used to register a callback to toggle between a regular client and a thin client.</td></tr>
 </table>
 
 ## See Also
@@ -73,3 +77,4 @@ public class GameManager : ScriptableObject
 
 #### Reference
 <a href="N_.md">(Default Namespace) Namespace</a>  
+<a href="T_HttpServer.md">HttpServer</a>  

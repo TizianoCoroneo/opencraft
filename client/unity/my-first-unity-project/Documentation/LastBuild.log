@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder and Tools" version="2024.9.12.0" projectFile="C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\documentation.shfbproj" started="03/12/2024 11:47:16">
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2024.9.12.0" projectFile="C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\documentation.shfbproj" started="03/12/2024 15:06:39">
 <buildStep step="Initializing">
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder&#39;
 Locating components in the following folder(s):
@@ -11,9 +11,6 @@ Using presentation style &#39;Markdown&#39; located in &#39;C:\Program Files (x8
 Loading and initializing plug-ins...
 Assembly Binding Redirection Version 2024.9.12.0
 Copyright &#169; 2006-2024, Eric Woodruff, All Rights Reserved
-</buildStep>
-<buildStep step="ClearWorkFolder">
-Clearing working folder...
 -------------------------------
 Clearing any prior web/markdown output...
 </buildStep>
@@ -48,11 +45,11 @@ Copying XML comments files
 </buildStep>
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, English (United States))...
-    Last step completed in 00:00:00.0011
+    Last step completed in 00:00:00.0010
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00.0081
+    Last step completed in 00:00:00.0126
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
@@ -69,10 +66,10 @@ Adding ignored assembly names to assembly resolver configuration:
     websocket-sharp
     UnityEngine.TestRunner
     nunit.framework
-</plugIn>[C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\MSBuild.exe - GenerateRefInfo-cb07fcf4-1617-4297-8cae-7f22f5f4370d.proj]
-Build started 03/12/2024 11:47:25.
+</plugIn>[C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\MSBuild.exe - GenerateRefInfo-94015a98-6419-4244-804e-bbd982c71bbb.proj]
+Build started 03/12/2024 15:06:48.
 
-Project &quot;C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-cb07fcf4-1617-4297-8cae-7f22f5f4370d.proj&quot; on node 1 (default targets).
+Project &quot;C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-94015a98-6419-4244-804e-bbd982c71bbb.proj&quot; on node 1 (default targets).
 PrepareForBuild:
   Creating directory &quot;obj\Debug\&quot;.
 GenerateRefInfo:
@@ -80,21 +77,21 @@ GenerateRefInfo:
   c Microsoft Corporation. All rights reserved.
   No source code context base path specified.  Source context information is unavailable.
   Loaded 1 assemblies for reflection and 19 dependency assemblies.
-MRefBuilder : warning : Ignoring unresolved assembly reference: Unity.InputSystem (Unity.InputSystem, Version=1.7.0.0, Culture=neutral, PublicKeyToken=null) required by Assembly-CSharp [C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-cb07fcf4-1617-4297-8cae-7f22f5f4370d.proj]
-MRefBuilder : warning : Ignoring unresolved assembly reference: Google.Protobuf (Google.Protobuf, Version=3.28.2.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604) required by Assembly-CSharp [C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-cb07fcf4-1617-4297-8cae-7f22f5f4370d.proj]
-MRefBuilder : warning : Ignoring unresolved assembly reference: CommandLine (CommandLine, Version=2.9.1.0, Culture=neutral, PublicKeyToken=5a870481e358d379) required by Assembly-CSharp [C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-cb07fcf4-1617-4297-8cae-7f22f5f4370d.proj]
-MRefBuilder : warning : Ignoring unresolved assembly reference: UnityEngine.UI (UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null) required by Assembly-CSharp [C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-cb07fcf4-1617-4297-8cae-7f22f5f4370d.proj]
-MRefBuilder : warning : Ignoring unresolved assembly reference: UnityEngine.UI (UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null) required by Unity.RenderStreaming [C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-cb07fcf4-1617-4297-8cae-7f22f5f4370d.proj]
-MRefBuilder : warning : Ignoring unresolved assembly reference: Unity.WebRTC (Unity.WebRTC, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null) required by Unity.RenderStreaming [C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-cb07fcf4-1617-4297-8cae-7f22f5f4370d.proj]
+MRefBuilder : warning : Ignoring unresolved assembly reference: Unity.InputSystem (Unity.InputSystem, Version=1.7.0.0, Culture=neutral, PublicKeyToken=null) required by Assembly-CSharp [C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-94015a98-6419-4244-804e-bbd982c71bbb.proj]
+MRefBuilder : warning : Ignoring unresolved assembly reference: Google.Protobuf (Google.Protobuf, Version=3.28.2.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604) required by Assembly-CSharp [C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-94015a98-6419-4244-804e-bbd982c71bbb.proj]
+MRefBuilder : warning : Ignoring unresolved assembly reference: CommandLine (CommandLine, Version=2.9.1.0, Culture=neutral, PublicKeyToken=5a870481e358d379) required by Assembly-CSharp [C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-94015a98-6419-4244-804e-bbd982c71bbb.proj]
+MRefBuilder : warning : Ignoring unresolved assembly reference: UnityEngine.UI (UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null) required by Assembly-CSharp [C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-94015a98-6419-4244-804e-bbd982c71bbb.proj]
+MRefBuilder : warning : Ignoring unresolved assembly reference: UnityEngine.UI (UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null) required by Unity.RenderStreaming [C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-94015a98-6419-4244-804e-bbd982c71bbb.proj]
+MRefBuilder : warning : Ignoring unresolved assembly reference: Unity.WebRTC (Unity.WebRTC, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null) required by Unity.RenderStreaming [C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-94015a98-6419-4244-804e-bbd982c71bbb.proj]
   Wrote information on 3 namespaces, 33 types, and 533 members
   Merging duplicate type and member information
   Merged 0 duplicate type(s) and 0 duplicate member(s)
-Done Building Project &quot;C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-cb07fcf4-1617-4297-8cae-7f22f5f4370d.proj&quot; (default targets).
-    Last step completed in 00:00:02.6737
+Done Building Project &quot;C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\GenerateRefInfo-94015a98-6419-4244-804e-bbd982c71bbb.proj&quot; (default targets).
+    Last step completed in 00:00:02.5948
 </buildStep>
 <buildStep step="ApplyDocumentModel">
 Applying document model to reflection output...
-    Last step completed in 00:00:00.0401
+    Last step completed in 00:00:00.0363
 </buildStep>
 <buildStep step="AddApiTopicFilenames">
 Adding topic filenames to API members...
@@ -144,15 +141,15 @@ Adding topic filenames to API members...
     Unique name M_Opencraft_NetCode_YouArePlayer__ctor_1 generated for M:Opencraft.NetCode.YouArePlayer.#ctor(Opencraft.NetCode.YouArePlayer)
     Unique name M_Opencraft_NetCode_YouArePlayer_Equals_1 generated for M:Opencraft.NetCode.YouArePlayer.Equals(System.Object)
     Unique name M_Opencraft_NetCode_YouArePlayer_MergeFrom_1 generated for M:Opencraft.NetCode.YouArePlayer.MergeFrom(Opencraft.NetCode.YouArePlayer)
-    Last step completed in 00:00:00.0407
+    Last step completed in 00:00:00.0363
 </buildStep>
 <buildStep step="GenerateApiTopicManifest">
 Generating API topic manifest...
-    Last step completed in 00:00:00.0248
+    Last step completed in 00:00:00.0254
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00.5992
+    Last step completed in 00:00:00.5178
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
@@ -166,11 +163,11 @@ Merging conceptual and additional tables of contents...
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file for API content...
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:00.0257
+    Last step completed in 00:00:00.0258
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
-    Last step completed in 00:00:00.3580
+    Last step completed in 00:00:00.1624
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
@@ -181,7 +178,7 @@ Merging custom build component configurations
 C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\BuildAssembler.config
   Updating reference topic configurations.
   No conceptual content.  Removing conceptual content components.
-    Last step completed in 00:00:00.0163
+    Last step completed in 00:00:00.0160
 </buildStep>
 <buildStep step="BuildTopics">
 Building help topics...
@@ -192,19 +189,14 @@ SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Bootstrap] Unknown refe
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Bootstrap] Unknown reference link target &#39;T:UnityEngine.Component&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Bootstrap] Unknown reference link target &#39;T:UnityEngine.Behaviour&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Bootstrap] Unknown reference link target &#39;T:UnityEngine.MonoBehaviour&#39;.
-SHFB: Warning BE0066: ShowMissingComponent: [F:Bootstrap.extraArguments] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [F:Bootstrap.networking] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [M:Bootstrap.Start] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:Bootstrap.Update] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:FrameRateManager] Unknown reference link target &#39;T:UnityEngine.Object&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:FrameRateManager] Unknown reference link target &#39;T:UnityEngine.Component&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:FrameRateManager] Unknown reference link target &#39;T:UnityEngine.Behaviour&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:FrameRateManager] Unknown reference link target &#39;T:UnityEngine.MonoBehaviour&#39;.
-SHFB: Warning BE0066: ShowMissingComponent: [M:FrameRateManager.Awake] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [P:FrameRateManager.Instance] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:FrameRateManager.Awake] Unknown reference link target &#39;P:UnityEngine.Application.targetFrameRate&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:GameManager] Unknown reference link target &#39;T:UnityEngine.Object&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:GameManager] Unknown reference link target &#39;T:UnityEngine.ScriptableObject&#39;.
-SHFB: Warning BE0066: ShowMissingComponent: [F:GameManager.inputManager] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:GameManager.OnDestroy] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:GameManager.SwitchToScene(GameScenes)] Unknown reference link target &#39;T:UnityEngine.AsyncOperation&#39;.
 SHFB: Warning BE0066: ShowMissingComponent: [M:GameManager.Update] Missing &lt;summary&gt; documentation
@@ -212,35 +204,22 @@ SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:HttpServer] Unknown ref
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:HttpServer] Unknown reference link target &#39;T:UnityEngine.Component&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:HttpServer] Unknown reference link target &#39;T:UnityEngine.Behaviour&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:HttpServer] Unknown reference link target &#39;T:UnityEngine.MonoBehaviour&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:HttpServer] Unknown reference link target &#39;T:UnityEngine.ScriptableObject&#39;.
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [Fields.T:HttpServer] Unknown reference link target &#39;T:UnityEngine.ScriptableObject&#39;.
 SHFB: Warning BE0066: ShowMissingComponent: [M:HttpServer.BecomeThinClientRoutine(System.Net.IPEndPoint,System.Net.IPEndPoint,System.Int32,System.UInt32,Unity.RenderStreaming.IceServer[])] Missing &lt;returns&gt; documentation
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:HttpServer.BecomeThinClientRoutine(System.Net.IPEndPoint,System.Net.IPEndPoint,System.Int32,System.UInt32,Unity.RenderStreaming.IceServer[])] Unknown reference link target &#39;T:Unity.RenderStreaming.IceServer&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:HttpServer.ConnectToRenderer(System.Net.IPEndPoint,Unity.RenderStreaming.IceServer[])] Unknown reference link target &#39;T:Unity.RenderStreaming.IceServer&#39;.
-SHFB: Warning BE0066: ShowMissingComponent: [F:HttpServer.gameManager] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:HttpServer.gameManager] Unknown reference link target &#39;T:UnityEngine.ScriptableObject&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:HttpServer.GetRequest(System.String,System.Action{UnityEngine.Networking.UnityWebRequest})] Unknown reference link target &#39;T:UnityEngine.Networking.UnityWebRequest&#39;.
 SHFB: Warning BE0066: ShowMissingComponent: [M:HttpServer.HandleRequestBecomeClientRoutine(System.Collections.Specialized.NameValueCollection)] Missing &lt;returns&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [F:HttpServer.httpListener] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [F:HttpServer.listening] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [F:HttpServer.listenLoop] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:HttpServer.ParseIceServers(System.String)] Unknown reference link target &#39;T:Unity.RenderStreaming.IceServer&#39;.
-SHFB: Warning BE0066: ShowMissingComponent: [M:HttpServer.ParseSignalingServerEndpoint(System.String)] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [M:HttpServer.ParseSignalingServerEndpoint(System.String)] Missing &lt;returns&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [M:HttpServer.ParseSignalingServerEndpoint(System.String)] Missing &lt;param name=&quot;signalingServerStr&quot;/&gt; documentation
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Networking] Unknown reference link target &#39;T:UnityEngine.Object&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Networking] Unknown reference link target &#39;T:UnityEngine.Component&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Networking] Unknown reference link target &#39;T:UnityEngine.Behaviour&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:Networking] Unknown reference link target &#39;T:UnityEngine.MonoBehaviour&#39;.
-SHFB: Warning BE0066: ShowMissingComponent: [F:Networking.automaticLogin] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [F:Networking.client] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [F:Networking.gameManager] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [F:Networking.messageQueue] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:Networking.OnDestroy] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [F:Networking.outgoingMessages] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [F:Networking.playerCharacter] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Networking.playerCharacter] Unknown reference link target &#39;T:UnityEngine.GameObject&#39;.
-SHFB: Warning BE0066: ShowMissingComponent: [F:Networking.receiveLoop] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [F:Networking.running] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:Networking.Start] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [F:Networking.world] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [T:playerscript] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:playerscript] Unknown reference link target &#39;T:UnityEngine.Object&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:playerscript] Unknown reference link target &#39;T:UnityEngine.Component&#39;.
@@ -322,42 +301,25 @@ SHFB: Warning BE0066: ShowMissingComponent: [F:Receiver.settings] Missing &lt;su
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Receiver.settings] Unknown reference link target &#39;T:RenderStreamingSettings&#39;.
 SHFB: Warning BE0066: ShowMissingComponent: [M:Receiver.Start] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:Receiver.Update] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [T:UserInputManager] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:UserInputManager] Unknown reference link target &#39;T:UnityEngine.Object&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:UserInputManager] Unknown reference link target &#39;T:UnityEngine.ScriptableObject&#39;.
 SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.Awake] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [E:UserInputManager.FireEvent] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [E:UserInputManager.FireEvent] Unknown reference link target &#39;T:UnityEngine.Events.UnityAction&#39;.
-SHFB: Warning BE0066: ShowMissingComponent: [F:UserInputManager.gameInput] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:UserInputManager.gameInput] Unknown reference link target &#39;T:UnityEngine.InputSystem.PlayerInputActions&#39;.
-SHFB: Warning BE0066: ShowMissingComponent: [E:UserInputManager.LookEvent] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [E:UserInputManager.LookEvent] Unknown reference link target &#39;T:UnityEngine.Events.UnityAction`1&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [E:UserInputManager.LookEvent] Unknown reference link target &#39;T:UnityEngine.Vector2&#39;.
-SHFB: Warning BE0066: ShowMissingComponent: [E:UserInputManager.MoveEvent] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [E:UserInputManager.MoveEvent] Unknown reference link target &#39;T:UnityEngine.Events.UnityAction`1&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [E:UserInputManager.MoveEvent] Unknown reference link target &#39;T:UnityEngine.Vector2&#39;.
 SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.OnDestroy] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.OnDisable] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.OnEnable] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.OnFire(UnityEngine.InputSystem.InputAction.CallbackContext)] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.OnFire(UnityEngine.InputSystem.InputAction.CallbackContext)] Missing &lt;param name=&quot;context&quot;/&gt; documentation
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:UserInputManager.OnFire(UnityEngine.InputSystem.InputAction.CallbackContext)] Unknown reference link target &#39;T:UnityEngine.InputSystem.InputAction.CallbackContext&#39;.
-SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.OnLook(UnityEngine.InputSystem.InputAction.CallbackContext)] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.OnLook(UnityEngine.InputSystem.InputAction.CallbackContext)] Missing &lt;param name=&quot;context&quot;/&gt; documentation
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:UserInputManager.OnLook(UnityEngine.InputSystem.InputAction.CallbackContext)] Unknown reference link target &#39;T:UnityEngine.InputSystem.InputAction.CallbackContext&#39;.
-SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.OnMove(UnityEngine.InputSystem.InputAction.CallbackContext)] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.OnMove(UnityEngine.InputSystem.InputAction.CallbackContext)] Missing &lt;param name=&quot;context&quot;/&gt; documentation
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:UserInputManager.OnMove(UnityEngine.InputSystem.InputAction.CallbackContext)] Unknown reference link target &#39;T:UnityEngine.InputSystem.InputAction.CallbackContext&#39;.
-SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.OnToggleThinClient(UnityEngine.InputSystem.InputAction.CallbackContext)] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [M:UserInputManager.OnToggleThinClient(UnityEngine.InputSystem.InputAction.CallbackContext)] Missing &lt;param name=&quot;context&quot;/&gt; documentation
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [M:UserInputManager.OnToggleThinClient(UnityEngine.InputSystem.InputAction.CallbackContext)] Unknown reference link target &#39;T:UnityEngine.InputSystem.InputAction.CallbackContext&#39;.
-SHFB: Warning BE0066: ShowMissingComponent: [E:UserInputManager.ToggleThinClientEvent] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [E:UserInputManager.ToggleThinClientEvent] Unknown reference link target &#39;T:UnityEngine.Events.UnityAction&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:World] Unknown reference link target &#39;T:UnityEngine.Object&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:World] Unknown reference link target &#39;T:UnityEngine.Component&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:World] Unknown reference link target &#39;T:UnityEngine.Behaviour&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [T:World] Unknown reference link target &#39;T:UnityEngine.MonoBehaviour&#39;.
-SHFB: Warning BE0066: ShowMissingComponent: [F:World.BlockPrefab] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:World.BlockPrefab] Unknown reference link target &#39;T:UnityEngine.GameObject&#39;.
 SHFB: Warning BE0066: ShowMissingComponent: [M:World.InstantiateChunk(UnityEngine.Vector2Int,System.Byte[])] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:World.InstantiateChunk(UnityEngine.Vector2Int,System.Byte[])] Missing &lt;param name=&quot;position&quot;/&gt; documentation
@@ -1038,10 +1000,10 @@ SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:Opencraft.RenderStreami
 SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.RenderStreaming.ReceiverScript.Start] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:Opencraft.RenderStreaming.ReceiverScript.Update] Missing &lt;summary&gt; documentation
 Processed 691 topic(s)
-850 warning(s)
+815 warning(s)
 CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 8 of 15.
 CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 1 of 30.
-    Last step completed in 00:00:05.2183
+    Last step completed in 00:00:04.4368
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
@@ -1051,11 +1013,11 @@ C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\Markdo
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\Markdown\media\AlertSecurity.png -&gt; C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\Output\Markdown\media\AlertSecurity.png
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\Markdown\media\AlertToDo.png -&gt; C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\Output\Markdown\media\AlertToDo.png
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\Markdown\MarkdownContent\_Footer.md -&gt; C:\Users\micro\repos\opencraft\client\unity\my-first-unity-project\Documentation\Working\Output\Markdown\_Footer.md
-    Last step completed in 00:00:00.0216
+    Last step completed in 00:00:00.0091
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Executing informational Generate Help Project build step for plug-ins (not used for Markdown)
-    Last step completed in 00:00:00.0010
+    Last step completed in 00:00:00.0000
 </buildStep>
 <buildStep step="CompilingHelpFile">
 Generating markdown content...
@@ -1064,15 +1026,15 @@ Finished generating 691 topics
 Copying content to output folder...
 Copied 500 files
 Finished copying 699 files
-    Last step completed in 00:00:01.8388
+    Last step completed in 00:00:01.7077
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00.1565
+    Last step completed in 00:00:00.1475
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 03/12/2024 11:47:35.  Total time: 00:00:19.4939
+Build completed successfully at 03/12/2024 15:06:58.  Total time: 00:00:18.4936
 
 </buildStep>
 </shfbBuild>

@@ -1,7 +1,7 @@
 # FireEvent Event
 
 
-\[Missing &lt;summary&gt; documentation for "E:UserInputManager.FireEvent"\]
+Represents an input that interacts with the object the camera is currently looking at, or fires a weapon in the current direction.
 
 
 

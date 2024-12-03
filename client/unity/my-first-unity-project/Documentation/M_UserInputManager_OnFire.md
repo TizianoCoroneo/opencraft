@@ -1,7 +1,7 @@
 # OnFire Method
 
 
-\[Missing &lt;summary&gt; documentation for "M:UserInputManager.OnFire(UnityEngine.InputSystem.InputAction.CallbackContext)"\]
+Invokes the callbacks registered on <a href="E_UserInputManager_FireEvent.md">FireEvent</a> when a fire input is received.
 
 
 
@@ -19,7 +19,7 @@ public void OnFire(
 
 
 #### Parameters
-<dl><dt>  CallbackContext</dt><dd>\[Missing &lt;param name="context"/&gt; documentation for "M:UserInputManager.OnFire(UnityEngine.InputSystem.InputAction.CallbackContext)"\]</dd></dl>
+<dl><dt>  CallbackContext</dt><dd /></dl>
 
 ## See Also
 

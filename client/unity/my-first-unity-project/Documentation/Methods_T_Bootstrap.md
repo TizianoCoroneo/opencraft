@@ -13,7 +13,7 @@
 <td>Starts the client in the way indicated by the provides command line options <code>opts</code>.</td></tr>
 <tr>
 <td><a href="M_Bootstrap_Start.md">Start</a></td>
-<td> </td></tr>
+<td>Automatically called when the game starts. Calls <a href="M_Bootstrap_RunOptions.md">RunOptions()</a>.</td></tr>
 <tr>
 <td><a href="M_Bootstrap_Update.md">Update</a></td>
 <td> </td></tr>

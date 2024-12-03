@@ -1,7 +1,7 @@
 # httpListener Field
 
 
-\[Missing &lt;summary&gt; documentation for "F:HttpServer.httpListener"\]
+The object that actually listens for and receives incoming requests.
 
 
 

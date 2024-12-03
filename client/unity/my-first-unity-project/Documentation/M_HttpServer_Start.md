@@ -1,7 +1,7 @@
 # Start Method
 
 
-Start the HTTP Server when this script is enabled.
+Starts the HTTP Server when this script is enabled (e.g., when entering play mode or stopping the process).
 
 
 

@@ -1,7 +1,7 @@
 # LookEvent Event
 
 
-\[Missing &lt;summary&gt; documentation for "E:UserInputManager.LookEvent"\]
+Represents an input that changes the orientation of the user's camera.
 
 
 

@@ -1,7 +1,7 @@
 # world Field
 
 
-\[Missing &lt;summary&gt; documentation for "F:Networking.world"\]
+Reference to the game world. Used to load new chunks received from the server. The field is set through the Unity editor.
 
 
 
@@ -25,3 +25,4 @@ public World world
 #### Reference
 <a href="T_Networking.md">Networking Class</a>  
 <a href="N_.md">(Default Namespace) Namespace</a>  
+<a href="M_Networking_HandleMessageColumnData.md">HandleMessageColumnData(ColumnData)</a>  

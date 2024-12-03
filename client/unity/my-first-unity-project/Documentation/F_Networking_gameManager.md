@@ -1,7 +1,7 @@
 # gameManager Field
 
 
-\[Missing &lt;summary&gt; documentation for "F:Networking.gameManager"\]
+Reference to the <a href="T_GameManager.md">GameManager</a> ScriptableObjects, which maintains information about the (ongoing) game. This class uses the game manager to save the player ID received from the server and the server address after successfully logging in.
 
 
 
@@ -25,3 +25,4 @@ private GameManager gameManager
 #### Reference
 <a href="T_Networking.md">Networking Class</a>  
 <a href="N_.md">(Default Namespace) Namespace</a>  
+<a href="M_HttpServer_HandleRequestBecomeThinClient.md">HandleRequestBecomeThinClient(NameValueCollection)</a>  

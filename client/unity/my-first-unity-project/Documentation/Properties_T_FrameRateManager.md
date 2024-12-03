@@ -7,7 +7,7 @@
 <table>
 <tr>
 <td><a href="P_FrameRateManager_Instance.md">Instance</a></td>
-<td> </td></tr>
+<td>A reference to an instance of this class. Used to implement the singleton pattern and prevent multiple instances of this class being created within the same game.</td></tr>
 </table>
 
 ## See Also

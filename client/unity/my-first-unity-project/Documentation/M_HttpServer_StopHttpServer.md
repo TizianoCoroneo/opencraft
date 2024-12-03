@@ -1,7 +1,7 @@
 # StopHttpServer Method
 
 
-Stop the HTTP server.
+Stop the HTTP server. Called by <a href="M_HttpServer_OnDisable.md">OnDisable()</a>.
 
 
 

@@ -1,7 +1,7 @@
 # OnEnable Method
 
 
-\[Missing &lt;summary&gt; documentation for "M:UserInputManager.OnEnable"\]
+Enables inputs and registers callbacks.
 
 
 

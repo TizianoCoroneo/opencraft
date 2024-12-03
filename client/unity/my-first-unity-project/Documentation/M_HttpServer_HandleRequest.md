@@ -1,7 +1,7 @@
 # HandleRequest Method
 
 
-Handle a single HTTP request. 
+Most important method of this class. Handles a single HTTP request. 
 Supported commands are: <table><thead><tr><th>command</th><th>description</th></tr></thead><tr><td>login</td><td>log in as a client to the specified server. See <a href="M_HttpServer_HandleRequestLogin.md">HandleRequestLogin(NameValueCollection)</a>.</td></tr><tr><td>become/thinclient</td><td>Switch to the ThinClient scene if necessary and connect to another client that renders frames. See <a href="M_HttpServer_HandleRequestBecomeThinClient.md">HandleRequestBecomeThinClient(NameValueCollection)</a>.</td></tr><tr><td>become/client</td><td>Swtich to the Client scene if necessary and connect to a server. See <a href="M_HttpServer_HandleRequestBecomeClient.md">HandleRequestBecomeClient(NameValueCollection)</a>.</td></tr></table>
 
 

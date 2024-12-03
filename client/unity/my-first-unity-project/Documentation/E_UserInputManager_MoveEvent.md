@@ -1,7 +1,7 @@
 # MoveEvent Event
 
 
-\[Missing &lt;summary&gt; documentation for "E:UserInputManager.MoveEvent"\]
+Represents an input that changes the user's avatar location.
 
 
 

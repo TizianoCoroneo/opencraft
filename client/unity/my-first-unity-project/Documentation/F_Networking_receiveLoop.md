@@ -1,7 +1,7 @@
 # receiveLoop Field
 
 
-\[Missing &lt;summary&gt; documentation for "F:Networking.receiveLoop"\]
+The task that reads incoming messages from <a href="https://learn.microsoft.com/dotnet/api/system.net.sockets.tcpclient" target="_blank" rel="noopener noreferrer">TcpClient</a> and enqueues them in the <a href="F_Networking_messageQueue.md">messageQueue</a>.
 
 
 

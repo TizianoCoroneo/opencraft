@@ -6,13 +6,32 @@ using UnityEngine.Assertions;
 using UnityEngine.SceneManagement;
 
 /// <summary>
-/// This class can switch the client's deployment.
-/// Examples include logging in as a client to a specified server,
-/// disconnecting, or switching from client to thin-client mode.
+/// This class keeps track of game data that other scripts need access to, and
+/// can also switch the client's deployment. Examples include logging in as a
+/// client to a specified server, disconnecting, or switching from client to
+/// thin-client mode.
+///
+/// <para>
+/// This being a ScriptableObject makes it a good place to take care of scene
+/// switching, because regular scripts (i.e., MonoBehaviors) are part of a
+/// scene, and therefore not a great place to take actions that work across
+/// scenes.
+/// </para>
+///
+/// <para>This scene only executes switching, it does not decide when to act.
+/// Other scripts can call into this object to make the switch happen. For
+/// example, switching between a thin client and regular client via a HTTP GET
+/// request makes the <see cref="HttpServer"/> call into this object.
+/// </para>
 /// </summary>
+/// <seealso cref="HttpServer"/>
 [CreateAssetMenu(menuName = "ScriptableObjects/GameManager")]
 public class GameManager : ScriptableObject
 {
+    /// <summary>
+    /// Reference to the <see cref="UserInputManager"/>. Used to register a
+    /// callback to toggle between a regular client and a thin client.
+    /// </summary>
     [SerializeField] private UserInputManager inputManager = default;
 
     /// <summary>

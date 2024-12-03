@@ -1,7 +1,7 @@
 # outgoingMessages Field
 
 
-\[Missing &lt;summary&gt; documentation for "F:Networking.outgoingMessages"\]
+A queue for outgoing client messages, stored here when they have been generated but have not yet been sent using the <a href="F_Networking_client.md">client</a>.
 
 
 

@@ -18,3 +18,7 @@ Unity Editor Extension [ParrelSync](https://github.com/VeriorPies/ParrelSync) to
 open the same project in two different editors. Open the Client scene in one
 editor, and the ThinClient in another. Configure them correctly and press play
 in both editors.
+
+## Documentation
+
+[Documentation for the Unity client](./Documentation/Home.md)

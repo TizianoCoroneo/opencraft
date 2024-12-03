@@ -1,7 +1,10 @@
 # ToggleThinClientEvent Event
+<blockquote><strong>Note: This API is now obsolete.</strong></blockquote>
 
 
-\[Missing &lt;summary&gt; documentation for "E:UserInputManager.ToggleThinClientEvent"\]
+
+
+Represents an input that makes the client switch between being a regular client and a thin client.
 
 
 
@@ -11,6 +14,7 @@
 
 **C#**
 ``` C#
+[ObsoleteAttribute("Switching between client and thin client should happen using HTTP requests.")]
 public event UnityAction ToggleThinClientEvent
 ```
 

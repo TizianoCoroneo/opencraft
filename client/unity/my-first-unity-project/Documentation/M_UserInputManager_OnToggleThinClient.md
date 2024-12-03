@@ -1,7 +1,10 @@
 # OnToggleThinClient Method
+<blockquote><strong>Note: This API is now obsolete.</strong></blockquote>
 
 
-\[Missing &lt;summary&gt; documentation for "M:UserInputManager.OnToggleThinClient(UnityEngine.InputSystem.InputAction.CallbackContext)"\]
+
+
+Toggles this client between being a regular client and a thin client when a <a href="E_UserInputManager_ToggleThinClientEvent.md">ToggleThinClientEvent</a> input is received.
 
 
 
@@ -11,6 +14,7 @@
 
 **C#**
 ``` C#
+[ObsoleteAttribute("Switching between client and thin client should happen using HTTP requests.")]
 public void OnToggleThinClient(
 	CallbackContext context
 )
@@ -19,7 +23,7 @@ public void OnToggleThinClient(
 
 
 #### Parameters
-<dl><dt>  CallbackContext</dt><dd>\[Missing &lt;param name="context"/&gt; documentation for "M:UserInputManager.OnToggleThinClient(UnityEngine.InputSystem.InputAction.CallbackContext)"\]</dd></dl>
+<dl><dt>  CallbackContext</dt><dd /></dl>
 
 ## See Also
 

@@ -1,7 +1,7 @@
 # gameInput Field
 
 
-\[Missing &lt;summary&gt; documentation for "F:UserInputManager.gameInput"\]
+Can be queried for player inputs and can be used to register callbacks on certain inputs.
 
 
 

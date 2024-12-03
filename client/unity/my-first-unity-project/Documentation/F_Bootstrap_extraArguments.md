@@ -1,7 +1,7 @@
 # extraArguments Field
 
 
-\[Missing &lt;summary&gt; documentation for "F:Bootstrap.extraArguments"\]
+A list of arguments, specified using the editor, that are interpreted as additional command line arguments. This field is only used when the game runs in the editor. Stand-alone builds ignore this field.
 
 
 

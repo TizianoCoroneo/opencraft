@@ -1,7 +1,7 @@
 # Awake Method
 
 
-\[Missing &lt;summary&gt; documentation for "M:FrameRateManager.Awake"\]
+Sets the target framerate when the game boots up.
 
 
 
@@ -22,3 +22,4 @@ private void Awake()
 #### Reference
 <a href="T_FrameRateManager.md">FrameRateManager Class</a>  
 <a href="N_.md">(Default Namespace) Namespace</a>  
+targetFrameRate  

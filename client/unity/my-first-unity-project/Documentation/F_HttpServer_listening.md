@@ -1,7 +1,7 @@
 # listening Field
 
 
-\[Missing &lt;summary&gt; documentation for "F:HttpServer.listening"\]
+True when the HTTP server is actively listening for requests. When set to false, the listen loop will stop listening after its next request.
 
 
 
@@ -25,3 +25,6 @@ private bool listening
 #### Reference
 <a href="T_HttpServer.md">HttpServer Class</a>  
 <a href="N_.md">(Default Namespace) Namespace</a>  
+<a href="M_HttpServer_StartHttpServer.md">StartHttpServer()</a>  
+<a href="M_HttpServer_StopHttpServer.md">StopHttpServer()</a>  
+<a href="M_HttpServer_ListenForRequests.md">ListenForRequests()</a>  
