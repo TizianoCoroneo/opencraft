@@ -38,3 +38,8 @@ Although the instructions below are for Windows, they can be easily translated t
       ```powershell
       Invoke-WebRequest -URI "http://localhost:7980/become/client?host=localhost&port=7979&playerID=1"
       ```
+
+## Documentation
+
+1. [Unity client](./client/unity/my-first-unity-project/Documentation/Home.md)
+2. [Go server](./server/go/opencraft-go/docs/README.md)
