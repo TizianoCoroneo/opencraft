@@ -11,23 +11,10 @@ public class CustomCSProjectProcessor : AssetPostprocessor
         XmlDocument csprojDoc = new();
         csprojDoc.LoadXml(content);
 
-        // Create or find an existing PropertyGroup to add a custom setting
-        var propertyGroup = csprojDoc.CreateElement("PropertyGroup");
-        // <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        // <DocumentationFile>bin/Debug/Assembly-CSharp.xml</DocumentationFile>
+        var propertyGroup = csprojDoc.SelectSingleNode("//Project/PropertyGroup");
         var generateDoc = csprojDoc.CreateElement("GenerateDocumentationFile");
         generateDoc.InnerText = "true";
         propertyGroup.AppendChild(generateDoc);
-
-        var documentationFile = csprojDoc.CreateElement("DocumentationFile");
-        documentationFile.InnerText = "Builds/Docs/Assembly-CSharp.xml";
-        propertyGroup.AppendChild(documentationFile);
-
-        var project = csprojDoc.SelectSingleNode("//Project");
-        project.AppendChild(propertyGroup);
-
-        // Save the modified .csproj back to disk
-        // return csprojDoc.OuterXml;
 
         var sb = new StringBuilder();
         var xws = new XmlWriterSettings();
