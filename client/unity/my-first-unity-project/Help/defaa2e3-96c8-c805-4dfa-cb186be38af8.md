@@ -1,0 +1,28 @@
+# CalculateSize Method
+
+
+\[Missing &lt;summary&gt; documentation for "M:Opencraft.NetCode.IWantMovePlayer.CalculateSize"\]
+
+
+
+## Definition
+**Namespace:** <a href="74916f57-cba9-5924-c41d-e8d2ff36e87a">Opencraft.NetCode</a>  
+**Assembly:** Assembly-CSharp (in Assembly-CSharp.dll) Version: 0.0.0.0
+
+**C#**
+``` C#
+public int CalculateSize()
+```
+
+
+
+#### Return Value
+<a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">Int32</a>  
+\[Missing &lt;returns&gt; documentation for "M:Opencraft.NetCode.IWantMovePlayer.CalculateSize"\]
+
+## See Also
+
+
+#### Reference
+<a href="276a680f-d9c9-e37b-eca0-cc6589b823eb">IWantMovePlayer Class</a>  
+<a href="74916f57-cba9-5924-c41d-e8d2ff36e87a">Opencraft.NetCode Namespace</a>  
