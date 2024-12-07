@@ -2,14 +2,15 @@ package server
 
 import (
 	"bufio"
+	"math/rand"
+	"net"
+	"time"
+
 	"github.com/g3n/engine/math32"
 	"github.com/jdonkervliet/opencraft-go/model"
 	"github.com/jdonkervliet/opencraft-go/protos"
 	log "github.com/sirupsen/logrus"
 	"google.golang.org/protobuf/encoding/protodelim"
-	"math/rand"
-	"net"
-	"time"
 )
 
 // IncomingMessage is a struct used to wrap messages that come in from clients.
@@ -182,6 +183,20 @@ func (g *Game) handleIWantColumn(msg *protos.IWantColumn, conn net.Conn) {
 	}
 }
 
+func (g *Game) handleIWantPing(msg *protos.IWantOpenPing, conn net.Conn) {
+	log.Info("processing I want ping")
+	reply := &protos.ToClient{
+		Payload: &protos.ToClient_OpenPing{
+			OpenPing: &protos.OpenPing{
+				TimeSent: msg.TimeSent,
+			},
+		},
+	}
+	if _, err := protodelim.MarshalTo(conn, reply); err != nil {
+		log.Warn(err)
+	}
+}
+
 // Handles a single incoming message from a client and sends a reply if
 // necessary.
 func (g *Game) handleMessage(msg *IncomingMessage) {
@@ -195,6 +210,8 @@ func (g *Game) handleMessage(msg *IncomingMessage) {
 		g.handleIWantChangeBlock(x.IWantChangeBlock, msg.Connection)
 	case *protos.ToServer_IWantColumn:
 		g.handleIWantColumn(x.IWantColumn, msg.Connection)
+	case *protos.ToServer_IWantOpenPing:
+		g.handleIWantPing(x.IWantOpenPing, msg.Connection)
 	default:
 		log.Warn("unknown msg type", x)
 	}

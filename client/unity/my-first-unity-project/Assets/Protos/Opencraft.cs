@@ -24,46 +24,51 @@ namespace Opencraft.NetCode {
     static OpencraftReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg9vcGVuY3JhZnQucHJvdG8SCW9wZW5jcmFmdCLtAQoIVG9TZXJ2ZXISLwoN",
+            "Cg9vcGVuY3JhZnQucHJvdG8SCW9wZW5jcmFmdCKjAgoIVG9TZXJ2ZXISLwoN",
             "aV93YW50X3BsYXllchgBIAEoCzIWLm9wZW5jcmFmdC5JV2FudFBsYXllckgA",
             "EjgKEmlfd2FudF9tb3ZlX3BsYXllchgCIAEoCzIaLm9wZW5jcmFmdC5JV2Fu",
             "dE1vdmVQbGF5ZXJIABI6ChNpX3dhbnRfY2hhbmdlX2Jsb2NrGAMgASgLMhsu",
             "b3BlbmNyYWZ0LklXYW50Q2hhbmdlQmxvY2tIABIvCg1pX3dhbnRfY29sdW1u",
-            "GAQgASgLMhYub3BlbmNyYWZ0LklXYW50Q29sdW1uSABCCQoHcGF5bG9hZCIf",
-            "CgtJV2FudFBsYXllchIQCghwbGF5ZXJJRBgBIAEoDSJJCg9JV2FudE1vdmVQ",
-            "bGF5ZXISEAoIcGxheWVySUQYASABKA0SJAoLbmV3UG9zaXRpb24YAiABKAsy",
-            "Dy5vcGVuY3JhZnQuVmVjMyJNChBJV2FudENoYW5nZUJsb2NrEiYKDWJsb2Nr",
-            "UG9zaXRpb24YASABKAsyDy5vcGVuY3JhZnQuUG9zMxIRCglibG9ja1R5cGUY",
-            "AiABKA0iMQoLSVdhbnRDb2x1bW4SIgoJY29sdW1uUG9zGAEgASgLMg8ub3Bl",
-            "bmNyYWZ0LlBvczIivwIKCFRvQ2xpZW50EjEKDnlvdV9hcmVfcGxheWVyGAEg",
-            "ASgLMhcub3BlbmNyYWZ0LllvdUFyZVBsYXllckgAEjAKDXBsYXllcl91cGRh",
-            "dGUYAiABKAsyFy5vcGVuY3JhZnQuUGxheWVyVXBkYXRlSAASKgoKY2h1bmtf",
-            "ZGF0YRgDIAEoCzIULm9wZW5jcmFmdC5DaHVua0RhdGFIABIsCgtjb2x1bW5f",
-            "ZGF0YRgEIAEoCzIVLm9wZW5jcmFmdC5Db2x1bW5EYXRhSAASLgoMYmxvY2tf",
-            "dXBkYXRlGAUgASgLMhYub3BlbmNyYWZ0LkJsb2NrVXBkYXRlSAASOQoSbXVs",
-            "dGlfYmxvY2tfdXBkYXRlGAYgASgLMhsub3BlbmNyYWZ0Lk11bHRpQmxvY2tV",
-            "cGRhdGVIAEIJCgdwYXlsb2FkIkgKDFlvdUFyZVBsYXllchIQCghwbGF5ZXJJ",
-            "RBgBIAEoDRImCg1zcGF3bkxvY2F0aW9uGAIgASgLMg8ub3BlbmNyYWZ0LlZl",
-            "YzMiJwoEVmVjMxIJCgF4GAEgASgCEgkKAXkYAiABKAISCQoBehgDIAEoAiIc",
-            "CgRQb3MyEgkKAXgYASABKBESCQoBehgCIAEoESInCgRQb3MzEgkKAXgYASAB",
-            "KBESCQoBeRgCIAEoERIJCgF6GAMgASgRIkMKDFBsYXllclVwZGF0ZRIQCghw",
-            "bGF5ZXJJRBgBIAEoDRIhCghwb3NpdGlvbhgCIAEoCzIPLm9wZW5jcmFmdC5W",
-            "ZWMzIh8KCUNodW5rRGF0YRISCgpibG9ja1R5cGVzGAEgASgMIlUKCkNvbHVt",
-            "bkRhdGESIQoIcG9zaXRpb24YASABKAsyDy5vcGVuY3JhZnQuUG9zMhIkCgZj",
-            "aHVua3MYAiADKAsyFC5vcGVuY3JhZnQuQ2h1bmtEYXRhIkgKC0Jsb2NrVXBk",
-            "YXRlEiYKDWJsb2NrUG9zaXRpb24YASABKAsyDy5vcGVuY3JhZnQuUG9zMxIR",
-            "CglibG9ja1R5cGUYAiABKA0iOwoQTXVsdGlCbG9ja1VwZGF0ZRInCgd1cGRh",
-            "dGVzGAEgAygLMhYub3BlbmNyYWZ0LkJsb2NrVXBkYXRlQh5aCC4vcHJvdG9z",
-            "qgIRT3BlbmNyYWZ0Lk5ldENvZGViBnByb3RvMw=="));
+            "GAQgASgLMhYub3BlbmNyYWZ0LklXYW50Q29sdW1uSAASNAoQaV93YW50X29w",
+            "ZW5fcGluZxgFIAEoCzIYLm9wZW5jcmFmdC5JV2FudE9wZW5QaW5nSABCCQoH",
+            "cGF5bG9hZCIfCgtJV2FudFBsYXllchIQCghwbGF5ZXJJRBgBIAEoDSJJCg9J",
+            "V2FudE1vdmVQbGF5ZXISEAoIcGxheWVySUQYASABKA0SJAoLbmV3UG9zaXRp",
+            "b24YAiABKAsyDy5vcGVuY3JhZnQuVmVjMyJNChBJV2FudENoYW5nZUJsb2Nr",
+            "EiYKDWJsb2NrUG9zaXRpb24YASABKAsyDy5vcGVuY3JhZnQuUG9zMxIRCgli",
+            "bG9ja1R5cGUYAiABKA0iMQoLSVdhbnRDb2x1bW4SIgoJY29sdW1uUG9zGAEg",
+            "ASgLMg8ub3BlbmNyYWZ0LlBvczIiIQoNSVdhbnRPcGVuUGluZxIQCgh0aW1l",
+            "U2VudBgBIAEoBCLpAgoIVG9DbGllbnQSMQoOeW91X2FyZV9wbGF5ZXIYASAB",
+            "KAsyFy5vcGVuY3JhZnQuWW91QXJlUGxheWVySAASMAoNcGxheWVyX3VwZGF0",
+            "ZRgCIAEoCzIXLm9wZW5jcmFmdC5QbGF5ZXJVcGRhdGVIABIqCgpjaHVua19k",
+            "YXRhGAMgASgLMhQub3BlbmNyYWZ0LkNodW5rRGF0YUgAEiwKC2NvbHVtbl9k",
+            "YXRhGAQgASgLMhUub3BlbmNyYWZ0LkNvbHVtbkRhdGFIABIuCgxibG9ja191",
+            "cGRhdGUYBSABKAsyFi5vcGVuY3JhZnQuQmxvY2tVcGRhdGVIABI5ChJtdWx0",
+            "aV9ibG9ja191cGRhdGUYBiABKAsyGy5vcGVuY3JhZnQuTXVsdGlCbG9ja1Vw",
+            "ZGF0ZUgAEigKCW9wZW5fcGluZxgHIAEoCzITLm9wZW5jcmFmdC5PcGVuUGlu",
+            "Z0gAQgkKB3BheWxvYWQiSAoMWW91QXJlUGxheWVyEhAKCHBsYXllcklEGAEg",
+            "ASgNEiYKDXNwYXduTG9jYXRpb24YAiABKAsyDy5vcGVuY3JhZnQuVmVjMyIn",
+            "CgRWZWMzEgkKAXgYASABKAISCQoBeRgCIAEoAhIJCgF6GAMgASgCIhwKBFBv",
+            "czISCQoBeBgBIAEoERIJCgF6GAIgASgRIicKBFBvczMSCQoBeBgBIAEoERIJ",
+            "CgF5GAIgASgREgkKAXoYAyABKBEiQwoMUGxheWVyVXBkYXRlEhAKCHBsYXll",
+            "cklEGAEgASgNEiEKCHBvc2l0aW9uGAIgASgLMg8ub3BlbmNyYWZ0LlZlYzMi",
+            "HwoJQ2h1bmtEYXRhEhIKCmJsb2NrVHlwZXMYASABKAwiVQoKQ29sdW1uRGF0",
+            "YRIhCghwb3NpdGlvbhgBIAEoCzIPLm9wZW5jcmFmdC5Qb3MyEiQKBmNodW5r",
+            "cxgCIAMoCzIULm9wZW5jcmFmdC5DaHVua0RhdGEiSAoLQmxvY2tVcGRhdGUS",
+            "JgoNYmxvY2tQb3NpdGlvbhgBIAEoCzIPLm9wZW5jcmFmdC5Qb3MzEhEKCWJs",
+            "b2NrVHlwZRgCIAEoDSI7ChBNdWx0aUJsb2NrVXBkYXRlEicKB3VwZGF0ZXMY",
+            "ASADKAsyFi5vcGVuY3JhZnQuQmxvY2tVcGRhdGUiHAoIT3BlblBpbmcSEAoI",
+            "dGltZVNlbnQYASABKARCHloILi9wcm90b3OqAhFPcGVuY3JhZnQuTmV0Q29k",
+            "ZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Opencraft.NetCode.ToServer), global::Opencraft.NetCode.ToServer.Parser, new[]{ "IWantPlayer", "IWantMovePlayer", "IWantChangeBlock", "IWantColumn" }, new[]{ "Payload" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Opencraft.NetCode.ToServer), global::Opencraft.NetCode.ToServer.Parser, new[]{ "IWantPlayer", "IWantMovePlayer", "IWantChangeBlock", "IWantColumn", "IWantOpenPing" }, new[]{ "Payload" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Opencraft.NetCode.IWantPlayer), global::Opencraft.NetCode.IWantPlayer.Parser, new[]{ "PlayerID" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Opencraft.NetCode.IWantMovePlayer), global::Opencraft.NetCode.IWantMovePlayer.Parser, new[]{ "PlayerID", "NewPosition" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Opencraft.NetCode.IWantChangeBlock), global::Opencraft.NetCode.IWantChangeBlock.Parser, new[]{ "BlockPosition", "BlockType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Opencraft.NetCode.IWantColumn), global::Opencraft.NetCode.IWantColumn.Parser, new[]{ "ColumnPos" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Opencraft.NetCode.ToClient), global::Opencraft.NetCode.ToClient.Parser, new[]{ "YouArePlayer", "PlayerUpdate", "ChunkData", "ColumnData", "BlockUpdate", "MultiBlockUpdate" }, new[]{ "Payload" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Opencraft.NetCode.IWantOpenPing), global::Opencraft.NetCode.IWantOpenPing.Parser, new[]{ "TimeSent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Opencraft.NetCode.ToClient), global::Opencraft.NetCode.ToClient.Parser, new[]{ "YouArePlayer", "PlayerUpdate", "ChunkData", "ColumnData", "BlockUpdate", "MultiBlockUpdate", "OpenPing" }, new[]{ "Payload" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Opencraft.NetCode.YouArePlayer), global::Opencraft.NetCode.YouArePlayer.Parser, new[]{ "PlayerID", "SpawnLocation" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Opencraft.NetCode.Vec3), global::Opencraft.NetCode.Vec3.Parser, new[]{ "X", "Y", "Z" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Opencraft.NetCode.Pos2), global::Opencraft.NetCode.Pos2.Parser, new[]{ "X", "Z" }, null, null, null, null),
@@ -72,7 +77,8 @@ namespace Opencraft.NetCode {
             new pbr::GeneratedClrTypeInfo(typeof(global::Opencraft.NetCode.ChunkData), global::Opencraft.NetCode.ChunkData.Parser, new[]{ "BlockTypes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Opencraft.NetCode.ColumnData), global::Opencraft.NetCode.ColumnData.Parser, new[]{ "Position", "Chunks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Opencraft.NetCode.BlockUpdate), global::Opencraft.NetCode.BlockUpdate.Parser, new[]{ "BlockPosition", "BlockType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Opencraft.NetCode.MultiBlockUpdate), global::Opencraft.NetCode.MultiBlockUpdate.Parser, new[]{ "Updates" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Opencraft.NetCode.MultiBlockUpdate), global::Opencraft.NetCode.MultiBlockUpdate.Parser, new[]{ "Updates" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Opencraft.NetCode.OpenPing), global::Opencraft.NetCode.OpenPing.Parser, new[]{ "TimeSent" }, null, null, null, null)
           }));
     }
     #endregion
@@ -82,23 +88,31 @@ namespace Opencraft.NetCode {
   /// <summary>
   /// Messages from clients to servers
   /// </summary>
-  public sealed partial class ToServer : pb::IMessage<ToServer> {
+  public sealed partial class ToServer : pb::IMessage<ToServer>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ToServer> _parser = new pb::MessageParser<ToServer>(() => new ToServer());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ToServer> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ToServer() {
       OnConstruction();
     }
@@ -106,6 +120,7 @@ namespace Opencraft.NetCode {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ToServer(ToServer other) : this() {
       switch (other.PayloadCase) {
         case PayloadOneofCase.IWantPlayer:
@@ -120,12 +135,16 @@ namespace Opencraft.NetCode {
         case PayloadOneofCase.IWantColumn:
           IWantColumn = other.IWantColumn.Clone();
           break;
+        case PayloadOneofCase.IWantOpenPing:
+          IWantOpenPing = other.IWantOpenPing.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ToServer Clone() {
       return new ToServer(this);
     }
@@ -133,6 +152,7 @@ namespace Opencraft.NetCode {
     /// <summary>Field number for the "i_want_player" field.</summary>
     public const int IWantPlayerFieldNumber = 1;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Opencraft.NetCode.IWantPlayer IWantPlayer {
       get { return payloadCase_ == PayloadOneofCase.IWantPlayer ? (global::Opencraft.NetCode.IWantPlayer) payload_ : null; }
       set {
@@ -144,6 +164,7 @@ namespace Opencraft.NetCode {
     /// <summary>Field number for the "i_want_move_player" field.</summary>
     public const int IWantMovePlayerFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Opencraft.NetCode.IWantMovePlayer IWantMovePlayer {
       get { return payloadCase_ == PayloadOneofCase.IWantMovePlayer ? (global::Opencraft.NetCode.IWantMovePlayer) payload_ : null; }
       set {
@@ -155,6 +176,7 @@ namespace Opencraft.NetCode {
     /// <summary>Field number for the "i_want_change_block" field.</summary>
     public const int IWantChangeBlockFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Opencraft.NetCode.IWantChangeBlock IWantChangeBlock {
       get { return payloadCase_ == PayloadOneofCase.IWantChangeBlock ? (global::Opencraft.NetCode.IWantChangeBlock) payload_ : null; }
       set {
@@ -166,11 +188,24 @@ namespace Opencraft.NetCode {
     /// <summary>Field number for the "i_want_column" field.</summary>
     public const int IWantColumnFieldNumber = 4;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Opencraft.NetCode.IWantColumn IWantColumn {
       get { return payloadCase_ == PayloadOneofCase.IWantColumn ? (global::Opencraft.NetCode.IWantColumn) payload_ : null; }
       set {
         payload_ = value;
         payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.IWantColumn;
+      }
+    }
+
+    /// <summary>Field number for the "i_want_open_ping" field.</summary>
+    public const int IWantOpenPingFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Opencraft.NetCode.IWantOpenPing IWantOpenPing {
+      get { return payloadCase_ == PayloadOneofCase.IWantOpenPing ? (global::Opencraft.NetCode.IWantOpenPing) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.IWantOpenPing;
       }
     }
 
@@ -182,25 +217,30 @@ namespace Opencraft.NetCode {
       IWantMovePlayer = 2,
       IWantChangeBlock = 3,
       IWantColumn = 4,
+      IWantOpenPing = 5,
     }
     private PayloadOneofCase payloadCase_ = PayloadOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PayloadOneofCase PayloadCase {
       get { return payloadCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearPayload() {
       payloadCase_ = PayloadOneofCase.None;
       payload_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ToServer);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ToServer other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -212,17 +252,20 @@ namespace Opencraft.NetCode {
       if (!object.Equals(IWantMovePlayer, other.IWantMovePlayer)) return false;
       if (!object.Equals(IWantChangeBlock, other.IWantChangeBlock)) return false;
       if (!object.Equals(IWantColumn, other.IWantColumn)) return false;
+      if (!object.Equals(IWantOpenPing, other.IWantOpenPing)) return false;
       if (PayloadCase != other.PayloadCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (payloadCase_ == PayloadOneofCase.IWantPlayer) hash ^= IWantPlayer.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.IWantMovePlayer) hash ^= IWantMovePlayer.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.IWantChangeBlock) hash ^= IWantChangeBlock.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.IWantColumn) hash ^= IWantColumn.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.IWantOpenPing) hash ^= IWantOpenPing.GetHashCode();
       hash ^= (int) payloadCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -231,12 +274,17 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (payloadCase_ == PayloadOneofCase.IWantPlayer) {
         output.WriteRawTag(10);
         output.WriteMessage(IWantPlayer);
@@ -253,12 +301,48 @@ namespace Opencraft.NetCode {
         output.WriteRawTag(34);
         output.WriteMessage(IWantColumn);
       }
+      if (payloadCase_ == PayloadOneofCase.IWantOpenPing) {
+        output.WriteRawTag(42);
+        output.WriteMessage(IWantOpenPing);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (payloadCase_ == PayloadOneofCase.IWantPlayer) {
+        output.WriteRawTag(10);
+        output.WriteMessage(IWantPlayer);
+      }
+      if (payloadCase_ == PayloadOneofCase.IWantMovePlayer) {
+        output.WriteRawTag(18);
+        output.WriteMessage(IWantMovePlayer);
+      }
+      if (payloadCase_ == PayloadOneofCase.IWantChangeBlock) {
+        output.WriteRawTag(26);
+        output.WriteMessage(IWantChangeBlock);
+      }
+      if (payloadCase_ == PayloadOneofCase.IWantColumn) {
+        output.WriteRawTag(34);
+        output.WriteMessage(IWantColumn);
+      }
+      if (payloadCase_ == PayloadOneofCase.IWantOpenPing) {
+        output.WriteRawTag(42);
+        output.WriteMessage(IWantOpenPing);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (payloadCase_ == PayloadOneofCase.IWantPlayer) {
@@ -273,6 +357,9 @@ namespace Opencraft.NetCode {
       if (payloadCase_ == PayloadOneofCase.IWantColumn) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(IWantColumn);
       }
+      if (payloadCase_ == PayloadOneofCase.IWantOpenPing) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IWantOpenPing);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -280,6 +367,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ToServer other) {
       if (other == null) {
         return;
@@ -309,13 +397,23 @@ namespace Opencraft.NetCode {
           }
           IWantColumn.MergeFrom(other.IWantColumn);
           break;
+        case PayloadOneofCase.IWantOpenPing:
+          if (IWantOpenPing == null) {
+            IWantOpenPing = new global::Opencraft.NetCode.IWantOpenPing();
+          }
+          IWantOpenPing.MergeFrom(other.IWantOpenPing);
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -358,29 +456,107 @@ namespace Opencraft.NetCode {
             IWantColumn = subBuilder;
             break;
           }
+          case 42: {
+            global::Opencraft.NetCode.IWantOpenPing subBuilder = new global::Opencraft.NetCode.IWantOpenPing();
+            if (payloadCase_ == PayloadOneofCase.IWantOpenPing) {
+              subBuilder.MergeFrom(IWantOpenPing);
+            }
+            input.ReadMessage(subBuilder);
+            IWantOpenPing = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Opencraft.NetCode.IWantPlayer subBuilder = new global::Opencraft.NetCode.IWantPlayer();
+            if (payloadCase_ == PayloadOneofCase.IWantPlayer) {
+              subBuilder.MergeFrom(IWantPlayer);
+            }
+            input.ReadMessage(subBuilder);
+            IWantPlayer = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Opencraft.NetCode.IWantMovePlayer subBuilder = new global::Opencraft.NetCode.IWantMovePlayer();
+            if (payloadCase_ == PayloadOneofCase.IWantMovePlayer) {
+              subBuilder.MergeFrom(IWantMovePlayer);
+            }
+            input.ReadMessage(subBuilder);
+            IWantMovePlayer = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Opencraft.NetCode.IWantChangeBlock subBuilder = new global::Opencraft.NetCode.IWantChangeBlock();
+            if (payloadCase_ == PayloadOneofCase.IWantChangeBlock) {
+              subBuilder.MergeFrom(IWantChangeBlock);
+            }
+            input.ReadMessage(subBuilder);
+            IWantChangeBlock = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Opencraft.NetCode.IWantColumn subBuilder = new global::Opencraft.NetCode.IWantColumn();
+            if (payloadCase_ == PayloadOneofCase.IWantColumn) {
+              subBuilder.MergeFrom(IWantColumn);
+            }
+            input.ReadMessage(subBuilder);
+            IWantColumn = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Opencraft.NetCode.IWantOpenPing subBuilder = new global::Opencraft.NetCode.IWantOpenPing();
+            if (payloadCase_ == PayloadOneofCase.IWantOpenPing) {
+              subBuilder.MergeFrom(IWantOpenPing);
+            }
+            input.ReadMessage(subBuilder);
+            IWantOpenPing = subBuilder;
+            break;
+          }
         }
       }
     }
+    #endif
 
   }
 
-  public sealed partial class IWantPlayer : pb::IMessage<IWantPlayer> {
+  public sealed partial class IWantPlayer : pb::IMessage<IWantPlayer>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<IWantPlayer> _parser = new pb::MessageParser<IWantPlayer>(() => new IWantPlayer());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<IWantPlayer> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IWantPlayer() {
       OnConstruction();
     }
@@ -388,12 +564,14 @@ namespace Opencraft.NetCode {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IWantPlayer(IWantPlayer other) : this() {
       playerID_ = other.playerID_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IWantPlayer Clone() {
       return new IWantPlayer(this);
     }
@@ -402,6 +580,7 @@ namespace Opencraft.NetCode {
     public const int PlayerIDFieldNumber = 1;
     private uint playerID_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint PlayerID {
       get { return playerID_; }
       set {
@@ -410,11 +589,13 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as IWantPlayer);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(IWantPlayer other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -427,6 +608,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (PlayerID != 0) hash ^= PlayerID.GetHashCode();
@@ -437,12 +619,17 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (PlayerID != 0) {
         output.WriteRawTag(8);
         output.WriteUInt32(PlayerID);
@@ -450,9 +637,25 @@ namespace Opencraft.NetCode {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PlayerID != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(PlayerID);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (PlayerID != 0) {
@@ -465,6 +668,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(IWantPlayer other) {
       if (other == null) {
         return;
@@ -476,7 +680,11 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -489,27 +697,55 @@ namespace Opencraft.NetCode {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            PlayerID = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class IWantMovePlayer : pb::IMessage<IWantMovePlayer> {
+  public sealed partial class IWantMovePlayer : pb::IMessage<IWantMovePlayer>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<IWantMovePlayer> _parser = new pb::MessageParser<IWantMovePlayer>(() => new IWantMovePlayer());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<IWantMovePlayer> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IWantMovePlayer() {
       OnConstruction();
     }
@@ -517,6 +753,7 @@ namespace Opencraft.NetCode {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IWantMovePlayer(IWantMovePlayer other) : this() {
       playerID_ = other.playerID_;
       newPosition_ = other.newPosition_ != null ? other.newPosition_.Clone() : null;
@@ -524,6 +761,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IWantMovePlayer Clone() {
       return new IWantMovePlayer(this);
     }
@@ -532,6 +770,7 @@ namespace Opencraft.NetCode {
     public const int PlayerIDFieldNumber = 1;
     private uint playerID_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint PlayerID {
       get { return playerID_; }
       set {
@@ -543,6 +782,7 @@ namespace Opencraft.NetCode {
     public const int NewPositionFieldNumber = 2;
     private global::Opencraft.NetCode.Vec3 newPosition_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Opencraft.NetCode.Vec3 NewPosition {
       get { return newPosition_; }
       set {
@@ -551,11 +791,13 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as IWantMovePlayer);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(IWantMovePlayer other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -569,6 +811,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (PlayerID != 0) hash ^= PlayerID.GetHashCode();
@@ -580,12 +823,17 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (PlayerID != 0) {
         output.WriteRawTag(8);
         output.WriteUInt32(PlayerID);
@@ -597,9 +845,29 @@ namespace Opencraft.NetCode {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PlayerID != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(PlayerID);
+      }
+      if (newPosition_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(NewPosition);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (PlayerID != 0) {
@@ -615,6 +883,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(IWantMovePlayer other) {
       if (other == null) {
         return;
@@ -632,7 +901,11 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -652,27 +925,62 @@ namespace Opencraft.NetCode {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            PlayerID = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            if (newPosition_ == null) {
+              NewPosition = new global::Opencraft.NetCode.Vec3();
+            }
+            input.ReadMessage(NewPosition);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class IWantChangeBlock : pb::IMessage<IWantChangeBlock> {
+  public sealed partial class IWantChangeBlock : pb::IMessage<IWantChangeBlock>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<IWantChangeBlock> _parser = new pb::MessageParser<IWantChangeBlock>(() => new IWantChangeBlock());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<IWantChangeBlock> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IWantChangeBlock() {
       OnConstruction();
     }
@@ -680,6 +988,7 @@ namespace Opencraft.NetCode {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IWantChangeBlock(IWantChangeBlock other) : this() {
       blockPosition_ = other.blockPosition_ != null ? other.blockPosition_.Clone() : null;
       blockType_ = other.blockType_;
@@ -687,6 +996,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IWantChangeBlock Clone() {
       return new IWantChangeBlock(this);
     }
@@ -695,6 +1005,7 @@ namespace Opencraft.NetCode {
     public const int BlockPositionFieldNumber = 1;
     private global::Opencraft.NetCode.Pos3 blockPosition_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Opencraft.NetCode.Pos3 BlockPosition {
       get { return blockPosition_; }
       set {
@@ -706,6 +1017,7 @@ namespace Opencraft.NetCode {
     public const int BlockTypeFieldNumber = 2;
     private uint blockType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint BlockType {
       get { return blockType_; }
       set {
@@ -714,11 +1026,13 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as IWantChangeBlock);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(IWantChangeBlock other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -732,6 +1046,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (blockPosition_ != null) hash ^= BlockPosition.GetHashCode();
@@ -743,12 +1058,17 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (blockPosition_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(BlockPosition);
@@ -760,9 +1080,29 @@ namespace Opencraft.NetCode {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (blockPosition_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(BlockPosition);
+      }
+      if (BlockType != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(BlockType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (blockPosition_ != null) {
@@ -778,6 +1118,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(IWantChangeBlock other) {
       if (other == null) {
         return;
@@ -795,7 +1136,11 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -815,27 +1160,62 @@ namespace Opencraft.NetCode {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (blockPosition_ == null) {
+              BlockPosition = new global::Opencraft.NetCode.Pos3();
+            }
+            input.ReadMessage(BlockPosition);
+            break;
+          }
+          case 16: {
+            BlockType = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class IWantColumn : pb::IMessage<IWantColumn> {
+  public sealed partial class IWantColumn : pb::IMessage<IWantColumn>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<IWantColumn> _parser = new pb::MessageParser<IWantColumn>(() => new IWantColumn());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<IWantColumn> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IWantColumn() {
       OnConstruction();
     }
@@ -843,12 +1223,14 @@ namespace Opencraft.NetCode {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IWantColumn(IWantColumn other) : this() {
       columnPos_ = other.columnPos_ != null ? other.columnPos_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IWantColumn Clone() {
       return new IWantColumn(this);
     }
@@ -857,6 +1239,7 @@ namespace Opencraft.NetCode {
     public const int ColumnPosFieldNumber = 1;
     private global::Opencraft.NetCode.Pos2 columnPos_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Opencraft.NetCode.Pos2 ColumnPos {
       get { return columnPos_; }
       set {
@@ -865,11 +1248,13 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as IWantColumn);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(IWantColumn other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -882,6 +1267,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (columnPos_ != null) hash ^= ColumnPos.GetHashCode();
@@ -892,12 +1278,17 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (columnPos_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(ColumnPos);
@@ -905,9 +1296,25 @@ namespace Opencraft.NetCode {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (columnPos_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ColumnPos);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (columnPos_ != null) {
@@ -920,6 +1327,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(IWantColumn other) {
       if (other == null) {
         return;
@@ -934,7 +1342,11 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -950,30 +1362,250 @@ namespace Opencraft.NetCode {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (columnPos_ == null) {
+              ColumnPos = new global::Opencraft.NetCode.Pos2();
+            }
+            input.ReadMessage(ColumnPos);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class IWantOpenPing : pb::IMessage<IWantOpenPing>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<IWantOpenPing> _parser = new pb::MessageParser<IWantOpenPing>(() => new IWantOpenPing());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<IWantOpenPing> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IWantOpenPing() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IWantOpenPing(IWantOpenPing other) : this() {
+      timeSent_ = other.timeSent_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IWantOpenPing Clone() {
+      return new IWantOpenPing(this);
+    }
+
+    /// <summary>Field number for the "timeSent" field.</summary>
+    public const int TimeSentFieldNumber = 1;
+    private ulong timeSent_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong TimeSent {
+      get { return timeSent_; }
+      set {
+        timeSent_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as IWantOpenPing);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(IWantOpenPing other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TimeSent != other.TimeSent) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TimeSent != 0UL) hash ^= TimeSent.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (TimeSent != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(TimeSent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TimeSent != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(TimeSent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (TimeSent != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(TimeSent);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(IWantOpenPing other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TimeSent != 0UL) {
+        TimeSent = other.TimeSent;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            TimeSent = input.ReadUInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            TimeSent = input.ReadUInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Messages from servers to clients
   /// </summary>
-  public sealed partial class ToClient : pb::IMessage<ToClient> {
+  public sealed partial class ToClient : pb::IMessage<ToClient>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ToClient> _parser = new pb::MessageParser<ToClient>(() => new ToClient());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ToClient> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ToClient() {
       OnConstruction();
     }
@@ -981,6 +1613,7 @@ namespace Opencraft.NetCode {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ToClient(ToClient other) : this() {
       switch (other.PayloadCase) {
         case PayloadOneofCase.YouArePlayer:
@@ -1001,12 +1634,16 @@ namespace Opencraft.NetCode {
         case PayloadOneofCase.MultiBlockUpdate:
           MultiBlockUpdate = other.MultiBlockUpdate.Clone();
           break;
+        case PayloadOneofCase.OpenPing:
+          OpenPing = other.OpenPing.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ToClient Clone() {
       return new ToClient(this);
     }
@@ -1014,6 +1651,7 @@ namespace Opencraft.NetCode {
     /// <summary>Field number for the "you_are_player" field.</summary>
     public const int YouArePlayerFieldNumber = 1;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Opencraft.NetCode.YouArePlayer YouArePlayer {
       get { return payloadCase_ == PayloadOneofCase.YouArePlayer ? (global::Opencraft.NetCode.YouArePlayer) payload_ : null; }
       set {
@@ -1025,6 +1663,7 @@ namespace Opencraft.NetCode {
     /// <summary>Field number for the "player_update" field.</summary>
     public const int PlayerUpdateFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Opencraft.NetCode.PlayerUpdate PlayerUpdate {
       get { return payloadCase_ == PayloadOneofCase.PlayerUpdate ? (global::Opencraft.NetCode.PlayerUpdate) payload_ : null; }
       set {
@@ -1036,6 +1675,7 @@ namespace Opencraft.NetCode {
     /// <summary>Field number for the "chunk_data" field.</summary>
     public const int ChunkDataFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Opencraft.NetCode.ChunkData ChunkData {
       get { return payloadCase_ == PayloadOneofCase.ChunkData ? (global::Opencraft.NetCode.ChunkData) payload_ : null; }
       set {
@@ -1047,6 +1687,7 @@ namespace Opencraft.NetCode {
     /// <summary>Field number for the "column_data" field.</summary>
     public const int ColumnDataFieldNumber = 4;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Opencraft.NetCode.ColumnData ColumnData {
       get { return payloadCase_ == PayloadOneofCase.ColumnData ? (global::Opencraft.NetCode.ColumnData) payload_ : null; }
       set {
@@ -1058,6 +1699,7 @@ namespace Opencraft.NetCode {
     /// <summary>Field number for the "block_update" field.</summary>
     public const int BlockUpdateFieldNumber = 5;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Opencraft.NetCode.BlockUpdate BlockUpdate {
       get { return payloadCase_ == PayloadOneofCase.BlockUpdate ? (global::Opencraft.NetCode.BlockUpdate) payload_ : null; }
       set {
@@ -1069,11 +1711,24 @@ namespace Opencraft.NetCode {
     /// <summary>Field number for the "multi_block_update" field.</summary>
     public const int MultiBlockUpdateFieldNumber = 6;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Opencraft.NetCode.MultiBlockUpdate MultiBlockUpdate {
       get { return payloadCase_ == PayloadOneofCase.MultiBlockUpdate ? (global::Opencraft.NetCode.MultiBlockUpdate) payload_ : null; }
       set {
         payload_ = value;
         payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.MultiBlockUpdate;
+      }
+    }
+
+    /// <summary>Field number for the "open_ping" field.</summary>
+    public const int OpenPingFieldNumber = 7;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Opencraft.NetCode.OpenPing OpenPing {
+      get { return payloadCase_ == PayloadOneofCase.OpenPing ? (global::Opencraft.NetCode.OpenPing) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.OpenPing;
       }
     }
 
@@ -1087,25 +1742,30 @@ namespace Opencraft.NetCode {
       ColumnData = 4,
       BlockUpdate = 5,
       MultiBlockUpdate = 6,
+      OpenPing = 7,
     }
     private PayloadOneofCase payloadCase_ = PayloadOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PayloadOneofCase PayloadCase {
       get { return payloadCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearPayload() {
       payloadCase_ = PayloadOneofCase.None;
       payload_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ToClient);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ToClient other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1119,11 +1779,13 @@ namespace Opencraft.NetCode {
       if (!object.Equals(ColumnData, other.ColumnData)) return false;
       if (!object.Equals(BlockUpdate, other.BlockUpdate)) return false;
       if (!object.Equals(MultiBlockUpdate, other.MultiBlockUpdate)) return false;
+      if (!object.Equals(OpenPing, other.OpenPing)) return false;
       if (PayloadCase != other.PayloadCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (payloadCase_ == PayloadOneofCase.YouArePlayer) hash ^= YouArePlayer.GetHashCode();
@@ -1132,6 +1794,7 @@ namespace Opencraft.NetCode {
       if (payloadCase_ == PayloadOneofCase.ColumnData) hash ^= ColumnData.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.BlockUpdate) hash ^= BlockUpdate.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.MultiBlockUpdate) hash ^= MultiBlockUpdate.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.OpenPing) hash ^= OpenPing.GetHashCode();
       hash ^= (int) payloadCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1140,12 +1803,17 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (payloadCase_ == PayloadOneofCase.YouArePlayer) {
         output.WriteRawTag(10);
         output.WriteMessage(YouArePlayer);
@@ -1170,12 +1838,56 @@ namespace Opencraft.NetCode {
         output.WriteRawTag(50);
         output.WriteMessage(MultiBlockUpdate);
       }
+      if (payloadCase_ == PayloadOneofCase.OpenPing) {
+        output.WriteRawTag(58);
+        output.WriteMessage(OpenPing);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (payloadCase_ == PayloadOneofCase.YouArePlayer) {
+        output.WriteRawTag(10);
+        output.WriteMessage(YouArePlayer);
+      }
+      if (payloadCase_ == PayloadOneofCase.PlayerUpdate) {
+        output.WriteRawTag(18);
+        output.WriteMessage(PlayerUpdate);
+      }
+      if (payloadCase_ == PayloadOneofCase.ChunkData) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ChunkData);
+      }
+      if (payloadCase_ == PayloadOneofCase.ColumnData) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ColumnData);
+      }
+      if (payloadCase_ == PayloadOneofCase.BlockUpdate) {
+        output.WriteRawTag(42);
+        output.WriteMessage(BlockUpdate);
+      }
+      if (payloadCase_ == PayloadOneofCase.MultiBlockUpdate) {
+        output.WriteRawTag(50);
+        output.WriteMessage(MultiBlockUpdate);
+      }
+      if (payloadCase_ == PayloadOneofCase.OpenPing) {
+        output.WriteRawTag(58);
+        output.WriteMessage(OpenPing);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (payloadCase_ == PayloadOneofCase.YouArePlayer) {
@@ -1196,6 +1908,9 @@ namespace Opencraft.NetCode {
       if (payloadCase_ == PayloadOneofCase.MultiBlockUpdate) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MultiBlockUpdate);
       }
+      if (payloadCase_ == PayloadOneofCase.OpenPing) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OpenPing);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1203,6 +1918,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ToClient other) {
       if (other == null) {
         return;
@@ -1244,13 +1960,23 @@ namespace Opencraft.NetCode {
           }
           MultiBlockUpdate.MergeFrom(other.MultiBlockUpdate);
           break;
+        case PayloadOneofCase.OpenPing:
+          if (OpenPing == null) {
+            OpenPing = new global::Opencraft.NetCode.OpenPing();
+          }
+          OpenPing.MergeFrom(other.OpenPing);
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1311,29 +2037,125 @@ namespace Opencraft.NetCode {
             MultiBlockUpdate = subBuilder;
             break;
           }
+          case 58: {
+            global::Opencraft.NetCode.OpenPing subBuilder = new global::Opencraft.NetCode.OpenPing();
+            if (payloadCase_ == PayloadOneofCase.OpenPing) {
+              subBuilder.MergeFrom(OpenPing);
+            }
+            input.ReadMessage(subBuilder);
+            OpenPing = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Opencraft.NetCode.YouArePlayer subBuilder = new global::Opencraft.NetCode.YouArePlayer();
+            if (payloadCase_ == PayloadOneofCase.YouArePlayer) {
+              subBuilder.MergeFrom(YouArePlayer);
+            }
+            input.ReadMessage(subBuilder);
+            YouArePlayer = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Opencraft.NetCode.PlayerUpdate subBuilder = new global::Opencraft.NetCode.PlayerUpdate();
+            if (payloadCase_ == PayloadOneofCase.PlayerUpdate) {
+              subBuilder.MergeFrom(PlayerUpdate);
+            }
+            input.ReadMessage(subBuilder);
+            PlayerUpdate = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Opencraft.NetCode.ChunkData subBuilder = new global::Opencraft.NetCode.ChunkData();
+            if (payloadCase_ == PayloadOneofCase.ChunkData) {
+              subBuilder.MergeFrom(ChunkData);
+            }
+            input.ReadMessage(subBuilder);
+            ChunkData = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Opencraft.NetCode.ColumnData subBuilder = new global::Opencraft.NetCode.ColumnData();
+            if (payloadCase_ == PayloadOneofCase.ColumnData) {
+              subBuilder.MergeFrom(ColumnData);
+            }
+            input.ReadMessage(subBuilder);
+            ColumnData = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Opencraft.NetCode.BlockUpdate subBuilder = new global::Opencraft.NetCode.BlockUpdate();
+            if (payloadCase_ == PayloadOneofCase.BlockUpdate) {
+              subBuilder.MergeFrom(BlockUpdate);
+            }
+            input.ReadMessage(subBuilder);
+            BlockUpdate = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Opencraft.NetCode.MultiBlockUpdate subBuilder = new global::Opencraft.NetCode.MultiBlockUpdate();
+            if (payloadCase_ == PayloadOneofCase.MultiBlockUpdate) {
+              subBuilder.MergeFrom(MultiBlockUpdate);
+            }
+            input.ReadMessage(subBuilder);
+            MultiBlockUpdate = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Opencraft.NetCode.OpenPing subBuilder = new global::Opencraft.NetCode.OpenPing();
+            if (payloadCase_ == PayloadOneofCase.OpenPing) {
+              subBuilder.MergeFrom(OpenPing);
+            }
+            input.ReadMessage(subBuilder);
+            OpenPing = subBuilder;
+            break;
+          }
         }
       }
     }
+    #endif
 
   }
 
-  public sealed partial class YouArePlayer : pb::IMessage<YouArePlayer> {
+  public sealed partial class YouArePlayer : pb::IMessage<YouArePlayer>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<YouArePlayer> _parser = new pb::MessageParser<YouArePlayer>(() => new YouArePlayer());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<YouArePlayer> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public YouArePlayer() {
       OnConstruction();
     }
@@ -1341,6 +2163,7 @@ namespace Opencraft.NetCode {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public YouArePlayer(YouArePlayer other) : this() {
       playerID_ = other.playerID_;
       spawnLocation_ = other.spawnLocation_ != null ? other.spawnLocation_.Clone() : null;
@@ -1348,6 +2171,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public YouArePlayer Clone() {
       return new YouArePlayer(this);
     }
@@ -1356,6 +2180,7 @@ namespace Opencraft.NetCode {
     public const int PlayerIDFieldNumber = 1;
     private uint playerID_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint PlayerID {
       get { return playerID_; }
       set {
@@ -1367,6 +2192,7 @@ namespace Opencraft.NetCode {
     public const int SpawnLocationFieldNumber = 2;
     private global::Opencraft.NetCode.Vec3 spawnLocation_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Opencraft.NetCode.Vec3 SpawnLocation {
       get { return spawnLocation_; }
       set {
@@ -1375,11 +2201,13 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as YouArePlayer);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(YouArePlayer other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1393,6 +2221,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (PlayerID != 0) hash ^= PlayerID.GetHashCode();
@@ -1404,12 +2233,17 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (PlayerID != 0) {
         output.WriteRawTag(8);
         output.WriteUInt32(PlayerID);
@@ -1421,9 +2255,29 @@ namespace Opencraft.NetCode {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PlayerID != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(PlayerID);
+      }
+      if (spawnLocation_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SpawnLocation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (PlayerID != 0) {
@@ -1439,6 +2293,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(YouArePlayer other) {
       if (other == null) {
         return;
@@ -1456,7 +2311,11 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1476,27 +2335,62 @@ namespace Opencraft.NetCode {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            PlayerID = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            if (spawnLocation_ == null) {
+              SpawnLocation = new global::Opencraft.NetCode.Vec3();
+            }
+            input.ReadMessage(SpawnLocation);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class Vec3 : pb::IMessage<Vec3> {
+  public sealed partial class Vec3 : pb::IMessage<Vec3>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Vec3> _parser = new pb::MessageParser<Vec3>(() => new Vec3());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Vec3> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Vec3() {
       OnConstruction();
     }
@@ -1504,6 +2398,7 @@ namespace Opencraft.NetCode {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Vec3(Vec3 other) : this() {
       x_ = other.x_;
       y_ = other.y_;
@@ -1512,6 +2407,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Vec3 Clone() {
       return new Vec3(this);
     }
@@ -1520,6 +2416,7 @@ namespace Opencraft.NetCode {
     public const int XFieldNumber = 1;
     private float x_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float X {
       get { return x_; }
       set {
@@ -1531,6 +2428,7 @@ namespace Opencraft.NetCode {
     public const int YFieldNumber = 2;
     private float y_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Y {
       get { return y_; }
       set {
@@ -1542,6 +2440,7 @@ namespace Opencraft.NetCode {
     public const int ZFieldNumber = 3;
     private float z_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Z {
       get { return z_; }
       set {
@@ -1550,11 +2449,13 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Vec3);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Vec3 other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1569,6 +2470,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (X != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(X);
@@ -1581,12 +2483,17 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (X != 0F) {
         output.WriteRawTag(13);
         output.WriteFloat(X);
@@ -1602,9 +2509,33 @@ namespace Opencraft.NetCode {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (X != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(X);
+      }
+      if (Y != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Y);
+      }
+      if (Z != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(Z);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (X != 0F) {
@@ -1623,6 +2554,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Vec3 other) {
       if (other == null) {
         return;
@@ -1640,7 +2572,11 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1661,27 +2597,63 @@ namespace Opencraft.NetCode {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 13: {
+            X = input.ReadFloat();
+            break;
+          }
+          case 21: {
+            Y = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            Z = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class Pos2 : pb::IMessage<Pos2> {
+  public sealed partial class Pos2 : pb::IMessage<Pos2>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Pos2> _parser = new pb::MessageParser<Pos2>(() => new Pos2());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Pos2> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Pos2() {
       OnConstruction();
     }
@@ -1689,6 +2661,7 @@ namespace Opencraft.NetCode {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Pos2(Pos2 other) : this() {
       x_ = other.x_;
       z_ = other.z_;
@@ -1696,6 +2669,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Pos2 Clone() {
       return new Pos2(this);
     }
@@ -1704,6 +2678,7 @@ namespace Opencraft.NetCode {
     public const int XFieldNumber = 1;
     private int x_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int X {
       get { return x_; }
       set {
@@ -1715,6 +2690,7 @@ namespace Opencraft.NetCode {
     public const int ZFieldNumber = 2;
     private int z_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Z {
       get { return z_; }
       set {
@@ -1723,11 +2699,13 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Pos2);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Pos2 other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1741,6 +2719,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (X != 0) hash ^= X.GetHashCode();
@@ -1752,12 +2731,17 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (X != 0) {
         output.WriteRawTag(8);
         output.WriteSInt32(X);
@@ -1769,9 +2753,29 @@ namespace Opencraft.NetCode {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (X != 0) {
+        output.WriteRawTag(8);
+        output.WriteSInt32(X);
+      }
+      if (Z != 0) {
+        output.WriteRawTag(16);
+        output.WriteSInt32(Z);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (X != 0) {
@@ -1787,6 +2791,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Pos2 other) {
       if (other == null) {
         return;
@@ -1801,7 +2806,11 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1818,27 +2827,59 @@ namespace Opencraft.NetCode {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            X = input.ReadSInt32();
+            break;
+          }
+          case 16: {
+            Z = input.ReadSInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class Pos3 : pb::IMessage<Pos3> {
+  public sealed partial class Pos3 : pb::IMessage<Pos3>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Pos3> _parser = new pb::MessageParser<Pos3>(() => new Pos3());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Pos3> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Pos3() {
       OnConstruction();
     }
@@ -1846,6 +2887,7 @@ namespace Opencraft.NetCode {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Pos3(Pos3 other) : this() {
       x_ = other.x_;
       y_ = other.y_;
@@ -1854,6 +2896,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Pos3 Clone() {
       return new Pos3(this);
     }
@@ -1862,6 +2905,7 @@ namespace Opencraft.NetCode {
     public const int XFieldNumber = 1;
     private int x_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int X {
       get { return x_; }
       set {
@@ -1873,6 +2917,7 @@ namespace Opencraft.NetCode {
     public const int YFieldNumber = 2;
     private int y_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Y {
       get { return y_; }
       set {
@@ -1884,6 +2929,7 @@ namespace Opencraft.NetCode {
     public const int ZFieldNumber = 3;
     private int z_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Z {
       get { return z_; }
       set {
@@ -1892,11 +2938,13 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Pos3);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Pos3 other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1911,6 +2959,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (X != 0) hash ^= X.GetHashCode();
@@ -1923,12 +2972,17 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (X != 0) {
         output.WriteRawTag(8);
         output.WriteSInt32(X);
@@ -1944,9 +2998,33 @@ namespace Opencraft.NetCode {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (X != 0) {
+        output.WriteRawTag(8);
+        output.WriteSInt32(X);
+      }
+      if (Y != 0) {
+        output.WriteRawTag(16);
+        output.WriteSInt32(Y);
+      }
+      if (Z != 0) {
+        output.WriteRawTag(24);
+        output.WriteSInt32(Z);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (X != 0) {
@@ -1965,6 +3043,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Pos3 other) {
       if (other == null) {
         return;
@@ -1982,7 +3061,11 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2003,27 +3086,63 @@ namespace Opencraft.NetCode {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            X = input.ReadSInt32();
+            break;
+          }
+          case 16: {
+            Y = input.ReadSInt32();
+            break;
+          }
+          case 24: {
+            Z = input.ReadSInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class PlayerUpdate : pb::IMessage<PlayerUpdate> {
+  public sealed partial class PlayerUpdate : pb::IMessage<PlayerUpdate>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<PlayerUpdate> _parser = new pb::MessageParser<PlayerUpdate>(() => new PlayerUpdate());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PlayerUpdate> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PlayerUpdate() {
       OnConstruction();
     }
@@ -2031,6 +3150,7 @@ namespace Opencraft.NetCode {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PlayerUpdate(PlayerUpdate other) : this() {
       playerID_ = other.playerID_;
       position_ = other.position_ != null ? other.position_.Clone() : null;
@@ -2038,6 +3158,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PlayerUpdate Clone() {
       return new PlayerUpdate(this);
     }
@@ -2046,6 +3167,7 @@ namespace Opencraft.NetCode {
     public const int PlayerIDFieldNumber = 1;
     private uint playerID_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint PlayerID {
       get { return playerID_; }
       set {
@@ -2057,6 +3179,7 @@ namespace Opencraft.NetCode {
     public const int PositionFieldNumber = 2;
     private global::Opencraft.NetCode.Vec3 position_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Opencraft.NetCode.Vec3 Position {
       get { return position_; }
       set {
@@ -2065,11 +3188,13 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PlayerUpdate);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PlayerUpdate other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2083,6 +3208,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (PlayerID != 0) hash ^= PlayerID.GetHashCode();
@@ -2094,12 +3220,17 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (PlayerID != 0) {
         output.WriteRawTag(8);
         output.WriteUInt32(PlayerID);
@@ -2111,9 +3242,29 @@ namespace Opencraft.NetCode {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PlayerID != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(PlayerID);
+      }
+      if (position_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Position);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (PlayerID != 0) {
@@ -2129,6 +3280,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PlayerUpdate other) {
       if (other == null) {
         return;
@@ -2146,7 +3298,11 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2166,27 +3322,62 @@ namespace Opencraft.NetCode {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            PlayerID = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            if (position_ == null) {
+              Position = new global::Opencraft.NetCode.Vec3();
+            }
+            input.ReadMessage(Position);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class ChunkData : pb::IMessage<ChunkData> {
+  public sealed partial class ChunkData : pb::IMessage<ChunkData>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ChunkData> _parser = new pb::MessageParser<ChunkData>(() => new ChunkData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ChunkData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChunkData() {
       OnConstruction();
     }
@@ -2194,12 +3385,14 @@ namespace Opencraft.NetCode {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChunkData(ChunkData other) : this() {
       blockTypes_ = other.blockTypes_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChunkData Clone() {
       return new ChunkData(this);
     }
@@ -2208,6 +3401,7 @@ namespace Opencraft.NetCode {
     public const int BlockTypesFieldNumber = 1;
     private pb::ByteString blockTypes_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString BlockTypes {
       get { return blockTypes_; }
       set {
@@ -2216,11 +3410,13 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ChunkData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ChunkData other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2233,6 +3429,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (BlockTypes.Length != 0) hash ^= BlockTypes.GetHashCode();
@@ -2243,12 +3440,17 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (BlockTypes.Length != 0) {
         output.WriteRawTag(10);
         output.WriteBytes(BlockTypes);
@@ -2256,9 +3458,25 @@ namespace Opencraft.NetCode {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (BlockTypes.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(BlockTypes);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (BlockTypes.Length != 0) {
@@ -2271,6 +3489,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ChunkData other) {
       if (other == null) {
         return;
@@ -2282,7 +3501,11 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2295,27 +3518,55 @@ namespace Opencraft.NetCode {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            BlockTypes = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class ColumnData : pb::IMessage<ColumnData> {
+  public sealed partial class ColumnData : pb::IMessage<ColumnData>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ColumnData> _parser = new pb::MessageParser<ColumnData>(() => new ColumnData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ColumnData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ColumnData() {
       OnConstruction();
     }
@@ -2323,6 +3574,7 @@ namespace Opencraft.NetCode {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ColumnData(ColumnData other) : this() {
       position_ = other.position_ != null ? other.position_.Clone() : null;
       chunks_ = other.chunks_.Clone();
@@ -2330,6 +3582,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ColumnData Clone() {
       return new ColumnData(this);
     }
@@ -2338,6 +3591,7 @@ namespace Opencraft.NetCode {
     public const int PositionFieldNumber = 1;
     private global::Opencraft.NetCode.Pos2 position_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Opencraft.NetCode.Pos2 Position {
       get { return position_; }
       set {
@@ -2351,16 +3605,19 @@ namespace Opencraft.NetCode {
         = pb::FieldCodec.ForMessage(18, global::Opencraft.NetCode.ChunkData.Parser);
     private readonly pbc::RepeatedField<global::Opencraft.NetCode.ChunkData> chunks_ = new pbc::RepeatedField<global::Opencraft.NetCode.ChunkData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Opencraft.NetCode.ChunkData> Chunks {
       get { return chunks_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ColumnData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ColumnData other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2374,6 +3631,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (position_ != null) hash ^= Position.GetHashCode();
@@ -2385,12 +3643,17 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (position_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Position);
@@ -2399,9 +3662,26 @@ namespace Opencraft.NetCode {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (position_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Position);
+      }
+      chunks_.WriteTo(ref output, _repeated_chunks_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (position_ != null) {
@@ -2415,6 +3695,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ColumnData other) {
       if (other == null) {
         return;
@@ -2430,7 +3711,11 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2450,27 +3735,62 @@ namespace Opencraft.NetCode {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (position_ == null) {
+              Position = new global::Opencraft.NetCode.Pos2();
+            }
+            input.ReadMessage(Position);
+            break;
+          }
+          case 18: {
+            chunks_.AddEntriesFrom(ref input, _repeated_chunks_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class BlockUpdate : pb::IMessage<BlockUpdate> {
+  public sealed partial class BlockUpdate : pb::IMessage<BlockUpdate>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<BlockUpdate> _parser = new pb::MessageParser<BlockUpdate>(() => new BlockUpdate());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BlockUpdate> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BlockUpdate() {
       OnConstruction();
     }
@@ -2478,6 +3798,7 @@ namespace Opencraft.NetCode {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BlockUpdate(BlockUpdate other) : this() {
       blockPosition_ = other.blockPosition_ != null ? other.blockPosition_.Clone() : null;
       blockType_ = other.blockType_;
@@ -2485,6 +3806,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BlockUpdate Clone() {
       return new BlockUpdate(this);
     }
@@ -2493,6 +3815,7 @@ namespace Opencraft.NetCode {
     public const int BlockPositionFieldNumber = 1;
     private global::Opencraft.NetCode.Pos3 blockPosition_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Opencraft.NetCode.Pos3 BlockPosition {
       get { return blockPosition_; }
       set {
@@ -2504,6 +3827,7 @@ namespace Opencraft.NetCode {
     public const int BlockTypeFieldNumber = 2;
     private uint blockType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint BlockType {
       get { return blockType_; }
       set {
@@ -2512,11 +3836,13 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as BlockUpdate);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(BlockUpdate other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2530,6 +3856,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (blockPosition_ != null) hash ^= BlockPosition.GetHashCode();
@@ -2541,12 +3868,17 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (blockPosition_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(BlockPosition);
@@ -2558,9 +3890,29 @@ namespace Opencraft.NetCode {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (blockPosition_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(BlockPosition);
+      }
+      if (BlockType != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(BlockType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (blockPosition_ != null) {
@@ -2576,6 +3928,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(BlockUpdate other) {
       if (other == null) {
         return;
@@ -2593,7 +3946,11 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2613,27 +3970,62 @@ namespace Opencraft.NetCode {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (blockPosition_ == null) {
+              BlockPosition = new global::Opencraft.NetCode.Pos3();
+            }
+            input.ReadMessage(BlockPosition);
+            break;
+          }
+          case 16: {
+            BlockType = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class MultiBlockUpdate : pb::IMessage<MultiBlockUpdate> {
+  public sealed partial class MultiBlockUpdate : pb::IMessage<MultiBlockUpdate>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<MultiBlockUpdate> _parser = new pb::MessageParser<MultiBlockUpdate>(() => new MultiBlockUpdate());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MultiBlockUpdate> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MultiBlockUpdate() {
       OnConstruction();
     }
@@ -2641,12 +4033,14 @@ namespace Opencraft.NetCode {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MultiBlockUpdate(MultiBlockUpdate other) : this() {
       updates_ = other.updates_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MultiBlockUpdate Clone() {
       return new MultiBlockUpdate(this);
     }
@@ -2657,16 +4051,19 @@ namespace Opencraft.NetCode {
         = pb::FieldCodec.ForMessage(10, global::Opencraft.NetCode.BlockUpdate.Parser);
     private readonly pbc::RepeatedField<global::Opencraft.NetCode.BlockUpdate> updates_ = new pbc::RepeatedField<global::Opencraft.NetCode.BlockUpdate>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Opencraft.NetCode.BlockUpdate> Updates {
       get { return updates_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MultiBlockUpdate);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MultiBlockUpdate other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2679,6 +4076,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= updates_.GetHashCode();
@@ -2689,19 +4087,37 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       updates_.WriteTo(output, _repeated_updates_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      updates_.WriteTo(ref output, _repeated_updates_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += updates_.CalculateSize(_repeated_updates_codec);
@@ -2712,6 +4128,7 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MultiBlockUpdate other) {
       if (other == null) {
         return;
@@ -2721,7 +4138,11 @@ namespace Opencraft.NetCode {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2734,7 +4155,216 @@ namespace Opencraft.NetCode {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            updates_.AddEntriesFrom(ref input, _repeated_updates_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class OpenPing : pb::IMessage<OpenPing>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<OpenPing> _parser = new pb::MessageParser<OpenPing>(() => new OpenPing());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<OpenPing> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Opencraft.NetCode.OpencraftReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OpenPing() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OpenPing(OpenPing other) : this() {
+      timeSent_ = other.timeSent_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OpenPing Clone() {
+      return new OpenPing(this);
+    }
+
+    /// <summary>Field number for the "timeSent" field.</summary>
+    public const int TimeSentFieldNumber = 1;
+    private ulong timeSent_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong TimeSent {
+      get { return timeSent_; }
+      set {
+        timeSent_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as OpenPing);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(OpenPing other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TimeSent != other.TimeSent) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TimeSent != 0UL) hash ^= TimeSent.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (TimeSent != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(TimeSent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TimeSent != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(TimeSent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (TimeSent != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(TimeSent);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(OpenPing other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TimeSent != 0UL) {
+        TimeSent = other.TimeSent;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            TimeSent = input.ReadUInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            TimeSent = input.ReadUInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
