@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86a2c4de249b44a4d84efefa6d17acf7, type: 3}
-  m_Name: PolicyManager
+  m_Script: {fileID: 11500000, guid: 9756455a3f3fdc2be8b59c70f050bed7, type: 3}
+  m_Name: Threshold Bogus Policy
   m_EditorClassIdentifier: 
-  Policy: {fileID: 11400000, guid: 9b289f12b858b4207bf1e4ed5d51843a, type: 2}
