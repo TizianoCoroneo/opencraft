@@ -626,6 +626,7 @@ MonoBehaviour:
   automaticLogin: 0
   gameManager: {fileID: 11400000, guid: d50faa7a25b0a654685026ff2dacfb2a, type: 2}
   isHomeSide: 1
+  policyManager: {fileID: 11400000, guid: e28446b6805a3470fb3300d377bdf791, type: 2}
 --- !u!4 &775416440
 Transform:
   m_ObjectHideFlags: 0

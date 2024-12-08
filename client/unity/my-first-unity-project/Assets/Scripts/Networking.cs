@@ -12,6 +12,7 @@ using System.IO;
 using System.Diagnostics;
 using System.Collections;
 using UnityEngine.Networking;
+using UnityEngine.Serialization;
 
 /// <summary>
 /// This class takes care of the client-server networking. It sends packets to
@@ -88,6 +89,7 @@ public class Networking : MonoBehaviour
     private float currentRTT = 35.0f;
     private bool isThinClient = false;
     [SerializeField] public bool isHomeSide = false;
+    [SerializeField] public PolicyManager policyManager;
 
 
     // Start is called before the first frame update
@@ -153,6 +155,14 @@ public class Networking : MonoBehaviour
         Assert.IsTrue(addresses.Length > 0);
         var ip = addresses.Where(x => x.AddressFamily == AddressFamily.InterNetwork).First();
         LogIn(new(ip, port), playerID);
+    }
+
+    public void ReInitSocket(string serverHost = "localhost", int port = 7979)
+    {
+        var addresses = Dns.GetHostAddresses(serverHost);
+        Assert.IsTrue(addresses.Length > 0);
+        var ip = addresses.Where(x => x.AddressFamily == AddressFamily.InterNetwork).First();
+        ReInitSocket(new(ip, port));
     }
 
     /// <summary>
@@ -263,13 +273,12 @@ public class Networking : MonoBehaviour
         UnityEngine.Debug.Log($"Ping time taken: {(ulong)DateTimeOffset.Now.ToUnixTimeMilliseconds() - ping.TimeSent}ms");
         UnityEngine.Debug.Log($"Current RTT: {currentRTT}ms");
 
-        if (isThinClient && currentRTT > 100)
+        switch (policyManager.Policy.Evaluate(new Policy.PolicyData
+                {
+                    CurrentRTT = currentRTT
+                }))
         {
-            StartCoroutine(BecomeClient());
-        }
-        else if (!isThinClient && currentRTT < 80)
-        {
-            StartCoroutine(BecomeThinClient());
+            case Policy.PolicyResult.BecomeThinClient: StartCoroutine(BecomeThinClient()); break;
         }
     }
 
@@ -283,19 +292,6 @@ public class Networking : MonoBehaviour
         {
             isThinClient = true;
             UnityEngine.Debug.Log("Became thin client!");
-        }
-    }
-
-    IEnumerator BecomeClient()
-    {
-        using var www = UnityWebRequest.Get("http://localhost:7980/become/client?host=localhost&port=7979&playerID=1");
-        yield return www.SendWebRequest();
-
-        if (www.result != UnityWebRequest.Result.Success) UnityEngine.Debug.Log(www.error);
-        else
-        {
-            isThinClient = false;
-            UnityEngine.Debug.Log("Became client!");
         }
     }
 
