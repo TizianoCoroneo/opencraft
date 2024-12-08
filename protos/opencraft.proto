@@ -11,6 +11,7 @@ message ToServer {
         IWantMovePlayer i_want_move_player = 2;
         IWantChangeBlock i_want_change_block = 3;
         IWantColumn i_want_column = 4;
+        IWantOpenPing i_want_open_ping = 5;
     }
 }
 
@@ -32,6 +33,10 @@ message IWantColumn {
     Pos2 columnPos = 1;
 }
 
+message IWantOpenPing {
+    uint64 timeSent = 1;
+}
+
 // Messages from servers to clients
 message ToClient {
     oneof payload {
@@ -41,6 +46,7 @@ message ToClient {
         ColumnData column_data = 4;
         BlockUpdate block_update = 5;
         MultiBlockUpdate multi_block_update = 6;
+	    OpenPing open_ping = 7;
     }
 }
 
@@ -87,4 +93,8 @@ message BlockUpdate {
 
 message MultiBlockUpdate {
     repeated BlockUpdate updates = 1;
+}
+
+message OpenPing {
+    uint64 timeSent = 1;
 }

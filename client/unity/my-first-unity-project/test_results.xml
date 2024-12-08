@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2024-11-30 22:34:20Z" end-time="2024-11-30 22:34:22Z" duration="1.516856">
+  <test-suite type="TestSuite" id="1000" name="my-first-unity-project" fullname="my-first-unity-project" runstate="Runnable" testcasecount="179" result="Failed" site="Child" start-time="2024-11-30 22:34:20Z" end-time="2024-11-30 22:34:22Z" duration="1.516856" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1003" name="Tests.dll" fullname="/home/tiziano/opencraft/client/unity/my-first-unity-project/Library/ScriptAssemblies/Tests.dll" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2024-11-30 22:34:20Z" end-time="2024-11-30 22:34:22Z" duration="1.506504" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="34783" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="1001" name="Experiment" fullname="Experiment" classname="Experiment" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2024-11-30 22:34:20Z" end-time="2024-11-30 22:34:22Z" duration="1.503499" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="1002" name="GoForward60Seconds" fullname="Experiment.GoForward60Seconds" methodname="GoForward60Seconds" classname="Experiment" runstate="Runnable" seed="240709665" result="Failed" start-time="2024-11-30 22:34:20Z" end-time="2024-11-30 22:34:22Z" duration="1.489413" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+          </properties>
+          <failure>
+            <message><![CDATA[Unhandled log message: '[Exception] SocketException: Connection refused'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+            <stack-trace><![CDATA[System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) (at <9c36e86018ed40ba840b6061ef84dd1c>:0)
+System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remoteEP) (at <9c36e86018ed40ba840b6061ef84dd1c>:0)
+Networking.StartSocketReceive (System.Net.IPEndPoint server) (at Assets/Networking.cs:148)
+Networking.ReInitSocket (System.Net.IPEndPoint server) (at Assets/Networking.cs:142)
+Networking.LogIn (System.Net.IPEndPoint server, System.Int32 playerID) (at Assets/Networking.cs:74)
+Bootstrap.RunOptions (CommandLineInterface opts) (at Assets/Scripts/Bootstrap.cs:63)
+Bootstrap.Start () (at Assets/Scripts/Bootstrap.cs:43)
+
+]]></stack-trace>
+          </failure>
+          <output><![CDATA[Scene loaded
+not starting on awake
+Starting HTTP Server
+listening for http requests on http://*:7980/
+command line parameters: /home/tiziano/Unity/Hub/Editor/2022.3.26f1/Editor/Unity -projectPath client/unity/my-first-unity-project/ -runTests -testResults ./test_results.xml -testPlatform PlayMode -testFilter GoForward60Seconds --host localhost --port 7979 --user 1
+SocketException: Connection refused
+Requesting column at { "x": -80, "z": -80 }
+Sending { "iWantColumn": { "columnPos": { "x": -80, "z": -80 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -80, "z": -64 }
+Sending { "iWantColumn": { "columnPos": { "x": -80, "z": -64 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -80, "z": -48 }
+Sending { "iWantColumn": { "columnPos": { "x": -80, "z": -48 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -80, "z": -32 }
+Sending { "iWantColumn": { "columnPos": { "x": -80, "z": -32 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -80, "z": -16 }
+Sending { "iWantColumn": { "columnPos": { "x": -80, "z": -16 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -80 }
+Sending { "iWantColumn": { "columnPos": { "x": -80 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -80, "z": 16 }
+Sending { "iWantColumn": { "columnPos": { "x": -80, "z": 16 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -80, "z": 32 }
+Sending { "iWantColumn": { "columnPos": { "x": -80, "z": 32 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -80, "z": 48 }
+Sending { "iWantColumn": { "columnPos": { "x": -80, "z": 48 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -80, "z": 64 }
+Sending { "iWantColumn": { "columnPos": { "x": -80, "z": 64 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -64, "z": -80 }
+Sending { "iWantColumn": { "columnPos": { "x": -64, "z": -80 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -64, "z": -64 }
+Sending { "iWantColumn": { "columnPos": { "x": -64, "z": -64 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -64, "z": -48 }
+Sending { "iWantColumn": { "columnPos": { "x": -64, "z": -48 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -64, "z": -32 }
+Sending { "iWantColumn": { "columnPos": { "x": -64, "z": -32 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -64, "z": -16 }
+Sending { "iWantColumn": { "columnPos": { "x": -64, "z": -16 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -64 }
+Sending { "iWantColumn": { "columnPos": { "x": -64 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -64, "z": 16 }
+Sending { "iWantColumn": { "columnPos": { "x": -64, "z": 16 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -64, "z": 32 }
+Sending { "iWantColumn": { "columnPos": { "x": -64, "z": 32 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -64, "z": 48 }
+Sending { "iWantColumn": { "columnPos": { "x": -64, "z": 48 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -64, "z": 64 }
+Sending { "iWantColumn": { "columnPos": { "x": -64, "z": 64 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -48, "z": -80 }
+Sending { "iWantColumn": { "columnPos": { "x": -48, "z": -80 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -48, "z": -64 }
+Sending { "iWantColumn": { "columnPos": { "x": -48, "z": -64 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -48, "z": -48 }
+Sending { "iWantColumn": { "columnPos": { "x": -48, "z": -48 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -48, "z": -32 }
+Sending { "iWantColumn": { "columnPos": { "x": -48, "z": -32 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -48, "z": -16 }
+Sending { "iWantColumn": { "columnPos": { "x": -48, "z": -16 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -48 }
+Sending { "iWantColumn": { "columnPos": { "x": -48 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -48, "z": 16 }
+Sending { "iWantColumn": { "columnPos": { "x": -48, "z": 16 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -48, "z": 32 }
+Sending { "iWantColumn": { "columnPos": { "x": -48, "z": 32 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -48, "z": 48 }
+Sending { "iWantColumn": { "columnPos": { "x": -48, "z": 48 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -48, "z": 64 }
+Sending { "iWantColumn": { "columnPos": { "x": -48, "z": 64 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -32, "z": -80 }
+Sending { "iWantColumn": { "columnPos": { "x": -32, "z": -80 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -32, "z": -64 }
+Sending { "iWantColumn": { "columnPos": { "x": -32, "z": -64 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -32, "z": -48 }
+Sending { "iWantColumn": { "columnPos": { "x": -32, "z": -48 } } } to 
+InvalidOperationException: The operation is not allowed on non-connected sockets.
+Requesting column at { "x": -32, "z": -32 }
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

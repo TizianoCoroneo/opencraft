@@ -9,6 +9,9 @@ using System.Net;
 using UnityEngine.Assertions;
 using System;
 using System.IO;
+using System.Diagnostics;
+using System.Collections;
+using UnityEngine.Networking;
 
 /// <summary>
 /// This class takes care of the client-server networking. It sends packets to
@@ -81,12 +84,19 @@ public class Networking : MonoBehaviour
     /// enqueues them in the <see cref="messageQueue"/>.
     /// </summary>
     private Task receiveLoop = default;
+    private Stopwatch stopwatch = new();
+    private float currentRTT = 35.0f;
+    private bool isThinClient = false;
+    [SerializeField] public bool isHomeSide = false;
+
 
     // Start is called before the first frame update
     void Start()
     {
         messageQueue = new();
         outgoingMessages = new();
+        if (isHomeSide)
+            stopwatch.Start();
 
         if (automaticLogin)
             // TODO support remote servers
@@ -99,12 +109,22 @@ public class Networking : MonoBehaviour
     /// </summary>
     void Update()
     {
+        if (isHomeSide && stopwatch.ElapsedMilliseconds > 1000)
+        {
+            var ping = new ToServer
+            {
+                IWantOpenPing = new IWantOpenPing { TimeSent = (ulong)DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() }
+            };
+            SendToServer(ping);
+            stopwatch.Restart();
+        }
+
         var nOutgoing = outgoingMessages.Count;
         for (var i = 0; i < nOutgoing; i++)
         {
             if (outgoingMessages.TryDequeue(out var message))
             {
-                // Debug.Log($"Sending {message} to {client.Client.RemoteEndPoint}");
+                // UnityEngine.Debug.Log($"Sending {message} to {client.Client.RemoteEndPoint}");
                 message.WriteDelimitedTo(client.GetStream());
             }
         }
@@ -178,11 +198,27 @@ public class Networking : MonoBehaviour
                 break;
             case ToClient.PayloadOneofCase.ColumnData:
                 HandleMessageColumnData(toClient.ColumnData);
+                break; 
+            case ToClient.PayloadOneofCase.OpenPing:
+                HandleMessageOpenPing(toClient.OpenPing);
                 break;
             default:
-                Debug.LogWarning($"Got unsupported message: {toClient.PayloadCase}");
+                UnityEngine.Debug.LogWarning($"Got unsupported message: {toClient.PayloadCase}");
                 break;
         }
+    }
+
+    public void RequestColumn(Pos2 position) {
+        // UnityEngine.Debug.Log($"Requesting column at {position}");
+
+        var getColumn = new ToServer
+        {
+            IWantColumn = new IWantColumn
+            {
+                ColumnPos = position
+            }
+        };
+        outgoingMessages.Enqueue(getColumn);
     }
 
     /// <summary>
@@ -192,20 +228,13 @@ public class Networking : MonoBehaviour
     /// <param name="youArePlayer">The received reply.</param>
     private void HandleMessageLogin(YouArePlayer youArePlayer)
     {
-        Debug.Log(youArePlayer.ToString());
+        // UnityEngine.Debug.Log(youArePlayer.ToString());
         gameManager.PlayerID = youArePlayer.PlayerID;
         var pos = youArePlayer.SpawnLocation;
         playerCharacter.GetComponent<playerscript>().Teleport(new(pos.X, pos.Y, pos.Z));
 
         // Immediately ask for the column at 0,0
-        var getColumn = new ToServer
-        {
-            IWantColumn = new IWantColumn
-            {
-                ColumnPos = new Pos2 { X = 0, Z = 0 }
-            }
-        };
-        outgoingMessages.Enqueue(getColumn);
+        RequestColumn(new Pos2 { X = 0, Z = 0 });
     }
 
     /// <summary>
@@ -221,6 +250,52 @@ public class Networking : MonoBehaviour
         {
             var bytes = chunk.BlockTypes.ToByteArray();
             world.InstantiateChunk(new(pos.X, pos.Z), bytes);
+        }
+    }
+
+    /// <summary>
+    /// Handle a server ping message. We use this to measure network latency.
+    /// </summary>
+    /// <param name="ping">The received ping message.</param>
+    private void HandleMessageOpenPing(OpenPing ping)
+    {
+        currentRTT = currentRTT * 0.9f + ((ulong)DateTimeOffset.Now.ToUnixTimeMilliseconds() - ping.TimeSent) * 0.1f;
+        UnityEngine.Debug.Log($"Ping time taken: {(ulong)DateTimeOffset.Now.ToUnixTimeMilliseconds() - ping.TimeSent}ms");
+        UnityEngine.Debug.Log($"Current RTT: {currentRTT}ms");
+
+        if (isThinClient && currentRTT > 100)
+        {
+            StartCoroutine(BecomeClient());
+        }
+        else if (!isThinClient && currentRTT < 80)
+        {
+            StartCoroutine(BecomeThinClient());
+        }
+    }
+
+    IEnumerator BecomeThinClient()
+    {
+        using var www = UnityWebRequest.Get("http://localhost:7980/become/thinclient?host=localhost&port=7999&signalingPort=7981");
+        yield return www.SendWebRequest();
+
+        if (www.result != UnityWebRequest.Result.Success) UnityEngine.Debug.Log(www.error);
+        else
+        {
+            isThinClient = true;
+            UnityEngine.Debug.Log("Became thin client!");
+        }
+    }
+
+    IEnumerator BecomeClient()
+    {
+        using var www = UnityWebRequest.Get("http://localhost:7980/become/client?host=localhost&port=7979&playerID=1");
+        yield return www.SendWebRequest();
+
+        if (www.result != UnityWebRequest.Result.Success) UnityEngine.Debug.Log(www.error);
+        else
+        {
+            isThinClient = false;
+            UnityEngine.Debug.Log("Became client!");
         }
     }
 
@@ -262,7 +337,7 @@ public class Networking : MonoBehaviour
                 {
                     if (running)
                     {
-                        Debug.LogError(e);
+                        UnityEngine.Debug.LogError(e);
                     }
                 }
             }

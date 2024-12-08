@@ -57,7 +57,7 @@ public class GameManager : ScriptableObject
     void OnEnable()
     {
         // Register a callback for user input to switch scenes
-        inputManager.ToggleThinClientEvent += ToggleThinClient;
+        // inputManager.ToggleThinClientEvent += ToggleThinClient;
 
         PlayerID = 0;
         ServerEndpoint = null;
@@ -68,7 +68,7 @@ public class GameManager : ScriptableObject
     /// </summary>
     void OnDisable()
     {
-        inputManager.ToggleThinClientEvent -= ToggleThinClient;
+        // inputManager.ToggleThinClientEvent -= ToggleThinClient;
     }
 
     void OnDestroy()

@@ -2,6 +2,7 @@ package server
 
 import (
 	"bufio"
+	"math/rand"
 	"net"
 	"time"
 
@@ -53,6 +54,8 @@ type Game struct {
 
 // The default constructor for the Game struct.
 func NewGame() *Game {
+	rand.Seed(time.Now().UnixNano())
+
 	return &Game{
 		World:        *model.NewWorld(),
 		Players:      make(map[uint32]*ServerPlayer),
@@ -83,6 +86,7 @@ func (g *Game) Stop() {
 // successful login, the server replies to the client with a YouArePlayer
 // message telling the client their player ID and avatar location.
 func (g *Game) handleIWantPlayer(msg *protos.IWantPlayer, conn net.Conn) {
+	log.Info("processing I want player")
 	var i uint32
 
 	if msg.PlayerID == 0 {
@@ -125,6 +129,7 @@ func (g *Game) handleIWantPlayer(msg *protos.IWantPlayer, conn net.Conn) {
 // whatsoever if this move is valid. It simply accepts the new position. It does
 // not send a reply.
 func (g *Game) handleIWantMovePlayer(msg *protos.IWantMovePlayer, conn net.Conn) {
+	log.Info("processing I want move player")
 	p, ok := g.Players[msg.PlayerID]
 	if ok {
 		// No checks whatsoever!
@@ -137,6 +142,7 @@ func (g *Game) handleIWantMovePlayer(msg *protos.IWantMovePlayer, conn net.Conn)
 // Handles the IWantChangeBlock message from the client. Tries to set the block
 // at the specified location to the specified type. It does not send a reply.
 func (g *Game) handleIWantChangeBlock(msg *protos.IWantChangeBlock, conn net.Conn) {
+	log.Info("processing I want change block")
 	msgPos := msg.BlockPosition
 	msgTyp := msg.BlockType
 	pos := model.IntPos3{X: int(msgPos.X), Y: int(msgPos.Y), Z: int(msgPos.Z)}
@@ -151,11 +157,16 @@ func (g *Game) handleIWantChangeBlock(msg *protos.IWantChangeBlock, conn net.Con
 // thick layer of non-air blocks in a ColumnData message.
 // TODO the game should generate and keep track of the world.
 func (g *Game) handleIWantColumn(msg *protos.IWantColumn, conn net.Conn) {
+	log.Info("processing I want column")
 	pos := &protos.Pos2{X: msg.ColumnPos.X, Z: msg.ColumnPos.Z}
 	chunks := make([]*protos.ChunkData, 1)
 	buf := make([]byte, 16*16*16)
 	for i := 0; i < 16*16; i++ {
-		buf[i] = 1
+		if rand.Intn(2) == 0 {
+			buf[i] = 1
+		} else {
+			buf[i] = 2
+		}
 	}
 	chunkData := &protos.ChunkData{BlockTypes: buf}
 	chunks[0] = chunkData
@@ -164,6 +175,20 @@ func (g *Game) handleIWantColumn(msg *protos.IWantColumn, conn net.Conn) {
 			ColumnData: &protos.ColumnData{
 				Position: pos,
 				Chunks:   chunks,
+			},
+		},
+	}
+	if _, err := protodelim.MarshalTo(conn, reply); err != nil {
+		log.Warn(err)
+	}
+}
+
+func (g *Game) handleIWantPing(msg *protos.IWantOpenPing, conn net.Conn) {
+	log.Info("processing I want ping")
+	reply := &protos.ToClient{
+		Payload: &protos.ToClient_OpenPing{
+			OpenPing: &protos.OpenPing{
+				TimeSent: msg.TimeSent,
 			},
 		},
 	}
@@ -185,6 +210,8 @@ func (g *Game) handleMessage(msg *IncomingMessage) {
 		g.handleIWantChangeBlock(x.IWantChangeBlock, msg.Connection)
 	case *protos.ToServer_IWantColumn:
 		g.handleIWantColumn(x.IWantColumn, msg.Connection)
+	case *protos.ToServer_IWantOpenPing:
+		g.handleIWantPing(x.IWantOpenPing, msg.Connection)
 	default:
 		log.Warn("unknown msg type", x)
 	}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 11400000, guid: d50faa7a25b0a654685026ff2dacfb2a, type: 2}
+  world: {fileID: 1927846690}
 --- !u!4 &292567536
 Transform:
   m_ObjectHideFlags: 0
@@ -624,6 +625,7 @@ MonoBehaviour:
   world: {fileID: 1927846690}
   automaticLogin: 0
   gameManager: {fileID: 11400000, guid: d50faa7a25b0a654685026ff2dacfb2a, type: 2}
+  isHomeSide: 1
 --- !u!4 &775416440
 Transform:
   m_ObjectHideFlags: 0
@@ -1055,6 +1057,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BlockPrefab: {fileID: 2867210926734458378, guid: 85318610a031c7d45bf0ebf01d978774,
     type: 3}
+  GrassPrefab: {fileID: 2867210926734458378, guid: bd295c6cf778a435393892a0700ef768,
+    type: 3}
+  Player: {fileID: 1229785342}
+  Net: {fileID: 775416439}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
