@@ -75,7 +75,7 @@ public class World : MonoBehaviour
             Destroy(chunk);
         }
 
-        var farChunkKeys = farPairs.Select(pair => pair.Key);
+        var farChunkKeys = (farPairs.Select(pair => pair.Key)).ToList();
 
         foreach (var key in farChunkKeys)
         {
