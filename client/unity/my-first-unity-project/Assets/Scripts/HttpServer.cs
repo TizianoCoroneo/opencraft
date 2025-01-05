@@ -58,7 +58,7 @@ public class HttpServer : MonoBehaviour
     [SerializeField] private GameManager gameManager;
 
     [SerializeField] private World world;
-    
+
     /// <summary>
     /// The port on which the HTTP server listens for requests. Given that this
     /// server is not meant to serve (HTML) content, it is better to use a
@@ -548,7 +548,7 @@ public class HttpServer : MonoBehaviour
         yield return StartCoroutine(gameManager.SwitchSceneRoutine(GameScenes.ThinClient));
 
         ConnectToRenderer(new IPEndPoint(render.Address, signalingPort), iceServers);
-     
+
         world.ClearLoadedChunks();
     }
 
@@ -702,7 +702,7 @@ public class HttpServer : MonoBehaviour
 
         // Perform login
         HandleRequestLogin(v);
-        
+
         world.ClearLoadedChunks();
     }
 

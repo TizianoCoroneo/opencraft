@@ -13,6 +13,8 @@ using System.Diagnostics;
 using System.Collections;
 using UnityEngine.Networking;
 using UnityEngine.Serialization;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 
 /// <summary>
 /// This class takes care of the client-server networking. It sends packets to
@@ -33,17 +35,6 @@ public class Networking : MonoBehaviour
     /// </summary>
     /// <seealso cref="HandleMessageColumnData"/>
     public World world;
-
-    /// <summary>
-    /// When set to true, tries to automatically log in to a server running on
-    /// localhost, using the default port of 7979, when the game starts.
-    ///
-    /// <para><b>DEPRECATED</b> this field is deprecated. Set to false. Use the
-    /// <see cref="Bootstrap"/> class to connect to a server upon boot.</para>
-    /// </summary>
-    [Obsolete("Logging in is now the responsibility of the Bootstrap class. Setting this value tries to log in on localhost.")]
-    [SerializeField]
-    private bool automaticLogin = default;
 
     /// <summary>
     /// Reference to the <see cref="GameManager"/> ScriptableObjects, which
@@ -72,6 +63,12 @@ public class Networking : MonoBehaviour
     private ConcurrentQueue<ToServer> outgoingMessages = default;
 
     /// <summary>
+    /// A k,v pair of column positions and the time at which the column was
+    /// requested. Used to ensure a column is eventually received.
+    /// </summary>
+    private Dictionary<Pos2, long> columnRequests = default;
+
+    /// <summary>
     /// Indicates whether there is an asynchronous task listening for incoming
     /// messages from the server.
     /// </summary>
@@ -85,10 +82,16 @@ public class Networking : MonoBehaviour
     /// enqueues them in the <see cref="messageQueue"/>.
     /// </summary>
     private Task receiveLoop = default;
-    private Stopwatch stopwatch = new();
+    private readonly Stopwatch stopwatch = new();
     private float currentRTT = 35.0f;
     private bool isThinClient = false;
+    /// <summary>
+    /// Indicates whether the client is on the home side.
+    /// </summary>
     [SerializeField] public bool isHomeSide = false;
+    /// <summary>
+    /// Reference to the policy manager. Used to evaluate policies.
+    /// </summary>
     [SerializeField] public PolicyManager policyManager;
 
 
@@ -97,12 +100,9 @@ public class Networking : MonoBehaviour
     {
         messageQueue = new();
         outgoingMessages = new();
+        columnRequests = new();
         if (isHomeSide)
             stopwatch.Start();
-
-        if (automaticLogin)
-            // TODO support remote servers
-            LogIn("localhost");
     }
 
     /// <summary>
@@ -121,12 +121,20 @@ public class Networking : MonoBehaviour
             stopwatch.Restart();
         }
 
+        var maxWait = 500;
+        foreach (var pair in columnRequests.ToList())
+        {
+            if (DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() - pair.Value > maxWait)
+            {
+                RequestColumn(pair.Key);
+            }
+        }
+
         var nOutgoing = outgoingMessages.Count;
         for (var i = 0; i < nOutgoing; i++)
         {
             if (outgoingMessages.TryDequeue(out var message))
             {
-                // UnityEngine.Debug.Log($"Sending {message} to {client.Client.RemoteEndPoint}");
                 message.WriteDelimitedTo(client.GetStream());
             }
         }
@@ -157,6 +165,11 @@ public class Networking : MonoBehaviour
         LogIn(new(ip, port), playerID);
     }
 
+    /// <summary>
+    /// Reinitialize the socket connection to a server.
+    /// </summary>
+    /// <param name="serverHost">Server address.</param>
+    /// <param name="port">Server port.</param>
     public void ReInitSocket(string serverHost = "localhost", int port = 7979)
     {
         var addresses = Dns.GetHostAddresses(serverHost);
@@ -208,7 +221,7 @@ public class Networking : MonoBehaviour
                 break;
             case ToClient.PayloadOneofCase.ColumnData:
                 HandleMessageColumnData(toClient.ColumnData);
-                break; 
+                break;
             case ToClient.PayloadOneofCase.OpenPing:
                 HandleMessageOpenPing(toClient.OpenPing);
                 break;
@@ -218,9 +231,15 @@ public class Networking : MonoBehaviour
         }
     }
 
-    public void RequestColumn(Pos2 position) {
-        // UnityEngine.Debug.Log($"Requesting column at {position}");
+    /// <summary>
+    /// Requests a column of blocks at the specified position.
+    /// </summary>
+    /// <param name="position">The position of the column to request.</param>
+    public void RequestColumn(Pos2 position)
+    {
+        UnityEngine.Debug.Log($"Requesting column at {position}");
 
+        columnRequests[position] = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
         var getColumn = new ToServer
         {
             IWantColumn = new IWantColumn
@@ -256,6 +275,8 @@ public class Networking : MonoBehaviour
     {
         var pos = columnData.Position;
         var chunks = columnData.Chunks;
+
+        columnRequests.Remove(pos);
         foreach (var chunk in chunks)
         {
             var bytes = chunk.BlockTypes.ToByteArray();
@@ -274,9 +295,9 @@ public class Networking : MonoBehaviour
         UnityEngine.Debug.Log($"Current RTT: {currentRTT}ms");
 
         switch (policyManager.Policy.Evaluate(new Policy.PolicyData
-                {
-                    CurrentRTT = currentRTT
-                }))
+        {
+            CurrentRTT = currentRTT
+        }))
         {
             case Policy.PolicyResult.BecomeThinClient: StartCoroutine(BecomeThinClient()); break;
         }

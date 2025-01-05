@@ -18,41 +18,61 @@ public class World : MonoBehaviour
     /// Prefab for a single block in the world.
     /// </summary>
     public GameObject BlockPrefab;
+    /// <summary>
+    /// Prefab for a grass block in the world.
+    /// </summary>
     public GameObject GrassPrefab;
+    /// <summary>
+    /// Reference to the player GameObject.
+    /// </summary>
     public GameObject Player;
+    /// <summary>
+    /// Reference to the Networking component.
+    /// </summary>
     public Networking Net;
+    /// <summary>
+    /// Dictionary of loaded chunks.
+    /// </summary>
+    private readonly Dictionary<Vector2Int, List<GameObject>> _loadedChunksDict = new();
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-
-
-    }
-
-    private Dictionary<Vector2Int, List<GameObject>> _loadedChunksDict = new Dictionary<Vector2Int, List<GameObject>>();
-
+    /// <summary>
+    /// Clears the dictionary of loaded chunks.
+    /// </summary>
     public void ClearLoadedChunks()
     {
         _loadedChunksDict.Clear();
     }
 
+    // Start is called before the first frame update
+    void Start() { }
+
     // Update is called once per frame
     void Update()
+    {
+        LoadChunk();
+    }
+
+
+    /// <summary>
+    /// Loads the chunk the player is currently in and unloads far chunks.
+    /// </summary>
+    private void LoadChunk()
     {
         var loadNextNChunks = 1;
         var chunkSpacingFactor = 16;
 
         // Quantized to column multiples
-        var playerX = (int)(Player.transform.position.x / 16) * 16;
-        var playerZ = (int)(Player.transform.position.z / 16) * 16;
+        var playerX = Mathf.FloorToInt(Player.transform.position.x / 16) * 16;
+        var playerZ = Mathf.FloorToInt(Player.transform.position.z / 16) * 16;
 
         for (var i = -loadNextNChunks; i <= loadNextNChunks; i++)
         {
             for (var j = -loadNextNChunks; j <= loadNextNChunks; j++)
             {
                 var pos = new Vector2Int { x = playerX + i * chunkSpacingFactor, y = playerZ + j * chunkSpacingFactor };
-                if (_loadedChunksDict.ContainsKey(pos)) continue;
+
+                if (_loadedChunksDict.ContainsKey(pos))
+                    continue;
 
                 _loadedChunksDict.Add(pos, new List<GameObject>());
                 Debug.Log($"Added chunk key {pos}");
@@ -69,13 +89,12 @@ public class World : MonoBehaviour
 
         var farPairs = _loadedChunksDict.Where(pair => isFarChunk(pair.Key));
         var farChunkGameObjects = farPairs.SelectMany(pair => pair.Value);
+        var farChunkKeys = (farPairs.Select(pair => pair.Key)).ToList();
 
         foreach (var chunk in farChunkGameObjects)
         {
             Destroy(chunk);
         }
-
-        var farChunkKeys = (farPairs.Select(pair => pair.Key)).ToList();
 
         foreach (var key in farChunkKeys)
         {
@@ -84,9 +103,20 @@ public class World : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Instantiates a chunk at the given position with the provided block data.
+    /// </summary>
+    /// <param name="position">The position of the chunk.</param>
+    /// <param name="blockData">The block data for the chunk.</param>
     public void InstantiateChunk(Vector2Int position, byte[] blockData)
     {
         Debug.Log($"Instantiating chuck at position {position}");
+
+        if (_loadedChunksDict.ContainsKey(position) && _loadedChunksDict[position].Count > 0)
+        {
+            Debug.Log($"Chunk already exists at position {position}, probably a duplicate request.");
+            return;
+        }
 
         for (var i = 0; i < blockData.Length; i++)
         {
@@ -107,8 +137,7 @@ public class World : MonoBehaviour
 
             var gameObject = Instantiate(blockToInstantiate, pos, Quaternion.identity);
 
-            List<GameObject> loadedChunkGameObjects;
-            if (_loadedChunksDict.TryGetValue(position, out loadedChunkGameObjects))
+            if (_loadedChunksDict.TryGetValue(position, out List<GameObject> loadedChunkGameObjects))
             {
                 loadedChunkGameObjects.Add(gameObject);
                 _loadedChunksDict[position] = loadedChunkGameObjects;
