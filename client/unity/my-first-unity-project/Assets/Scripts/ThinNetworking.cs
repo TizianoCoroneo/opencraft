@@ -12,13 +12,21 @@ using System.IO;
 using System.Diagnostics;
 using System.Collections;
 using UnityEngine.Networking;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 
 /// <summary>
 /// This class takes care of the client-server networking. It sends packets to
 /// the server, and it receives and handles packets received from the server.
 /// </summary>
-public class ThinNetworking : MonoBehaviour
+public class ThinNetworking : MonoBehaviour, INetworking
 {
+    /// <summary>
+    /// Reference to the statistic. Used to set the current RTT to the server.
+    /// The field is set through the Unity editor.
+    /// </summary>
+    /// <seealso cref="HandleMessageOpenPing"/>
+    public Statistics stats;
+
     /// <summary>
     /// The client used to communicate with the game server.
     /// </summary>
@@ -50,9 +58,12 @@ public class ThinNetworking : MonoBehaviour
     /// enqueues them in the <see cref="messageQueue"/>.
     /// </summary>
     private Task receiveLoop = default;
-    private Stopwatch stopwatch = new();
-    private float currentRTT = 35.0f;
+
     private bool isThinClient = false;
+
+    /// <summary>
+    /// Reference to the policy manager. Used to evaluate policies.
+    /// </summary>
     [SerializeField] public PolicyManager policyManager;
 
 
@@ -61,10 +72,8 @@ public class ThinNetworking : MonoBehaviour
     {
         messageQueue = new();
         outgoingMessages = new();
-        
+
         ReInitSocket();
-        
-        stopwatch.Start();
     }
 
     /// <summary>
@@ -73,26 +82,17 @@ public class ThinNetworking : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if (stopwatch.ElapsedMilliseconds > 1000)
-        {
-            var ping = new ToServer
-            {
-                IWantOpenPing = new IWantOpenPing { TimeSent = (ulong)DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() }
-            };
-            SendToServer(ping);
-            stopwatch.Restart();
-        }
-
+        // Send all outgoing messages to the server
         var nOutgoing = outgoingMessages.Count;
         for (var i = 0; i < nOutgoing; i++)
         {
             if (outgoingMessages.TryDequeue(out var message))
             {
-                // UnityEngine.Debug.Log($"Sending {message} to {client.Client.RemoteEndPoint}");
                 message.WriteDelimitedTo(client.GetStream());
             }
         }
 
+        // Process all incoming messages from the server
         var nMessages = messageQueue.Count;
         for (var i = 0; i < nMessages; i++)
         {
@@ -138,14 +138,11 @@ public class ThinNetworking : MonoBehaviour
     /// <param name="ping">The received ping message.</param>
     private void HandleMessageOpenPing(OpenPing ping)
     {
-        currentRTT = currentRTT * 0.9f + ((ulong)DateTimeOffset.Now.ToUnixTimeMilliseconds() - ping.TimeSent) * 0.1f;
-        UnityEngine.Debug.Log($"Ping time taken: {(ulong)DateTimeOffset.Now.ToUnixTimeMilliseconds() - ping.TimeSent}ms");
-        UnityEngine.Debug.Log($"Current RTT: {currentRTT}ms");
-
+        stats.RTT = stats.RTT * 0.9f + ((ulong)DateTimeOffset.Now.ToUnixTimeMilliseconds() - ping.TimeSent) * 0.1f;
         switch (policyManager.Policy.Evaluate(new Policy.PolicyData
-                {
-                    CurrentRTT = currentRTT
-                }))
+        {
+            stats = stats
+        }))
         {
             case Policy.PolicyResult.BecomeClient: StartCoroutine(BecomeClient()); break;
         }
@@ -163,7 +160,7 @@ public class ThinNetworking : MonoBehaviour
             UnityEngine.Debug.Log("Became client!");
         }
     }
-    
+
     public void ReInitSocket(string serverHost = "localhost", int port = 7979)
     {
         var addresses = Dns.GetHostAddresses(serverHost);

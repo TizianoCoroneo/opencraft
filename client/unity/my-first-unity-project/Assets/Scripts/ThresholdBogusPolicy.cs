@@ -5,26 +5,30 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using System.Diagnostics;
 
+/// <summary>
+/// A policy that toggles between client and thin client based on a 5 second
+/// timer.
+/// </summary>
 [CreateAssetMenu(menuName = "ScriptableObjects/ThresholdBogusPolicy")]
 public class ThresholdBogusPolicy : Policy
 {
-    private Stopwatch stopwatch = new Stopwatch();
+    private readonly Stopwatch stopwatch = new();
     private bool isThinClient = false;
 
-    public override Policy.PolicyResult Evaluate(Policy.PolicyData data)
+    public override PolicyResult Evaluate(PolicyData data)
     {
         if (!stopwatch.IsRunning)
             stopwatch.Start();
 
         if (stopwatch.ElapsedMilliseconds < 5000)
-            return Policy.PolicyResult.None;
+            return PolicyResult.None;
 
         isThinClient = !isThinClient;
         stopwatch.Reset();
 
         if (isThinClient)
-            return Policy.PolicyResult.BecomeClient;
+            return PolicyResult.BecomeClient;
         else
-            return Policy.PolicyResult.BecomeThinClient;
+            return PolicyResult.BecomeThinClient;
     }
 }

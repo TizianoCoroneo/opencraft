@@ -20,7 +20,7 @@ using Unity.VisualScripting;
 /// This class takes care of the client-server networking. It sends packets to
 /// the server, and it receives and handles packets received from the server.
 /// </summary>
-public class Networking : MonoBehaviour
+public class Networking : MonoBehaviour, INetworking
 {
     /// <summary>
     /// Reference to the player avatar object. Used to move the avatar to the
@@ -44,6 +44,13 @@ public class Networking : MonoBehaviour
     /// </summary>
     /// <seealso cref="HttpServer.HandleRequestBecomeThinClient"/>
     [SerializeField] private GameManager gameManager = default;
+
+    /// <summary>
+    /// Reference to the statistic. Used to set the current RTT to the server.
+    /// The field is set through the Unity editor.
+    /// </summary>
+    /// <seealso cref="HandleMessageOpenPing"/>
+    public Statistics stats;
 
     /// <summary>
     /// The client used to communicate with the game server.
@@ -82,13 +89,9 @@ public class Networking : MonoBehaviour
     /// enqueues them in the <see cref="messageQueue"/>.
     /// </summary>
     private Task receiveLoop = default;
-    private readonly Stopwatch stopwatch = new();
-    private float currentRTT = 35.0f;
+
     private bool isThinClient = false;
-    /// <summary>
-    /// Indicates whether the client is on the home side.
-    /// </summary>
-    [SerializeField] public bool isHomeSide = false;
+
     /// <summary>
     /// Reference to the policy manager. Used to evaluate policies.
     /// </summary>
@@ -101,8 +104,6 @@ public class Networking : MonoBehaviour
         messageQueue = new();
         outgoingMessages = new();
         columnRequests = new();
-        if (isHomeSide)
-            stopwatch.Start();
     }
 
     /// <summary>
@@ -111,25 +112,19 @@ public class Networking : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if (isHomeSide && stopwatch.ElapsedMilliseconds > 1000)
-        {
-            var ping = new ToServer
-            {
-                IWantOpenPing = new IWantOpenPing { TimeSent = (ulong)DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() }
-            };
-            SendToServer(ping);
-            stopwatch.Restart();
-        }
+        if (client == null)
+            return;
 
-        var maxWait = 500;
+        // Check if any column requests have timed out
         foreach (var pair in columnRequests.ToList())
         {
-            if (DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() - pair.Value > maxWait)
+            if (DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() - pair.Value > stats.RTT * 3)
             {
                 RequestColumn(pair.Key);
             }
         }
 
+        // Send all outgoing messages to the server
         var nOutgoing = outgoingMessages.Count;
         for (var i = 0; i < nOutgoing; i++)
         {
@@ -139,6 +134,7 @@ public class Networking : MonoBehaviour
             }
         }
 
+        // Process all incoming messages from the server
         var nMessages = messageQueue.Count;
         for (var i = 0; i < nMessages; i++)
         {
@@ -147,53 +143,6 @@ public class Networking : MonoBehaviour
                 HandleMessage(message.Item1, message.Item2);
             }
         }
-    }
-
-    /// <summary>
-    /// Log in to a server.
-    /// </summary>
-    /// <param name="serverHost">Server address.</param>
-    /// <param name="port">Server port.</param>
-    /// <param name="playerID">Player ID. If 0, the server will assign us a
-    /// player ID. If larger than 0, we request to log in as that player. A
-    /// player can be logged in multiple times.</param>
-    public void LogIn(string serverHost = "localhost", int port = 7979, int playerID = 0)
-    {
-        var addresses = Dns.GetHostAddresses(serverHost);
-        Assert.IsTrue(addresses.Length > 0);
-        var ip = addresses.Where(x => x.AddressFamily == AddressFamily.InterNetwork).First();
-        LogIn(new(ip, port), playerID);
-    }
-
-    /// <summary>
-    /// Reinitialize the socket connection to a server.
-    /// </summary>
-    /// <param name="serverHost">Server address.</param>
-    /// <param name="port">Server port.</param>
-    public void ReInitSocket(string serverHost = "localhost", int port = 7979)
-    {
-        var addresses = Dns.GetHostAddresses(serverHost);
-        Assert.IsTrue(addresses.Length > 0);
-        var ip = addresses.Where(x => x.AddressFamily == AddressFamily.InterNetwork).First();
-        ReInitSocket(new(ip, port));
-    }
-
-    /// <summary>
-    /// Log in to a server.
-    /// </summary>
-    /// <param name="server">The server endpoint (ip+port).</param>
-    /// <param name="playerID">Player ID. If 0, the server will assign us a
-    /// player ID. If larger than 0, we request to log in as that player. A
-    /// player can be logged in multiple times.</param>
-    public void LogIn(IPEndPoint server, int playerID = 0)
-    {
-        ReInitSocket(server);
-
-        var loginMsg = new ToServer
-        {
-            IWantPlayer = new IWantPlayer { PlayerID = (uint)playerID }
-        };
-        SendToServer(loginMsg);
     }
 
     /// <summary>
@@ -290,13 +239,10 @@ public class Networking : MonoBehaviour
     /// <param name="ping">The received ping message.</param>
     private void HandleMessageOpenPing(OpenPing ping)
     {
-        currentRTT = currentRTT * 0.9f + ((ulong)DateTimeOffset.Now.ToUnixTimeMilliseconds() - ping.TimeSent) * 0.1f;
-        UnityEngine.Debug.Log($"Ping time taken: {(ulong)DateTimeOffset.Now.ToUnixTimeMilliseconds() - ping.TimeSent}ms");
-        UnityEngine.Debug.Log($"Current RTT: {currentRTT}ms");
-
+        stats.RTT = stats.RTT * 0.9f + ((ulong)DateTimeOffset.Now.ToUnixTimeMilliseconds() - ping.TimeSent) * 0.1f;
         switch (policyManager.Policy.Evaluate(new Policy.PolicyData
         {
-            CurrentRTT = currentRTT
+            stats = stats
         }))
         {
             case Policy.PolicyResult.BecomeThinClient: StartCoroutine(BecomeThinClient()); break;
@@ -314,6 +260,53 @@ public class Networking : MonoBehaviour
             isThinClient = true;
             UnityEngine.Debug.Log("Became thin client!");
         }
+    }
+
+    /// <summary>
+    /// Log in to a server.
+    /// </summary>
+    /// <param name="serverHost">Server address.</param>
+    /// <param name="port">Server port.</param>
+    /// <param name="playerID">Player ID. If 0, the server will assign us a
+    /// player ID. If larger than 0, we request to log in as that player. A
+    /// player can be logged in multiple times.</param>
+    public void LogIn(string serverHost = "localhost", int port = 7979, int playerID = 0)
+    {
+        var addresses = Dns.GetHostAddresses(serverHost);
+        Assert.IsTrue(addresses.Length > 0);
+        var ip = addresses.Where(x => x.AddressFamily == AddressFamily.InterNetwork).First();
+        LogIn(new(ip, port), playerID);
+    }
+
+    /// <summary>
+    /// Log in to a server.
+    /// </summary>
+    /// <param name="server">The server endpoint (ip+port).</param>
+    /// <param name="playerID">Player ID. If 0, the server will assign us a
+    /// player ID. If larger than 0, we request to log in as that player. A
+    /// player can be logged in multiple times.</param>
+    public void LogIn(IPEndPoint server, int playerID = 0)
+    {
+        ReInitSocket(server);
+
+        var loginMsg = new ToServer
+        {
+            IWantPlayer = new IWantPlayer { PlayerID = (uint)playerID }
+        };
+        SendToServer(loginMsg);
+    }
+
+    /// <summary>
+    /// Reinitialize the socket connection to a server.
+    /// </summary>
+    /// <param name="serverHost">Server address.</param>
+    /// <param name="port">Server port.</param>
+    public void ReInitSocket(string serverHost = "localhost", int port = 7979)
+    {
+        var addresses = Dns.GetHostAddresses(serverHost);
+        Assert.IsTrue(addresses.Length > 0);
+        var ip = addresses.Where(x => x.AddressFamily == AddressFamily.InterNetwork).First();
+        ReInitSocket(new(ip, port));
     }
 
     /// <summary>
@@ -335,7 +328,18 @@ public class Networking : MonoBehaviour
     private void StartSocketReceive(IPEndPoint server)
     {
         client = new();
-        client.Connect(server);
+
+        try
+        {
+            client.Connect(server);
+        }
+        catch (Exception)
+        {
+            UnityEngine.Debug.LogError("Could not connect, did you start the server?");
+            UnityEditor.EditorApplication.isPlaying = false;
+            return;
+        }
+
         gameManager.ServerEndpoint = server;
         receiveLoop = Task.Run(() =>
         {
