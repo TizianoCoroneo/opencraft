@@ -622,7 +622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   networkComponent: {fileID: 775416439}
-  measurementGapMilliseconds: 1000
+  measurementGap: 1
   isHomeSide: 1
 --- !u!4 &686036700
 Transform:

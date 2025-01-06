@@ -7,6 +7,7 @@ using System;
 using Unity.VisualScripting;
 using System.Threading;
 using System.Threading.Tasks;
+using System.IO;
 
 public class Statistics : MonoBehaviour
 {
@@ -39,6 +40,7 @@ public class Statistics : MonoBehaviour
 
     [SerializeField] private float measurementGap = 1;
     [SerializeField] private bool isHomeSide = false;
+    private string filePath = default;
     private readonly Stopwatch stopwatch = new();
 
     // Start is called before the first frame update
@@ -49,6 +51,16 @@ public class Statistics : MonoBehaviour
 
         stopwatch.Start();
         network = (INetworking)networkComponent;
+
+        // Initialize stats file
+        filePath = Application.persistentDataPath + $"/stats/{DateTime.Now.ToString("o")}.csv";
+        if (!File.Exists(filePath))
+        {
+            Directory.CreateDirectory(Application.persistentDataPath + "/stats");
+            using StreamWriter writer = new(filePath, false);
+            writer.WriteLine("RTT,FPS,CPU,GPU,Memory");
+            UnityEngine.Debug.Log("File initialized: " + filePath);
+        }
     }
 
     // Update is called once per frame
@@ -65,6 +77,7 @@ public class Statistics : MonoBehaviour
             SendPing();
             UpdateSystemStats();
             UnityEngine.Debug.Log($"RTT: {RTT} ms, FPS: {FPS}, CPU: {CPU}%, GPU: {GPU}%, Memory: {Memory}%");
+            WriteStats();
             stopwatch.Restart();
         }
     }
@@ -117,5 +130,15 @@ public class Statistics : MonoBehaviour
             process.Start();
             return process.StandardOutput.ReadToEnd();
         });
+    }
+
+    /// <summary>
+    /// Writes the statistics to a file.
+    /// </summary>
+    private async void WriteStats()
+    {
+        var stats = $"{RTT},{FPS},{CPU},{GPU},{Memory}";
+        using StreamWriter writer = new(filePath, true);
+        await writer.WriteLineAsync(stats);
     }
 }
