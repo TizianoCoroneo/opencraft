@@ -11,6 +11,8 @@ fps = []
 cpu = []
 gpu = []
 memory = []
+battery_status = []
+battery_level = []
 
 with open(sys.argv[1], mode="r") as file:
     reader = csv.DictReader(file)  # Read the CSV with headers
@@ -29,6 +31,9 @@ with open(sys.argv[1], mode="r") as file:
         cpu.append(float(row["CPU"]))
         gpu.append(float(row["GPU"]))
         memory.append(float(row["Memory"]))
+        battery_status.append(str(row["BatteryStatus"]))
+        battery_level.append(int(row["BatteryLevel"]))
+
 
 plt.figure(figsize=(10, 6))
 plt.plot(rtt, label="RTT (ms)", marker="o")
@@ -36,6 +41,7 @@ plt.plot(fps, label="FPS", marker="s")
 plt.plot(cpu, label="CPU (%)", marker="^")
 plt.plot(gpu, label="GPU (%)", marker="v")
 plt.plot(memory, label="Memory (%)", marker="d")
+plt.plot(battery_level, label="Battery Level (%)", marker="H")
 
 plt.title("Performance Metrics Over Time")
 plt.xlabel("Sample Index")

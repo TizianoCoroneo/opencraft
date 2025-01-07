@@ -37,6 +37,15 @@ public class Statistics : MonoBehaviour
     /// The current memory usage.
     /// </summary>
     public float Memory { get; set; }
+    /// <summary>
+    /// The current battery level.
+    /// </summary>
+    public int BatteryLevel { get; set; }
+    /// <summary>
+    /// The current battery status.
+    /// </summary>
+    public string BatteryStatus { get; set; }
+
 
     [SerializeField] private float measurementGap = 1;
     [SerializeField] private bool isHomeSide = false;
@@ -58,7 +67,7 @@ public class Statistics : MonoBehaviour
         {
             Directory.CreateDirectory(Application.persistentDataPath + "/stats");
             using StreamWriter writer = new(filePath, false);
-            writer.WriteLine("RTT,FPS,CPU,GPU,Memory");
+            writer.WriteLine("RTT,FPS,CPU,GPU,Memory,BatteryStatus,BatteryLevel");
             UnityEngine.Debug.Log("File initialized: " + filePath);
         }
     }
@@ -76,7 +85,7 @@ public class Statistics : MonoBehaviour
         {
             SendPing();
             UpdateSystemStats();
-            UnityEngine.Debug.Log($"RTT: {RTT} ms, FPS: {FPS}, CPU: {CPU}%, GPU: {GPU}%, Memory: {Memory}%");
+            UnityEngine.Debug.Log($"RTT: {RTT} ms, FPS: {FPS}, CPU: {CPU}%, GPU: {GPU}%, Memory: {Memory}%, Battery Status: {BatteryStatus}, Battery Level: {BatteryLevel}%");
             WriteStats();
             stopwatch.Restart();
         }
@@ -101,13 +110,16 @@ public class Statistics : MonoBehaviour
             var cpuTask = "mpstat -P 0 | awk 'FNR==4{print ($NF>0?100-$NF:$NF)}'";
             var gpuTask = "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits";
             var memoryTask = "free | grep Mem | awk '{print $3/$2 * 100.0}'";
+            var batteryTask = "upower -i $(upower -e | grep 'BAT') | grep -E 'state|percentage' | sed 's/state://g; s/percentage://g; s/%//g; s/'[[:blank:]]'//g'";
 
-            var result = await RunShellCommand(cpuTask + "; " + gpuTask + "; " + memoryTask);
+            var result = await RunShellCommand(cpuTask + "; " + gpuTask + "; " + memoryTask + "; " + batteryTask);
             var results = result.Split("\n");
 
             CPU = float.Parse(results[0]);
             GPU = float.Parse(results[1]);
             Memory = float.Parse(results[2]);
+            BatteryStatus = results[3];
+            BatteryLevel = int.Parse(results[4]);
         }
     }
 
@@ -137,7 +149,7 @@ public class Statistics : MonoBehaviour
     /// </summary>
     private async void WriteStats()
     {
-        var stats = $"{RTT},{FPS},{CPU},{GPU},{Memory}";
+        var stats = $"{RTT},{FPS},{CPU},{GPU},{Memory},{BatteryStatus},{BatteryLevel}";
         using StreamWriter writer = new(filePath, true);
         await writer.WriteLineAsync(stats);
     }
