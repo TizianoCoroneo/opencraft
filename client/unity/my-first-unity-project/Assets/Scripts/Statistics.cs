@@ -28,23 +28,23 @@ public class Statistics : MonoBehaviour
     /// <summary>
     /// The current frames per second.
     /// </summary>
-    public float FPS { get; set; }
+    public float FPS { get; set; } = 30;
     /// <summary>
     /// The current CPU usage.
     /// </summary>
-    public float CPU { get; set; }
+    public float CPU { get; set; } = 20;
     /// <summary>
     /// The current GPU usage.
     /// </summary>
-    public float GPU { get; set; }
+    public float GPU { get; set; } = 40;
     /// <summary>
     /// The current memory usage.
     /// </summary>
-    public float Memory { get; set; }
+    public float Memory { get; set; } = 50;
     /// <summary>
     /// The current battery watt usage.
     /// </summary>
-    public float BatteryWatt { get; set; }
+    public float BatteryWatt { get; set; } = 22;
 
     [SerializeField] private float measurementGap = 1;
     [SerializeField] private bool isHomeSide = false;
