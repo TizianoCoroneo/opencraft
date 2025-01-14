@@ -250,7 +250,7 @@ public class Networking : MonoBehaviour, INetworking
 
     IEnumerator BecomeThinClient()
     {
-        using var www = UnityWebRequest.Get("http://localhost:7980/become/thinclient?host=localhost&port=7999&signalingPort=7981");
+        using var www = UnityWebRequest.Get($"http://localhost:7980/become/thinclient?host=192.168.1.69&port=7999&signalingPort=7981");
         yield return www.SendWebRequest();
 
         if (www.result != UnityWebRequest.Result.Success) UnityEngine.Debug.Log(www.error);

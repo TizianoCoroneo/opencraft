@@ -1,4 +1,4 @@
 #! /bin/sh
 set -eu
 
-./bin/run_unity_client.sh $1
+./bin/run_unity_client.sh
