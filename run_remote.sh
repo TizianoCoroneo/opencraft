@@ -15,4 +15,4 @@ cd bin
 ( ./run_signaling.sh ) &
 ./run_unity_thin.sh
 
-wait
+cleanup

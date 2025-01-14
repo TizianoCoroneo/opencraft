@@ -238,6 +238,7 @@ public class Networking : MonoBehaviour, INetworking
     private void HandleMessageOpenPing(OpenPing ping)
     {
         stats.RTT = stats.RTT * 0.9f + ((ulong)DateTimeOffset.Now.ToUnixTimeMilliseconds() - ping.TimeSent) * 0.1f;
+        stats.Jitter = (ulong)DateTimeOffset.Now.ToUnixTimeMilliseconds() - ping.TimeSent;
         switch (policyManager.Policy.Evaluate(new Policy.PolicyData
         {
             stats = stats
