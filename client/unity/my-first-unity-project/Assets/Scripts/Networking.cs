@@ -90,8 +90,6 @@ public class Networking : MonoBehaviour, INetworking
     /// </summary>
     private Task receiveLoop = default;
 
-    private bool isThinClient = false;
-
     /// <summary>
     /// Reference to the policy manager. Used to evaluate policies.
     /// </summary>
@@ -255,11 +253,7 @@ public class Networking : MonoBehaviour, INetworking
         yield return www.SendWebRequest();
 
         if (www.result != UnityWebRequest.Result.Success) UnityEngine.Debug.Log(www.error);
-        else
-        {
-            isThinClient = true;
-            UnityEngine.Debug.Log("Became thin client!");
-        }
+        else UnityEngine.Debug.Log("Became thin client!");
     }
 
     /// <summary>

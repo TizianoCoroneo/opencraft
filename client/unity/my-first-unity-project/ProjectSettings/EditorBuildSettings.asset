@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ThinClient/ThinClient.unity
     guid: 1bbef8a5a70ab414baa1f431429fbb1f
+  - enabled: 1
+    path: Assets/Scenes/Client/Remote.unity
+    guid: c330da9c68c15417b9a4dce59f23f4c1
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: b8dc01e4188f9fa4884820cc8510ca66,
       type: 2}

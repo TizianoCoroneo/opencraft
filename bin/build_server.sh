@@ -1,4 +1,5 @@
 #! /bin/sh
+set -eu
 
 cd ../server/go/opencraft-go/cmd/opencraft-go/
 go build

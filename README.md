@@ -16,6 +16,8 @@ To run the experiment you first need to set up the remote/thin-client, which can
 ./run_remote.sh
 ```
 
+And selecting & running the `Remote` scene in the Unity editor that pops up (found under `Scenes/Client`).
+
 After this you can run the client, which performs the actual measurements of the metrics during a test where the client
  will walk in a circle for 60 seconds. This can be done by running:
 
