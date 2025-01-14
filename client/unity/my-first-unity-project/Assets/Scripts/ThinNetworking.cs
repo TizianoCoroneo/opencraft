@@ -149,14 +149,15 @@ public class ThinNetworking : MonoBehaviour, INetworking
 
     IEnumerator BecomeClient()
     {
-        using var www = UnityWebRequest.Get("http://localhost:7980/become/client?host=localhost&port=7979&playerID=1");
+        UnityEngine.Debug.Log("Switching to Client");
+        using var www = UnityWebRequest.Get("http://localhost:7980/become/client?host=192.168.1.69&port=7979&playerID=1");
         yield return www.SendWebRequest();
 
         if (www.result != UnityWebRequest.Result.Success) UnityEngine.Debug.Log(www.error);
         else UnityEngine.Debug.Log("Became client!");
     }
 
-    public void ReInitSocket(string serverHost = "localhost", int port = 7979)
+    public void ReInitSocket(string serverHost = "192.168.1.69", int port = 7979)
     {
         var addresses = Dns.GetHostAddresses(serverHost);
         Assert.IsTrue(addresses.Length > 0);

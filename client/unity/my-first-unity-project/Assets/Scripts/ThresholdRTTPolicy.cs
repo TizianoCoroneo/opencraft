@@ -7,15 +7,16 @@ using UnityEngine.Rendering.Universal;
 /// <summary>
 /// A policy that evaluates the round-trip time (RTT) and determines the appropriate client type.
 /// </summary>
-[CreateAssetMenu(menuName = "ScriptableObjects/ThresholdRTTPolicy")]
+[CreateAssetMenu(menuName = "ScriptableObjects/Threshold RTT Policy")]
 
 public class ThresholdRTTPolicy : Policy
 {
     public override PolicyResult Evaluate(PolicyData data)
     {
-        if (data.stats.RTT > 80)
+        UnityEngine.Debug.Log($"TEST {data.stats.RTT}");
+        if (data.stats.RTT > 100)
             return PolicyResult.BecomeClient;
-        else if (data.stats.RTT < 60)
+        else if (data.stats.RTT < 85)
             return PolicyResult.BecomeThinClient;
         else
             return PolicyResult.None;
