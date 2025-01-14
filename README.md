@@ -22,15 +22,16 @@ After this you can run the client, which performs the actual measurements of the
  will walk in a circle for 60 seconds. This can be done by running:
 
 ```sh
-./run_client.sh "your chosen policy"
+./run_client.sh
 ```
 
-Where the `"your chosen policy"` is one of the following supported policies:
+Where You then select one of the following supported policies under `Networking -> PolicyManager` :
 
 ```md
 * ThresholdNoPolicy
-* Threshold Bogus Policy
 * Threshold RTT Policy
+* Threshold System Policy
+* Threshold Combo Policy
 ```
 
 Additionally, also set the host to the local network ipv4 address of the remote device. Then, after running the test the
