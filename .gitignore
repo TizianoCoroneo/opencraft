@@ -131,5 +131,5 @@ fabric.properties
 
 .vscode/
 
-stats/*.csv
+# stats/*.csv
 server/go/opencraft-go/opencraft-go-linux
