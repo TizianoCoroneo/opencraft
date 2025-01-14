@@ -33,8 +33,8 @@ Where the `"your chosen policy"` is one of the following supported policies:
 * Threshold RTT Policy
 ```
 
-Then, after running the test the program will have outputted a csv file with the measured results. To get and plot it,
- run the following commands:
+Additionally, also set the host to the local network ipv4 address of the remote device. Then, after running the test the
+ program will have outputted a csv file with the measured results. To get and plot it, run the following commands:
 
 ```sh
 cd stats
