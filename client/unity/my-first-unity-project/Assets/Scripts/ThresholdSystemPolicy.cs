@@ -13,10 +13,9 @@ public class ThresholdSystemPolicy : Policy
 {
     public override PolicyResult Evaluate(PolicyData data)
     {
-        UnityEngine.Debug.Log($"TEST {data.stats.RTT}");
-        if (data.stats.FPS > 25 || data.stats.CPU < 20 || data.stats.GPU < 20 || data.stats.Memory < 20 || data.stats.BatteryWatt < 20)
+        if (data.stats.FPS > 25 || data.stats.GPU < 40 || data.stats.BatteryWatt < 25)
             return PolicyResult.BecomeClient;
-        else if (data.stats.FPS < 20 || data.stats.CPU > 80 || data.stats.GPU > 80 || data.stats.Memory > 80 || data.stats.BatteryWatt > 35)
+        else if (data.stats.FPS < 20 || data.stats.GPU > 85 || data.stats.BatteryWatt > 35)
             return PolicyResult.BecomeThinClient;
         else
             return PolicyResult.None;

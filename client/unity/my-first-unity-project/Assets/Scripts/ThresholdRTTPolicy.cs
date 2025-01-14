@@ -13,7 +13,6 @@ public class ThresholdRTTPolicy : Policy
 {
     public override PolicyResult Evaluate(PolicyData data)
     {
-        UnityEngine.Debug.Log($"TEST {data.stats.RTT}");
         if (data.stats.RTT > 100)
             return PolicyResult.BecomeClient;
         else if (data.stats.RTT < 85)
