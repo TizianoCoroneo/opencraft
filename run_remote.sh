@@ -15,4 +15,6 @@ cd bin
 ( ./run_signaling.sh ) &
 ./run_unity_thin.sh
 
+trap cleanup INT
+wait
 cleanup
